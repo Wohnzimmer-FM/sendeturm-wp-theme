@@ -15,36 +15,41 @@
 get_header(); ?>
 
 	<div id="main-content" class="container">
-		<main id="main" class="row">
+		<main id="main">
 
 		<?php
 		if (have_posts()) :
-			if (is_home() && ! is_front_page()): ?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
-			<?php
-			endif;
+			
+			while (have_posts())
+			{
+				the_post();
 
-			/* Start the Loop */
-			while (have_posts()): the_post();
+				if($wp_query->current_post == 0)
+				{
+					get_template_part('template-parts/content', 'episode');
+					echo '<div class="row">';
+					echo '<div class="col-md-8">';
+					echo '<div id="all-episodes" class="list-group">';
+				}
+				else
+				{
+					get_template_part('template-parts/content', 'podcast');
 
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-				get_template_part('template-parts/content', get_post_format());
+					if(($wp_query->current_post + 1) === ($wp_query->post_count))
+					{
+						echo '</div><!-- end of list-group -->';
 
-			endwhile;
+						echo '</div>';
+						echo '</div>';
+					}
+				}
+			}
 
-			the_posts_navigation();
-
+			//the_posts_navigation();
 		else :
 			get_template_part('template-parts/content', 'none');
 		endif;
 		?>
-
 		</main>
 	</div>
 
@@ -52,4 +57,4 @@ get_header(); ?>
 
 #get_sidebar();
 
-#get_footer();
+get_footer();

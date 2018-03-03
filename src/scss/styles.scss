@@ -6,13 +6,16 @@ $theme-colors: (
 
 $header-border: 10px;
 $accent-color: #FFEB3B;
+$main-border-radius: 7px;
 
 // Bootstrap
 @import "node_modules/bootstrap/scss/bootstrap";
 
-div, article, header {
-  //outline: 1px dotted red;
-}
+//#main-content {
+  div, article, header, ul {
+    outline: 1px dashed red;
+  }
+//}
 
 body {
   background: #F8F8F8;
@@ -46,7 +49,7 @@ body {
   margin-bottom: 50px;
   padding: 3em;
   background: #fff;
-  border-radius: 5px;
+  border-radius: $main-border-radius;
   box-shadow: 0 1px 1px 0 rgba(10, 16, 34, .2);
   border-top: $header-border solid $accent-color;
   border-bottom: $header-border solid $accent-color;
@@ -68,23 +71,55 @@ body {
   $search-bck: rgba(255, 255, 255, 0.7);
 
   input {
-    border-radius: 0;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    border: 0;
     background: $search-bck;
+    border: 0;
 
     &:focus {
       background: #fff;
-      outline: none;
+      border-color: inherit;
+      -webkit-box-shadow: none;
+      box-shadow: none;
     }
   }
 
   button {
     border: 0;
-    border-radius: 0;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
     background: $search-bck;
+    margin-top: 5px;
   }
+}
+
+@media(min-width:576px)
+{
+  #header-search {
+  
+    input {
+      border-radius: 0;
+      border-top-left-radius: $main-border-radius;
+      border-bottom-left-radius: $main-border-radius;
+      width: 10em;
+      transition: all .2s ease;
+
+      &:focus {
+        width: 20em;
+        transition: all .2s ease;
+      }
+    }
+  
+    button {
+      border-radius: 0;
+      border-top-right-radius: $main-border-radius;
+      border-bottom-right-radius: $main-border-radius;
+      text-align: center;
+      margin: 0;
+    }
+  }
+}
+
+article {
+  background: rgba(0, 255, 255, 0.1);
+}
+
+aside {
+  background: rgba(150, 141, 20, 0.1);
 }

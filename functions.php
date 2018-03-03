@@ -4,8 +4,9 @@ include 'vendor/wp-bootstrap4-navwalker/wp-bootstrap-navwalker.php';
 
 function sendeturm_scripts()
 {
-    wp_enqueue_style('sendeturm-bootstraps', get_template_directory_uri() . '/dist/css/bootstrap.css');
-    wp_enqueue_style('sendeturm-styles', get_template_directory_uri() . '/dist/css/styles.css');
+    $css_file = '/dist/css/styles.css';
+    $version = filemtime(get_template_directory() . $css_file);
+    wp_enqueue_style('sendeturm-styles', get_template_directory_uri() . $css_file, array(), $version);
 
     wp_enqueue_script('script-bootstrap', get_template_directory_uri() . '/dist/js/bootstrap.min.js');
     wp_enqueue_script('script-jquery', get_template_directory_uri() . '/dist/js/jquery.min.js');
@@ -47,4 +48,29 @@ add_action('after_setup_theme', 'register_header_menu');
 function register_header_menu()
 {
     register_nav_menu('header-menu', __('Header Menu', 'sendeturm'));
+}
+
+function auto_template_part()
+{
+    if (get_post_type() == 'podcast') {
+        get_template_part('template-parts/content', 'podcast');
+    } else {
+        get_template_part('template-parts/content', get_post_format());
+    }
+}
+
+add_action('pre_get_posts', 'separate_podcasts_from_blogs');
+
+function separate_podcasts_from_blogs($query)
+{
+    # Erst mal bleibt das auf false, also nur Podcasts auflisten
+    $is_blog = false;
+
+    if ($query->is_main_query() && is_home()) {
+        if ($is_blog) {
+            $query->set('post_type', 'post');
+        } else {
+            $query->set('post_type', 'podcast');
+        }
+    }
 }
