@@ -63,3 +63,28 @@ body {
 .current_page_item {
   @extend .active
 }
+
+#header-search {
+  $search-bck: rgba(255, 255, 255, 0.7);
+
+  input {
+    border-radius: 0;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: 0;
+    background: $search-bck;
+
+    &:focus {
+      background: #fff;
+      outline: none;
+    }
+  }
+
+  button {
+    border: 0;
+    border-radius: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background: $search-bck;
+  }
+}

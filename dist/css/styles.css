@@ -6058,3 +6058,20 @@ body {
 
 .contributor .name {
   font-size: 1rem; }
+
+#header-search input {
+  border-radius: 0;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border: 0;
+  background: rgba(255, 255, 255, 0.7); }
+  #header-search input:focus {
+    background: #fff;
+    outline: none; }
+
+#header-search button {
+  border: 0;
+  border-radius: 0;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background: rgba(255, 255, 255, 0.7); }
