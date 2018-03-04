@@ -28,7 +28,8 @@ get_header(); ?>
 				{
 					get_template_part('template-parts/content', 'episode');
 					echo '<div class="row">';
-					echo '<div class="col-md-8">';
+					echo '<div class="col w-100">';
+					echo '<h3>'.__('All episodes', 'sendeturm').'</h3>';
 					echo '<div id="all-episodes" class="list-group">';
 				}
 				else
@@ -38,12 +39,15 @@ get_header(); ?>
 					if(($wp_query->current_post + 1) === ($wp_query->post_count))
 					{
 						echo '</div><!-- end of list-group -->';
-
+						
 						echo '</div>';
+
 						echo '</div>';
 					}
 				}
 			}
+
+			
 
 			//the_posts_navigation();
 		else :

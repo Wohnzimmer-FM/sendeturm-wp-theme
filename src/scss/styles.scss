@@ -1,19 +1,20 @@
 // Overrides
 
-$theme-colors: (
-  //"primary": #000
-);
-
 $header-border: 10px;
 $accent-color: #FFEB3B;
 $main-border-radius: 7px;
+
+$theme-colors: (
+  "primary": #2196F3,
+  "secondary": $accent-color
+);
 
 // Bootstrap
 @import "node_modules/bootstrap/scss/bootstrap";
 
 //#main-content {
   div, article, header, ul {
-    outline: 1px dashed red;
+    //outline: 1px dashed red;
   }
 //}
 
@@ -116,10 +117,16 @@ body {
   }
 }
 
-article {
-  background: rgba(0, 255, 255, 0.1);
+#current-episode {
+  //border-bottom: 5px solid $accent-color;
 }
 
-aside {
-  background: rgba(150, 141, 20, 0.1);
+.episode-image {
+  display: none;
+}
+
+@media(min-width: 768px) {
+  .episode-image {
+    display: block;
+  }
 }
