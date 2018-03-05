@@ -120,13 +120,3 @@ body {
 #current-episode {
   //border-bottom: 5px solid $accent-color;
 }
-
-.episode-image {
-  display: none;
-}
-
-@media(min-width: 768px) {
-  .episode-image {
-    display: block;
-  }
-}

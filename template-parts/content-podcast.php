@@ -12,7 +12,7 @@ $episode = \Podlove\get_episode();
 
 <a href="<?php echo esc_url(get_permalink()); ?>" class="list-group-item list-group-item-action flex-column align-items-start">
     <div class="d-flex w-100 justify-content-between">
-        <h5 class="mb-1"><?php the_title(); ?></h5>
+        <h5 class="mb-1"><i class="fa fa-volume-down mr-2"></i><?php the_title(); ?></h5>
         <small><?php echo $episode->publicationDate(); ?></small>
     </div>
 

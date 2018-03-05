@@ -2,13 +2,35 @@
 $episode = \Podlove\get_episode();
 ?>
 
-<?php the_title( '<h1 class="entry-title mb-4">', '</h1>' ); ?>
+<?php the_title('<h1 class="entry-title mb-4">', '</h1>'); ?>
 
 <div id="current-episode" class="row mb-4 pb-4">
     <div class="col-md-8">
         <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
             <div class="mb-4">
-            <?php echo $episode->player(); ?>
+                <?php echo $episode->player(); ?>
+            </div>
+
+            <div class="mb-4 text-center">
+                <a class="btn btn-secondary" href="<?php comments_link(); ?>" role="button">
+                    <i class="fa fa-comment mr-1"></i>
+                <?php 
+                    $comments_count = get_comments_number();
+
+                    if($comments_count < 1) {
+                        echo _e('Write the first comment!');
+                    } else {
+                        echo _e('Comments').'<span class="badge badge-light">'.$comments_count.'</span>';
+                    }
+                ?>
+                </a>
+                <a class="btn btn-secondary" href="<?php comments_link(); ?>" role="button">
+                    <i class="fa fa-heart mr-2"></i><?php echo _e('I like it!'); ?>
+                </a>
+
+                <a class="btn btn-secondary" href="<?php comments_link(); ?>" role="button">
+                    <i class="fa fa-share mr-2"></i><?php echo _e('Share'); ?>
+                </a>                
             </div>
             
             <?php the_content(); ?>
@@ -16,11 +38,9 @@ $episode = \Podlove\get_episode();
     </div>
 
     <div class="col-md-4">
-        <img src="<?php echo $episode->image(array('fallback' => true))->url(array('width' => 500)); ?>" alt="<?php echo _e('Episode cover'); ?>" class="img-fluid mb-4 episode-image" />
-
         <div class="card mb-4 bg-secondary">
             <div class="card-header">
-                <?php echo _e('Contributors'); ?>
+                <i class="fa fa-microphone mr-2"></i><?php echo _e('Contributors'); ?>
             </div>
 
             <ul id="contributors" class="list-group list-group-flush">
@@ -54,7 +74,7 @@ $episode = \Podlove\get_episode();
         <?php if($episode->relatedEpisodes()): ?>
         <div class="card">
             <div class="card-header">
-                <?php echo _e('Related episodes'); ?>
+                <i class="fa fa-volume-down mr-2"></i><?php echo _e('Related episodes'); ?>
             </div>
 
             <div class="list-group list-group-flush">
