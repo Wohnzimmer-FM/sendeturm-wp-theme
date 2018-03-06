@@ -6046,12 +6046,15 @@ body {
 #main-content {
   margin-top: 50px;
   margin-bottom: 50px;
-  padding: 3em;
   background: #fff;
   border-radius: 7px;
   box-shadow: 0 1px 1px 0 rgba(10, 16, 34, 0.2);
   border-top: 10px solid #FFEB3B;
-  border-bottom: 10px solid #FFEB3B; }
+  border-bottom: 10px solid #FFEB3B;
+  position: relative; }
+
+#main {
+  padding: 3em; }
 
 #main-nav {
   background: rgba(0, 0, 0, 0.7); }
@@ -6090,9 +6093,6 @@ body {
     text-align: center;
     margin: 0; } }
 
-.episode-image {
-  display: none; }
-
-@media (min-width: 768px) {
-  .episode-image {
-    display: block; } }
+.entry-title a {
+  color: #000;
+  text-decoration: none; }

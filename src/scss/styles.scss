@@ -48,13 +48,18 @@ body {
 #main-content {
   margin-top: 50px;
   margin-bottom: 50px;
-  padding: 3em;
   background: #fff;
   border-radius: $main-border-radius;
   box-shadow: 0 1px 1px 0 rgba(10, 16, 34, .2);
   border-top: $header-border solid $accent-color;
   border-bottom: $header-border solid $accent-color;
+  position: relative;
 }
+
+#main {
+  padding: 3em;
+}
+
 
 #main-nav {
   background: rgba(0, 0, 0, 0.7);
@@ -119,4 +124,9 @@ body {
 
 #current-episode {
   //border-bottom: 5px solid $accent-color;
+}
+
+.entry-title a {
+  color: #000;
+  text-decoration: none;
 }

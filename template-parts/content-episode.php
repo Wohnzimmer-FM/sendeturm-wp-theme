@@ -2,7 +2,16 @@
 $episode = \Podlove\get_episode();
 ?>
 
-<?php the_title('<h1 class="entry-title mb-4">', '</h1>'); ?>
+<?php
+if(is_single())
+{
+    the_title('<h1 class="entry-title mb-4">', '</h1>');
+}
+else
+{
+    the_title('<h1 class="entry-title mb-4"><a href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></h1>' );
+}
+?>
 
 <div id="current-episode" class="row mb-4 pb-4">
     <div class="col-md-8">
@@ -11,33 +20,56 @@ $episode = \Podlove\get_episode();
                 <?php echo $episode->player(); ?>
             </div>
 
-            <div class="mb-4 text-center">
+            <div class="mb-4">
+                <?php if(!is_single()) : ?>
+                    <a class="btn btn-secondary" href="<?php comments_link(); ?>" role="button"><i class="fa fa-arrow-circle-right"></i> Shownotes</a>
+                <?php endif; ?>
+
                 <a class="btn btn-secondary" href="<?php comments_link(); ?>" role="button">
                     <i class="fa fa-comment mr-1"></i>
-                <?php 
+                <?php
                     $comments_count = get_comments_number();
 
                     if($comments_count < 1) {
                         echo _e('Write the first comment!');
                     } else {
-                        echo _e('Comments').'<span class="badge badge-light">'.$comments_count.'</span>';
+                        echo _e('Comments').'<span class="badge badge-light ml-2">'.$comments_count.'</span>';
                     }
                 ?>
                 </a>
+
+                <?php /* ?>
                 <a class="btn btn-secondary" href="<?php comments_link(); ?>" role="button">
                     <i class="fa fa-heart mr-2"></i><?php echo _e('I like it!'); ?>
                 </a>
+                <?php */ ?>
 
-                <a class="btn btn-secondary" href="<?php comments_link(); ?>" role="button">
-                    <i class="fa fa-share mr-2"></i><?php echo _e('Share'); ?>
-                </a>                
+
+                <div class="dropdown d-inline">
+                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-share mr-2"></i><?php echo _e('Share'); ?>
+                    </a>
+
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item share-link" target="_blank" href="http://twitter.com/home/?status=<?php the_title(); ?> - <?php the_permalink(); ?>">Twitter</a>
+                        <a class="dropdown-item share-link" target="_blank" href="http://www.facebook.com/sharer.php?u=<?php the_permalink();?>&amp;t=<?php the_title(); ?>">Facebook</a>
+                        <a class="dropdown-item share-link" target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&amp;title=<?php the_title(); ?>&amp;url=<?php the_permalink(); ?>">LinkedIn</a>
+                    </div>
+                </div>
             </div>
             
-            <?php the_content(); ?>
+            <?php if(is_single()) : ?>
+                <?php the_content(); ?>
+            <?php else: ?>
+                <p><?php echo $episode->summary(); ?></p>
+            <?php endif; ?>
+
         </article>
     </div>
 
     <div class="col-md-4">
+
+    
         <div class="card mb-4 bg-secondary">
             <div class="card-header">
                 <i class="fa fa-microphone mr-2"></i><?php echo _e('Contributors'); ?>
@@ -71,7 +103,7 @@ $episode = \Podlove\get_episode();
             </ul>
         </div>
 
-        <?php if($episode->relatedEpisodes()): ?>
+        <?php if($episode->relatedEpisodes() && is_single()): ?>
         <div class="card">
             <div class="card-header">
                 <i class="fa fa-volume-down mr-2"></i><?php echo _e('Related episodes'); ?>
@@ -89,5 +121,7 @@ $episode = \Podlove\get_episode();
             </div>
         </div>
         <?php endif; ?>
+
+    
     </div>
 </div>

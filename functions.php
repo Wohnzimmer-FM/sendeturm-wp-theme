@@ -8,9 +8,9 @@ function sendeturm_scripts()
     $version = filemtime(get_template_directory() . $css_file);
     wp_enqueue_style('sendeturm-styles', get_template_directory_uri() . $css_file, array(), $version);
 
+    wp_enqueue_script('script-popper', get_template_directory_uri() . '/dist/js/popper.min.js');
     wp_enqueue_script('script-bootstrap', get_template_directory_uri() . '/dist/js/bootstrap.min.js');
     wp_enqueue_script('script-jquery', get_template_directory_uri() . '/dist/js/jquery.min.js');
-    wp_enqueue_script('script-popper', get_template_directory_uri() . '/dist/js/popper.min.js');
 
     if (is_singular() && comments_open() && get_option('thread_comments')) {
         wp_enqueue_script('comment-reply');
