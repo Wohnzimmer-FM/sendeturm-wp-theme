@@ -25,7 +25,9 @@ body {
 #page-header {
   padding-bottom: $header-border;
   box-shadow: 0 1px 1px 0 rgba(10, 16, 34, .2);
+}
 
+#page-header, #featured {
   background-image: repeating-linear-gradient(90deg, 
         #F44336 0.00%, #F44336 6.66%,
         #E91E63 6.66%, #E91E63 13.32%,
@@ -46,8 +48,8 @@ body {
 }
 
 #main-content {
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
   background: #fff;
   border-radius: $main-border-radius;
   box-shadow: 0 1px 1px 0 rgba(10, 16, 34, .2);
@@ -60,9 +62,32 @@ body {
   padding: 3em;
 }
 
-
 #main-nav {
   background: rgba(0, 0, 0, 0.7);
+}
+
+#featured {
+  .overlay {
+    background: rgba(0, 0, 0, 0.7);
+  }
+
+  .container {
+    padding: 0;
+    padding-top: 3rem;
+  }
+
+  h1 {
+    
+    a {
+      color: #fff;
+    }
+  }
+
+  box-shadow: 0 1px 1px 0 rgba(10, 16, 34, .2);
+
+  .podlovewebplayer_wrapper {
+    margin-bottom: 0;
+  }
 }
 
 .contributor .name {

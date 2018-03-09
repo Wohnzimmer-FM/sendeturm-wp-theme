@@ -6040,12 +6040,14 @@ body {
 
 #page-header {
   padding-bottom: 10px;
-  box-shadow: 0 1px 1px 0 rgba(10, 16, 34, 0.2);
+  box-shadow: 0 1px 1px 0 rgba(10, 16, 34, 0.2); }
+
+#page-header, #featured {
   background-image: repeating-linear-gradient(90deg, #F44336 0%, #F44336 6.66%, #E91E63 6.66%, #E91E63 13.32%, #9C27B0 13.32%, #9C27B0 19.98%, #3F51B5 19.98%, #3F51B5 26.64%, #2196F3 26.64%, #2196F3 33.33%, #03A9F4 33.33%, #03A9F4 39.96%, #00BCD4 39.96%, #00BCD4 46.62%, #009688 46.62%, #009688 53.28%, #4CAF50 53.28%, #4CAF50 59.94%, #8BC34A 59.94%, #8BC34A 66.6%, #CDDC39 66.6%, #CDDC39 73.26%, #FFEB3B 73.26%, #FFEB3B 79.92%, #FFC107 79.92%, #FFC107 86.58%, #FF9800 86.65%, #FF9800 93.24%, #FF5722 93.24%, #FF5722 100%); }
 
 #main-content {
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
   background: #fff;
   border-radius: 7px;
   box-shadow: 0 1px 1px 0 rgba(10, 16, 34, 0.2);
@@ -6058,6 +6060,18 @@ body {
 
 #main-nav {
   background: rgba(0, 0, 0, 0.7); }
+
+#featured {
+  box-shadow: 0 1px 1px 0 rgba(10, 16, 34, 0.2); }
+  #featured .overlay {
+    background: rgba(0, 0, 0, 0.7); }
+  #featured .container {
+    padding: 0;
+    padding-top: 3rem; }
+  #featured h1 a {
+    color: #fff; }
+  #featured .podlovewebplayer_wrapper {
+    margin-bottom: 0; }
 
 .contributor .name {
   font-size: 1rem; }

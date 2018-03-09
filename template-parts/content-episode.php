@@ -21,10 +21,6 @@ else
             </div>
 
             <div class="mb-4">
-                <?php if(!is_single()) : ?>
-                    <a class="btn btn-secondary" href="<?php comments_link(); ?>" role="button"><i class="fa fa-arrow-circle-right"></i> Shownotes</a>
-                <?php endif; ?>
-
                 <a class="btn btn-secondary" href="<?php comments_link(); ?>" role="button">
                     <i class="fa fa-comment mr-1"></i>
                 <?php
@@ -58,11 +54,8 @@ else
                 </div>
             </div>
             
-            <?php if(is_single()) : ?>
-                <?php the_content(); ?>
-            <?php else: ?>
-                <p><?php echo $episode->summary(); ?></p>
-            <?php endif; ?>
+            
+            <?php the_content(); ?>
 
         </article>
     </div>
@@ -103,7 +96,7 @@ else
             </ul>
         </div>
 
-        <?php if($episode->relatedEpisodes() && is_single()): ?>
+        <?php if($episode->relatedEpisodes()): ?>
         <div class="card">
             <div class="card-header">
                 <i class="fa fa-volume-down mr-2"></i><?php echo _e('Related episodes'); ?>
