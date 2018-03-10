@@ -9,7 +9,9 @@ $feed = \Podlove\Model\Feed::find_one_by_slug('mp3');
         <div class="container">
             <div class="row">
                 <div class="col">
-                <?php the_title('<h1 class="entry-title mb-4"><a href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></h1>' ); ?>
+                <?php the_title('<h1 class="entry-title mb-4"><a href="' . esc_url(get_permalink()) . 
+                '" rel="bookmark">', 
+                '</a> <span class="badge badge-pill badge-success">' . __('New', 'sendeturm') . '</span></h1>' ); ?>
                 </div>
             </div>
 

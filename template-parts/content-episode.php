@@ -7,10 +7,6 @@ if(is_single())
 {
     the_title('<h1 class="entry-title mb-4">', '</h1>');
 }
-else
-{
-    the_title('<h1 class="entry-title mb-4"><a href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></h1>' );
-}
 ?>
 
 <div id="current-episode" class="row mb-4 pb-4">
@@ -18,6 +14,11 @@ else
         <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
             <div class="mb-4">
                 <?php echo $episode->player(); ?>
+
+                <div class="row">
+                    <div class="col"><?php echo _e('Duration', 'sendeturm') . ': ' . $episode->duration(); ?></div>
+                    <div class="col text-right"><?php echo get_published(); ?></div>
+                </div>
             </div>
 
             <div class="mb-4">
@@ -54,9 +55,10 @@ else
                 </div>
             </div>
             
-            
             <?php the_content(); ?>
-
+            
+            
+            
         </article>
     </div>
 
