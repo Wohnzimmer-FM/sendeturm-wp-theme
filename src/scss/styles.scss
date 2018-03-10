@@ -15,8 +15,8 @@ $theme-colors: (
 @import "node_modules/bootstrap/scss/bootstrap";
 
 //#main-content {
-  div, article, header, ul {
-    //outline: 1px dashed red;
+  div, article, header, ul, ol {
+    //outline: 1px dashed #999;
   }
 //}
 
@@ -168,4 +168,20 @@ body {
 .entry-title a {
   color: #000;
   text-decoration: none;
+}
+
+#comments {
+  .media {
+    .media-content {
+      padding: 1em;
+      margin-bottom: 1em;
+      background: #f8f9fa;
+      border-radius: $main-border-radius;
+      box-shadow: 0 1px 1px 0 rgba(10, 16, 34, .2);
+    }
+  }
+
+  .bypostauthor .media-content {
+    border: 5px solid $accent-color;
+  }
 }

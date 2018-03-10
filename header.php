@@ -16,12 +16,13 @@
 	<header id="page-header">
 		<div id="main-nav" class="navbar navbar-expand-lg navbar-dark">
 			<a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>">
+			
 			<img src="<?php assets_url();?>brand/logo.svg" width="30" height="30" class="d-inline-block align-top" alt="">
 			<?php bloginfo('name');?>
 			</a>
 			
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
+				<span class="navbar-toggler-icon"></span>
 			</button>
 
 			<div class="collapse navbar-collapse" id="navbarNav">

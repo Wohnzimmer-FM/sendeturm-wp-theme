@@ -31,7 +31,7 @@ get_header(); ?>
 					echo '<main id="main">';
 					echo '<div class="row">';
 					echo '<div class="col w-100">';
-					echo '<h2>'.__('All episodes', 'sendeturm').'</h2>';
+					echo '<h2>' . __('All episodes', 'sendeturm') . '</h2>';
 					echo '<div id="all-episodes" class="list-group">';
 				}
 				else
@@ -48,8 +48,6 @@ get_header(); ?>
 					}
 				}
 			}
-
-			
 
 			//the_posts_navigation();
 		else :

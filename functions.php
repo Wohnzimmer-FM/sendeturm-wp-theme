@@ -112,3 +112,9 @@ function get_contributors($episode)
 
     return $list;
 }
+
+function custom_theme_setup() {
+    add_theme_support( 'html5', array( 'comment-list' ) );
+}
+
+add_action( 'after_setup_theme', 'custom_theme_setup' );
