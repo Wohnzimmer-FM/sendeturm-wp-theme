@@ -14,7 +14,8 @@
 
 get_header(); ?>
 
-
+	<div id="main-content" class="container">
+		<main id="main">
 
 		<?php
 		if (have_posts()) :
@@ -22,34 +23,8 @@ get_header(); ?>
 			while (have_posts())
 			{
 				the_post();
-
-				if($wp_query->current_post == 0)
-				{
-					get_template_part('template-parts/content', 'featured');
-
-					echo '<div id="main-content" class="container">';
-					echo '<main id="main">';
-					echo '<div class="row">';
-					echo '<div class="col w-100">';
-					echo '<h2>'.__('All episodes', 'sendeturm').'</h2>';
-					echo '<div id="all-episodes" class="list-group">';
-				}
-				else
-				{
-					get_template_part('template-parts/content', 'podcast');
-
-					if(($wp_query->current_post + 1) === ($wp_query->post_count))
-					{
-						echo '</div><!-- end of list-group -->';
-						
-						echo '</div>';
-
-						echo '</div>';
-					}
-				}
+				get_template_part('template-parts/content', 'page');
 			}
-
-			
 
 			//the_posts_navigation();
 		else :

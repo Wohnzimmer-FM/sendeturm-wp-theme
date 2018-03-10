@@ -74,3 +74,8 @@ function separate_podcasts_from_blogs($query)
         }
     }
 }
+
+function inspect_v($var)
+{
+    echo '<pre>'.print_r($var, true).'</pre>';
+}

@@ -6,7 +6,8 @@ $main-border-radius: 7px;
 
 $theme-colors: (
   "primary": #2196F3,
-  "secondary": $accent-color
+  "secondary": $accent-color,
+  "info": #3F51B5
 );
 
 // Bootstrap
@@ -58,12 +59,17 @@ body {
   position: relative;
 }
 
+.home #main-content {
+  margin-top: 0;
+  border-top: none;
+}
+
 #main {
   padding: 3em;
 }
 
 #main-nav {
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.8);
 }
 
 #featured {
@@ -83,10 +89,18 @@ body {
     }
   }
 
-  box-shadow: 0 1px 1px 0 rgba(10, 16, 34, .2);
-
   .podlovewebplayer_wrapper {
     margin-bottom: 0;
+  }
+
+  .subscribe .inner {
+    background: #444;
+  }
+}
+
+@media(min-width:992px) {
+  #featured .subscribe .inner {
+    background: none;
   }
 }
 
@@ -120,8 +134,7 @@ body {
   }
 }
 
-@media(min-width:576px)
-{
+@media(min-width:576px) {
   #header-search {
   
     input {
