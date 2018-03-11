@@ -2,10 +2,11 @@
 
 $header-border: 10px;
 $accent-color: #FFEB3B;
+$primary-color: #2196F3;
 $main-border-radius: 7px;
 
 $theme-colors: (
-  "primary": #2196F3,
+  "primary": $primary-color,
   "secondary": $accent-color,
   "info": #3F51B5,
   "success": #8BC34A
@@ -84,7 +85,6 @@ body {
   }
 
   h1 {
-    
     a {
       color: #fff;
     }
@@ -110,7 +110,7 @@ body {
 }
 
 .current_page_item {
-  @extend .active
+  @extend .active;
 }
 
 #header-search {
@@ -171,6 +171,10 @@ body {
 }
 
 #comments {
+  .comments-title {
+    margin-bottom: 0.5em;
+  }
+
   .media {
     .media-content {
       padding: 1em;
@@ -184,4 +188,35 @@ body {
   .bypostauthor .media-content {
     border: 5px solid $accent-color;
   }
+}
+
+.comment-form {
+  .comment-form-comment {
+    @extend .form-group;
+  }
+
+  textarea, input {
+    @extend .form-control;
+  }
+
+  #submit {
+    @extend .btn;
+    @extend .btn-primary;
+  }
+}
+
+#respond {
+  border-top: 5px solid $primary-color;
+  padding: 1em 1em 0.5em 1em;
+  background: #f8f9fa;
+  border-radius: $main-border-radius;
+  box-shadow: 0 1px 1px 0 rgba(10, 16, 34, .2);
+  margin-bottom: 1em;
+}
+
+#cancel-comment-reply-link {
+  font-size: 0.6em;
+  @extend .btn;
+  @extend .btn-danger;
+  margin-right: 1em;
 }

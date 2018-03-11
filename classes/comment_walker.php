@@ -12,8 +12,10 @@ class Sendeturm_Comment_Walker extends Walker_Comment
             </div>
 
             <div class="media-body" id="div-comment-<?php comment_ID(); ?>">
-                <div class="media-content">
+                <div class="media-content" id="div-comment-mc-<?php comment_ID(); ?>">
                     <span class="mt-0 comment-author font-weight-bold"><?php echo get_comment_author_link() ?></span>
+                    
+                    <i class="ml-2 fa fa-calendar text-primary"></i>
 
                     <a href="<?php echo esc_url( get_comment_link( $comment->comment_ID, $args ) ); ?>">
                         <time class="small" datetime="<?php comment_time( 'c' ); ?>">
@@ -30,7 +32,7 @@ class Sendeturm_Comment_Walker extends Walker_Comment
         
                     <?php
                         comment_reply_link( array_merge( $args, array(
-                            'add_below' => 'div-comment',
+                            'add_below' => 'div-comment-mc',
                             'depth'     => $depth,
                             'max_depth' => $args['max_depth'],
                             'before'    => '<p class="mb-0"><i class="fa fa-reply text-primary"></i> ',

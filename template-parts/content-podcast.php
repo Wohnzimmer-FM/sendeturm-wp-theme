@@ -20,6 +20,6 @@ $episode = \Podlove\get_episode();
 
     <div class="row">
         <small class="text-info col-lg-2 col-md col-12"><?php echo _e('Duration', 'sendeturm') . ': ' . $episode->duration(); ?></small>
-        <small class="text-info col"><?php echo _e('Contributors', 'sendeturm') . ': ' . get_contributors($episode); ?></small>
+        <small class="text-info col"><?php echo get_guests($episode, array('Guests', 'Gäste')); ?></small>
     </div>
 </a>

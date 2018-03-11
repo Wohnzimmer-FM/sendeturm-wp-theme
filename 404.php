@@ -21,19 +21,7 @@ get_header(); ?>
 		if (have_posts()) :
 
 			the_post();
-			
-			if(get_post_type() == 'podcast')
-			{
-				get_template_part('template-parts/content', 'episode');
-			} 
-			else
-			{
-				get_template_part('template-parts/content', 'post');
-			}
-
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
+			get_template_part('template-parts/content', 'page');
 			
 			//the_posts_navigation();
 		else :

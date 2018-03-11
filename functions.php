@@ -16,7 +16,6 @@ function sendeturm_scripts()
         wp_enqueue_script('comment-reply');
     }
 }
-
 add_action('wp_enqueue_scripts', 'sendeturm_scripts');
 
 add_filter('show_admin_bar', '__return_false');
@@ -43,12 +42,13 @@ function bootstrap_navigation($menu_location, $menu_class)
     ));
 }
 
-add_action('after_setup_theme', 'register_header_menu');
 
 function register_header_menu()
 {
     register_nav_menu('header-menu', __('Header Menu', 'sendeturm'));
 }
+add_action('after_setup_theme', 'register_header_menu');
+
 
 function auto_template_part()
 {
@@ -59,7 +59,6 @@ function auto_template_part()
     }
 }
 
-add_action('pre_get_posts', 'separate_podcasts_from_blogs');
 
 function separate_podcasts_from_blogs($query)
 {
@@ -74,6 +73,8 @@ function separate_podcasts_from_blogs($query)
         }
     }
 }
+add_action('pre_get_posts', 'separate_podcasts_from_blogs');
+
 
 function inspect_v($var)
 {
@@ -99,22 +100,29 @@ function get_published($since = 14)
     }
 }
 
-function get_contributors($episode)
+function get_guests($episode, $filter = array())
 {
     $names = array();
+    $filter_len = count($filter);
 
     foreach($episode->contributors() as $contributor)
     {
+        if($filter_len > 0 && !in_array($contributor->group(), $filter))
+        {
+            continue;
+        }
+
         $names []= $contributor->name();
     }
 
-    $list = implode(', ', $names);
+    $list = _n('Guest', 'Guests', count($names), 'sendeturm') .': '. implode(', ', $names);
 
     return $list;
 }
 
 function custom_theme_setup() {
-    add_theme_support( 'html5', array( 'comment-list' ) );
+    add_theme_support( 'html5', array(
+		'search-form', 'comment-form', 'comment-list', 'gallery', 'caption'
+	) );
 }
-
 add_action( 'after_setup_theme', 'custom_theme_setup' );
