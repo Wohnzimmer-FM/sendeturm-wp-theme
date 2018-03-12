@@ -30,7 +30,7 @@ get_header(); ?>
 					echo '<div id="main-content" class="container">';
 					echo '<main id="main">';
 					echo '<div class="row">';
-					echo '<div class="col w-100">';
+					echo '<div class="col-12">';
 					echo '<h2>' . __('All episodes', 'sendeturm') . '</h2>';
 					echo '<div id="all-episodes" class="list-group">';
 				}
@@ -40,11 +40,13 @@ get_header(); ?>
 
 					if(($wp_query->current_post + 1) === ($wp_query->post_count))
 					{
-						echo '</div><!-- end of list-group -->';
-						
-						echo '</div>';
+						?>
+								</div><!-- end of list-group -->
+							</div><!-- end of col-8 -->
 
-						echo '</div>';
+								</div>
+							</div>
+						<?php
 					}
 				}
 			}

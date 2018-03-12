@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2018-03-12 21:58+0100\n"
-"PO-Revision-Date: 2018-03-12 21:59+0100\n"
+"POT-Creation-Date: 2018-03-12 22:46+0100\n"
+"PO-Revision-Date: 2018-03-12 22:46+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de\n"
@@ -58,13 +58,25 @@ msgstr "Veröffentlicht am"
 msgid "Guest"
 msgstr "Gast"
 
-#: header.php:32
+#: header.php:32 search.php:21 search.php:24
 msgid "Search"
 msgstr "Suche"
 
 #: index.php:34
 msgid "All episodes"
 msgstr "Alle Episoden"
+
+#: index.php:48
+msgid "Last comments"
+msgstr "Neuste Kommentare"
+
+#: search.php:26
+msgid "Start search"
+msgstr "Suche starten"
+
+#: search.php:33
+msgid "Search results"
+msgstr "Suchergebnisse"
 
 #: template-parts/_bak/content-none.php:25
 #, php-format
@@ -81,7 +93,11 @@ msgstr ""
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""
 
-#: template-parts/content-episode.php:15 template-parts/content-podcast.php:22
+#: template-parts/content-404.php:4
+msgid "Sorry, the page you are looking was not found"
+msgstr "Sorry, die Seite wurde nicht gefunden"
+
+#: template-parts/content-episode.php:15 template-parts/content-home.php:23
 msgid "Duration"
 msgstr "Dauer"
 
@@ -116,3 +132,7 @@ msgstr "In iTunes abonnieren"
 #: template-parts/content-featured.php:26
 msgid "Subscribe with RSS"
 msgstr "Feed abonnieren"
+
+#: template-parts/content-none.php:2
+msgid "Sorry, nothing found"
+msgstr "Sorry, es wurde nichts gefunden"
