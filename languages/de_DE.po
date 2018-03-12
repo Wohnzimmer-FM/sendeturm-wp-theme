@@ -1,0 +1,118 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2018-03-12 21:58+0100\n"
+"PO-Revision-Date: 2018-03-12 21:59+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.6\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: node_modules\n"
+"X-Poedit-SearchPathExcluded-1: vendor\n"
+
+#: classes/comment_walker.php:28
+msgid "Your comment is awaiting moderation."
+msgstr "Ihr Kommentar wartet auf Freigabe."
+
+#: classes/comment_walker.php:43
+msgid "Edit"
+msgstr "Bearbeiten"
+
+#: comments.php:16 template-parts/content-episode.php:30
+msgid "Comments"
+msgstr "Kommentare"
+
+#: comments.php:39
+msgid "Comments are closed."
+msgstr "Kommentare deaktiviert."
+
+#: functions.php:49
+msgid "Header Menu"
+msgstr "Hauptmenü"
+
+#: functions.php:50
+msgid "Footer Menu"
+msgstr "Footer Menü"
+
+#: functions.php:97
+msgid "Published today"
+msgstr "Heute veröffentlicht"
+
+#: functions.php:99
+msgid "Published yesterday"
+msgstr "Gestern veröffentlicht"
+
+#: functions.php:101
+msgid "Published on"
+msgstr "Veröffentlicht am"
+
+#: functions.php:120
+msgid "Guest"
+msgstr "Gast"
+
+#: header.php:32
+msgid "Search"
+msgstr "Suche"
+
+#: index.php:34
+msgid "All episodes"
+msgstr "Alle Episoden"
+
+#: template-parts/_bak/content-none.php:25
+#, php-format
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: template-parts/_bak/content-page.php:37
+#, php-format
+msgid "Edit <span class=\"screen-reader-text\">%s</span>"
+msgstr ""
+
+#: template-parts/_bak/content.php:39
+#, php-format
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
+
+#: template-parts/content-episode.php:15 template-parts/content-podcast.php:22
+msgid "Duration"
+msgstr "Dauer"
+
+#: template-parts/content-episode.php:28
+msgid "Write the first comment!"
+msgstr "Kommentar schreiben!"
+
+#: template-parts/content-episode.php:44
+msgid "Share"
+msgstr "Teilen"
+
+#: template-parts/content-episode.php:64
+msgid "Contributors"
+msgstr "Mitwirkende"
+
+#: template-parts/content-episode.php:76
+msgid "Author's page"
+msgstr "Autorenseite"
+
+#: template-parts/content-episode.php:99
+msgid "Related episodes"
+msgstr "Verwandte Episoden"
+
+#: template-parts/content-featured.php:14
+msgid "New"
+msgstr "Neu"
+
+#: template-parts/content-featured.php:25
+msgid "Subscribe with iTunes"
+msgstr "In iTunes abonnieren"
+
+#: template-parts/content-featured.php:26
+msgid "Subscribe with RSS"
+msgstr "Feed abonnieren"

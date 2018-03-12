@@ -17,7 +17,7 @@
 		<div id="main-nav" class="navbar navbar-expand-lg navbar-dark">
 			<a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>">
 			
-			<img src="<?php assets_url();?>brand/logo.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+			<img src="<?php assets_url();?>brand/logo.svg" width="30" height="30" class="d-inline-block align-top mr-1" alt="">
 			<?php bloginfo('name');?>
 			</a>
 			

@@ -6187,13 +6187,16 @@ body {
 
 #main-content {
   margin-top: 4rem;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
   background: #fff;
   border-radius: 7px;
   box-shadow: 0 1px 1px 0 rgba(10, 16, 34, 0.2);
   border-top: 10px solid #FFEB3B;
   border-bottom: 10px solid #FFEB3B;
   position: relative; }
+
+#page-footer {
+  margin-bottom: 3rem; }
 
 .home #main-content {
   margin-top: 0;

@@ -2,16 +2,12 @@
 $episode = \Podlove\get_episode();
 ?>
 
-<?php
-if(is_single())
-{
-    the_title('<h1 class="entry-title mb-4">', '</h1>');
-}
-?>
+<?php the_title('<h1 class="entry-title mb-4">', '</h1>'); ?>
 
-<div id="current-episode" class="row mb-4 pb-4">
+<div id="current-episode" class="row pb-4">
     <div class="col-md-8">
         <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+            <!-- Player -->
             <div class="mb-4">
                 <?php echo $episode->player(); ?>
 
@@ -21,6 +17,7 @@ if(is_single())
                 </div>
             </div>
 
+            <!-- Buttons -->
             <div class="mb-4">
                 <a class="btn btn-secondary" href="<?php comments_link(); ?>" role="button">
                     <i class="fa fa-comment mr-1"></i>
@@ -28,9 +25,9 @@ if(is_single())
                     $comments_count = get_comments_number();
 
                     if($comments_count < 1) {
-                        echo _e('Write the first comment!');
+                        echo _e('Write the first comment!', 'sendeturm');
                     } else {
-                        echo _e('Comments').'<span class="badge badge-light ml-2">'.$comments_count.'</span>';
+                        echo _e('Comments', 'sendeturm').'<span class="badge badge-light ml-2">'.$comments_count.'</span>';
                     }
                 ?>
                 </a>
@@ -44,7 +41,7 @@ if(is_single())
 
                 <div class="dropdown d-inline">
                     <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fa fa-share mr-2"></i><?php echo _e('Share'); ?>
+                        <i class="fa fa-share mr-2"></i><?php echo _e('Share', 'sendeturm'); ?>
                     </a>
 
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -56,18 +53,15 @@ if(is_single())
             </div>
             
             <?php the_content(); ?>
-            
-            
-            
+
         </article>
     </div>
 
     <div class="col-md-4">
-
-    
+        <!-- Contributors list -->
         <div class="card mb-4 bg-secondary">
             <div class="card-header">
-                <i class="fa fa-microphone mr-2"></i><?php echo _e('Contributors'); ?>
+                <i class="fa fa-microphone mr-2"></i><?php echo _e('Contributors', 'sendeturm'); ?>
             </div>
 
             <ul id="contributors" class="list-group list-group-flush">
@@ -97,11 +91,12 @@ if(is_single())
                 <?php endforeach; ?>
             </ul>
         </div>
-
+                    
+        <!-- Related episodes -->
         <?php if($episode->relatedEpisodes()): ?>
         <div class="card">
             <div class="card-header">
-                <i class="fa fa-volume-down mr-2"></i><?php echo _e('Related episodes'); ?>
+                <i class="fa fa-volume-down mr-2"></i><?php echo _e('Related episodes', 'sendeturm'); ?>
             </div>
 
             <div class="list-group list-group-flush">
@@ -116,7 +111,5 @@ if(is_single())
             </div>
         </div>
         <?php endif; ?>
-
-    
     </div>
 </div>

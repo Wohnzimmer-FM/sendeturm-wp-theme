@@ -18,7 +18,7 @@ function sendeturm_scripts()
 }
 add_action('wp_enqueue_scripts', 'sendeturm_scripts');
 
-add_filter('show_admin_bar', '__return_false');
+#add_filter('show_admin_bar', '__return_false');
 
 function get_assets_url()
 {
@@ -43,11 +43,13 @@ function bootstrap_navigation($menu_location, $menu_class)
 }
 
 
-function register_header_menu()
+function sendeturm_theme_setup()
 {
+    load_theme_textdomain('sendeturm', get_template_directory() . '/languages');
     register_nav_menu('header-menu', __('Header Menu', 'sendeturm'));
+    register_nav_menu('footer-menu', __('Footer Menu', 'sendeturm'));
 }
-add_action('after_setup_theme', 'register_header_menu');
+add_action('after_setup_theme', 'sendeturm_theme_setup');
 
 
 function auto_template_part()
