@@ -36,7 +36,7 @@ get_header(); ?>
 				}
 				else
 				{
-					get_template_part('template-parts/content', 'podcast');
+					get_template_part('template-parts/content', 'home');
 
 					if(($wp_query->current_post + 1) === ($wp_query->post_count))
 					{

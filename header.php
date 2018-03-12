@@ -28,7 +28,7 @@
 			<div class="collapse navbar-collapse" id="navbarNav">
 			<?php bootstrap_navigation('header-menu', 'navbar-nav mr-auto mt-2 mt-lg-0'); ?>
 
-			<form id="header-search" class="form-inline " action="<?php echo home_url( '/' ); ?>" method="get">
+			<form id="header-search" class="form-inline" action="<?php echo home_url( '/' ); ?>" method="get">
 				<input class="form-control" name="s" value="<?php the_search_query(); ?>" type="search" placeholder="<?php _e('Search', 'sendeturm'); ?>" aria-label="<?php _e('Search', 'sendeturm'); ?>">
 				<button class="btn" type="submit">
 				<svg width="15px" height="15px">
