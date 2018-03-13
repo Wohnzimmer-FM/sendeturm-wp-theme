@@ -10,9 +10,9 @@
 $episode = \Podlove\get_episode();
 ?>
 
-<a href="<?php echo esc_url(get_permalink()); ?>" class="list-group-item list-group-item-action flex-column align-items-start">
-   <div class="row"> 
-        <div class="col-2">
+<a href="<?php echo esc_url(get_permalink()); ?>" class="list-group-item list-group-item-action">
+   <div class="row">
+        <div class="col-2 d-none d-md-block">
             <img src="<?php echo $episode->image(array('fallback' => true))->url(array('width' => 250)); ?>" alt="<?php echo _e('Episode cover'); ?>" class="img-fluid" />
         </div>
         <div class="col">

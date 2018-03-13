@@ -51,11 +51,7 @@ body {
 }
 
 #main-content {
-  margin-top: 4rem;
-  margin-bottom: 3rem;
   background: #fff;
-  border-radius: $main-border-radius;
-  box-shadow: 0 1px 1px 0 rgba(10, 16, 34, .2);
   border-top: $header-border solid $accent-color;
   border-bottom: $header-border solid $accent-color;
   position: relative;
@@ -71,7 +67,7 @@ body {
 }
 
 #main {
-  padding: 3em;
+  padding: 1em;
 }
 
 #main-nav {
@@ -139,7 +135,19 @@ body {
   }
 }
 
+/* > mobile view */
 @media(min-width:576px) {
+  #main {
+    padding: 3em;  
+  }
+
+  #main-content {
+    margin-top: 4rem;
+    margin-bottom: 3rem;
+    border-radius: $main-border-radius;
+    box-shadow: 0 1px 1px 0 rgba(10, 16, 34, .2);        
+  }
+
   #header-search {
   
     input {

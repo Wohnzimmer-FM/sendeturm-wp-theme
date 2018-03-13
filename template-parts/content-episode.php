@@ -5,7 +5,7 @@ $episode = \Podlove\get_episode();
 <?php the_title('<h1 class="entry-title mb-4">', '</h1>'); ?>
 
 <div id="current-episode" class="row pb-4">
-    <div class="col-md-8">
+    <div class="col-lg-8">
         <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
             <!-- Player -->
             <div class="mb-4">
@@ -39,7 +39,7 @@ $episode = \Podlove\get_episode();
                 <?php */ ?>
 
 
-                <div class="dropdown d-inline">
+                <div class="dropdown d-inline mt-1 mt-sm-0">
                     <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="fa fa-share mr-2"></i><?php echo _e('Share', 'sendeturm'); ?>
                     </a>
@@ -57,7 +57,7 @@ $episode = \Podlove\get_episode();
         </article>
     </div>
 
-    <div class="col-md-4">
+    <div class="col-lg-4">
         <!-- Contributors list -->
         <div class="card mb-4 bg-secondary">
             <div class="card-header">
@@ -68,14 +68,14 @@ $episode = \Podlove\get_episode();
             <?php foreach($episode->contributors() as $contributor): ?>
                 <li class="list-group-item contributor">
                     <div class="row no-gutters">
-                        <div class="contributor-pic col mb-sm-2">
+                        <div class="contributor-pic col mb-2 mb-sm-0">
                             <img src="<?php echo $contributor->image()->url(array('width' => 50, 'height' => 50)); ?>" />
                         </div>
-                        <div class="contributor-name col-8 col-sm-8 col-md-12 col-lg-5 col-xl-6">
+                        <div class="contributor-name col-12 col-sm-8 col-md-9 col-lg-5 col-xl-6">
                             <h4 class="name"><?php echo $contributor->name(); ?></h4>
                             <!--<a href="#"><?php echo _e('Author\'s page', 'sendeturm'); ?></a>-->
                         </div>
-                        <div class="contributor-links col mt-2 mt-lg-0">
+                        <div class="contributor-links col">
                             <ul class="nav justify-content-lg-end">
                                 <?php foreach($contributor->services() as $service): ?>
                                 <li class="nav-item mb-1 mr-1">
