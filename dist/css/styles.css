@@ -1321,18 +1321,22 @@ select.form-control:focus::-ms-value {
   .input-group-sm > .input-group-append > .form-control-plaintext.input-group-text,
   .input-group-sm > .input-group-prepend > .form-control-plaintext.btn, .comment-form
   .input-group-sm > .input-group-prepend > .form-control-plaintext#submit,
-  .input-group-sm > .input-group-prepend > .form-control-plaintext#cancel-comment-reply-link,
+  .input-group-sm > .input-group-prepend > .form-control-plaintext#cancel-comment-reply-link, .nav-links
+  .input-group-sm > .input-group-prepend > a.form-control-plaintext,
   .input-group-sm > .input-group-append > .form-control-plaintext.btn, .comment-form
   .input-group-sm > .input-group-append > .form-control-plaintext#submit,
-  .input-group-sm > .input-group-append > .form-control-plaintext#cancel-comment-reply-link, .form-control-plaintext.form-control-lg, .input-group-lg > .form-control-plaintext.form-control, .comment-form .input-group-lg > textarea.form-control-plaintext, .comment-form .input-group-lg > input.form-control-plaintext,
+  .input-group-sm > .input-group-append > .form-control-plaintext#cancel-comment-reply-link, .nav-links
+  .input-group-sm > .input-group-append > a.form-control-plaintext, .form-control-plaintext.form-control-lg, .input-group-lg > .form-control-plaintext.form-control, .comment-form .input-group-lg > textarea.form-control-plaintext, .comment-form .input-group-lg > input.form-control-plaintext,
   .input-group-lg > .input-group-prepend > .form-control-plaintext.input-group-text,
   .input-group-lg > .input-group-append > .form-control-plaintext.input-group-text,
   .input-group-lg > .input-group-prepend > .form-control-plaintext.btn, .comment-form
   .input-group-lg > .input-group-prepend > .form-control-plaintext#submit,
-  .input-group-lg > .input-group-prepend > .form-control-plaintext#cancel-comment-reply-link,
+  .input-group-lg > .input-group-prepend > .form-control-plaintext#cancel-comment-reply-link, .nav-links
+  .input-group-lg > .input-group-prepend > a.form-control-plaintext,
   .input-group-lg > .input-group-append > .form-control-plaintext.btn, .comment-form
   .input-group-lg > .input-group-append > .form-control-plaintext#submit,
-  .input-group-lg > .input-group-append > .form-control-plaintext#cancel-comment-reply-link {
+  .input-group-lg > .input-group-append > .form-control-plaintext#cancel-comment-reply-link, .nav-links
+  .input-group-lg > .input-group-append > a.form-control-plaintext {
     padding-right: 0;
     padding-left: 0; }
 
@@ -1341,10 +1345,12 @@ select.form-control:focus::-ms-value {
 .input-group-sm > .input-group-append > .input-group-text,
 .input-group-sm > .input-group-prepend > .btn, .comment-form
 .input-group-sm > .input-group-prepend > #submit,
-.input-group-sm > .input-group-prepend > #cancel-comment-reply-link,
+.input-group-sm > .input-group-prepend > #cancel-comment-reply-link, .nav-links
+.input-group-sm > .input-group-prepend > a,
 .input-group-sm > .input-group-append > .btn, .comment-form
 .input-group-sm > .input-group-append > #submit,
-.input-group-sm > .input-group-append > #cancel-comment-reply-link {
+.input-group-sm > .input-group-append > #cancel-comment-reply-link, .nav-links
+.input-group-sm > .input-group-append > a {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   line-height: 1.5;
@@ -1366,10 +1372,12 @@ select.form-control-sm:not([size]):not([multiple]), .input-group-sm > select.for
 .input-group-lg > .input-group-append > .input-group-text,
 .input-group-lg > .input-group-prepend > .btn, .comment-form
 .input-group-lg > .input-group-prepend > #submit,
-.input-group-lg > .input-group-prepend > #cancel-comment-reply-link,
+.input-group-lg > .input-group-prepend > #cancel-comment-reply-link, .nav-links
+.input-group-lg > .input-group-prepend > a,
 .input-group-lg > .input-group-append > .btn, .comment-form
 .input-group-lg > .input-group-append > #submit,
-.input-group-lg > .input-group-append > #cancel-comment-reply-link {
+.input-group-lg > .input-group-append > #cancel-comment-reply-link, .nav-links
+.input-group-lg > .input-group-append > a {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   line-height: 1.5;
@@ -1634,7 +1642,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
     .form-inline .custom-control-label {
       margin-bottom: 0; } }
 
-.btn, .comment-form #submit, #cancel-comment-reply-link {
+.btn, .comment-form #submit, #cancel-comment-reply-link, .nav-links a {
   display: inline-block;
   font-weight: 400;
   text-align: center;
@@ -1647,48 +1655,52 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   line-height: 1.5;
   border-radius: 0.25rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
-  .btn:hover, .comment-form #submit:hover, #cancel-comment-reply-link:hover, .btn:focus, .comment-form #submit:focus, #cancel-comment-reply-link:focus {
+  .btn:hover, .comment-form #submit:hover, #cancel-comment-reply-link:hover, .nav-links a:hover, .btn:focus, .comment-form #submit:focus, #cancel-comment-reply-link:focus, .nav-links a:focus {
     text-decoration: none; }
-  .btn:focus, .comment-form #submit:focus, #cancel-comment-reply-link:focus, .btn.focus, .comment-form .focus#submit, .focus#cancel-comment-reply-link {
+  .btn:focus, .comment-form #submit:focus, #cancel-comment-reply-link:focus, .nav-links a:focus, .btn.focus, .comment-form .focus#submit, .focus#cancel-comment-reply-link, .nav-links a.focus {
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgba(33, 150, 243, 0.25); }
-  .btn.disabled, .comment-form .disabled#submit, .disabled#cancel-comment-reply-link, .btn:disabled, .comment-form #submit:disabled, #cancel-comment-reply-link:disabled {
+  .btn.disabled, .comment-form .disabled#submit, .disabled#cancel-comment-reply-link, .nav-links a.disabled, .btn:disabled, .comment-form #submit:disabled, #cancel-comment-reply-link:disabled, .nav-links a:disabled {
     opacity: 0.65; }
-  .btn:not(:disabled):not(.disabled), .comment-form #submit:not(:disabled):not(.disabled), #cancel-comment-reply-link:not(:disabled):not(.disabled) {
+  .btn:not(:disabled):not(.disabled), .comment-form #submit:not(:disabled):not(.disabled), #cancel-comment-reply-link:not(:disabled):not(.disabled), .nav-links a:not(:disabled):not(.disabled) {
     cursor: pointer; }
-  .btn:not(:disabled):not(.disabled):active, .comment-form #submit:not(:disabled):not(.disabled):active, #cancel-comment-reply-link:not(:disabled):not(.disabled):active, .btn:not(:disabled):not(.disabled).active, .btn.current_page_item:not(:disabled):not(.disabled), .comment-form .current_page_item#submit:not(:disabled):not(.disabled), .current_page_item#cancel-comment-reply-link:not(:disabled):not(.disabled), .comment-form #submit:not(:disabled):not(.disabled).active, #cancel-comment-reply-link:not(:disabled):not(.disabled).active {
+  .btn:not(:disabled):not(.disabled):active, .comment-form #submit:not(:disabled):not(.disabled):active, #cancel-comment-reply-link:not(:disabled):not(.disabled):active, .nav-links a:not(:disabled):not(.disabled):active, .btn:not(:disabled):not(.disabled).active, .btn.current_page_item:not(:disabled):not(.disabled), .comment-form .current_page_item#submit:not(:disabled):not(.disabled), .current_page_item#cancel-comment-reply-link:not(:disabled):not(.disabled), .nav-links a.current_page_item:not(:disabled):not(.disabled), .comment-form #submit:not(:disabled):not(.disabled).active, #cancel-comment-reply-link:not(:disabled):not(.disabled).active, .nav-links a:not(:disabled):not(.disabled).active {
     background-image: none; }
 
-a.btn.disabled, .comment-form a.disabled#submit, a.disabled#cancel-comment-reply-link,
+a.btn.disabled, .comment-form a.disabled#submit, a.disabled#cancel-comment-reply-link, .nav-links a.disabled,
 fieldset:disabled a.btn,
 fieldset:disabled .comment-form a#submit, .comment-form
 fieldset:disabled a#submit,
-fieldset:disabled a#cancel-comment-reply-link {
+fieldset:disabled a#cancel-comment-reply-link,
+fieldset:disabled .nav-links a, .nav-links
+fieldset:disabled a {
   pointer-events: none; }
 
-.btn-primary, .comment-form #submit {
+.btn-primary, .comment-form #submit, .nav-links a {
   color: #fff;
   background-color: #2196F3;
   border-color: #2196F3; }
-  .btn-primary:hover, .comment-form #submit:hover {
+  .btn-primary:hover, .comment-form #submit:hover, .nav-links a:hover {
     color: #fff;
     background-color: #0c83e2;
     border-color: #0c7cd5; }
-  .btn-primary:focus, .comment-form #submit:focus, .btn-primary.focus, .comment-form .focus#submit {
+  .btn-primary:focus, .comment-form #submit:focus, .nav-links a:focus, .btn-primary.focus, .comment-form .focus#submit, .nav-links a.focus {
     box-shadow: 0 0 0 0.2rem rgba(33, 150, 243, 0.5); }
-  .btn-primary.disabled, .comment-form .disabled#submit, .btn-primary:disabled, .comment-form #submit:disabled {
+  .btn-primary.disabled, .comment-form .disabled#submit, .nav-links a.disabled, .btn-primary:disabled, .comment-form #submit:disabled, .nav-links a:disabled {
     color: #fff;
     background-color: #2196F3;
     border-color: #2196F3; }
-  .btn-primary:not(:disabled):not(.disabled):active, .comment-form #submit:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .btn-primary.current_page_item:not(:disabled):not(.disabled), .comment-form .current_page_item#submit:not(:disabled):not(.disabled), .comment-form #submit:not(:disabled):not(.disabled).active,
+  .btn-primary:not(:disabled):not(.disabled):active, .comment-form #submit:not(:disabled):not(.disabled):active, .nav-links a:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .btn-primary.current_page_item:not(:disabled):not(.disabled), .comment-form .current_page_item#submit:not(:disabled):not(.disabled), .nav-links a.current_page_item:not(:disabled):not(.disabled), .comment-form #submit:not(:disabled):not(.disabled).active, .nav-links a:not(:disabled):not(.disabled).active,
   .show > .btn-primary.dropdown-toggle, .comment-form
-  .show > .dropdown-toggle#submit {
+  .show > .dropdown-toggle#submit, .nav-links
+  .show > a.dropdown-toggle {
     color: #fff;
     background-color: #0c7cd5;
     border-color: #0b75c9; }
-    .btn-primary:not(:disabled):not(.disabled):active:focus, .comment-form #submit:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus, .btn-primary.current_page_item:not(:disabled):not(.disabled):focus, .comment-form .current_page_item#submit:not(:disabled):not(.disabled):focus, .comment-form #submit:not(:disabled):not(.disabled).active:focus,
+    .btn-primary:not(:disabled):not(.disabled):active:focus, .comment-form #submit:not(:disabled):not(.disabled):active:focus, .nav-links a:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus, .btn-primary.current_page_item:not(:disabled):not(.disabled):focus, .comment-form .current_page_item#submit:not(:disabled):not(.disabled):focus, .nav-links a.current_page_item:not(:disabled):not(.disabled):focus, .comment-form #submit:not(:disabled):not(.disabled).active:focus, .nav-links a:not(:disabled):not(.disabled).active:focus,
     .show > .btn-primary.dropdown-toggle:focus, .comment-form
-    .show > .dropdown-toggle#submit:focus {
+    .show > .dropdown-toggle#submit:focus, .nav-links
+    .show > a.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(33, 150, 243, 0.5); }
 
 .btn-secondary {
@@ -2054,13 +2066,13 @@ fieldset:disabled a#cancel-comment-reply-link {
   .btn-link:disabled, .btn-link.disabled {
     color: #6c757d; }
 
-.btn-lg, .btn-group-lg > .btn, .comment-form .btn-group-lg > #submit, .btn-group-lg > #cancel-comment-reply-link {
+.btn-lg, .btn-group-lg > .btn, .comment-form .btn-group-lg > #submit, .btn-group-lg > #cancel-comment-reply-link, .nav-links .btn-group-lg > a {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   line-height: 1.5;
   border-radius: 0.3rem; }
 
-.btn-sm, .btn-group-sm > .btn, .comment-form .btn-group-sm > #submit, .btn-group-sm > #cancel-comment-reply-link {
+.btn-sm, .btn-group-sm > .btn, .comment-form .btn-group-sm > #submit, .btn-group-sm > #cancel-comment-reply-link, .nav-links .btn-group-sm > a {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   line-height: 1.5;
@@ -2255,63 +2267,95 @@ tbody.collapse.show {
   position: relative;
   display: inline-flex;
   vertical-align: middle; }
-  .btn-group > .btn, .comment-form .btn-group > #submit, .btn-group > #cancel-comment-reply-link,
+  .btn-group > .btn, .comment-form .btn-group > #submit, .btn-group > #cancel-comment-reply-link, .nav-links .btn-group > a,
   .btn-group-vertical > .btn, .comment-form
   .btn-group-vertical > #submit,
-  .btn-group-vertical > #cancel-comment-reply-link {
+  .btn-group-vertical > #cancel-comment-reply-link, .nav-links
+  .btn-group-vertical > a {
     position: relative;
     flex: 0 1 auto; }
-    .btn-group > .btn:hover, .comment-form .btn-group > #submit:hover, .btn-group > #cancel-comment-reply-link:hover,
+    .btn-group > .btn:hover, .comment-form .btn-group > #submit:hover, .btn-group > #cancel-comment-reply-link:hover, .nav-links .btn-group > a:hover,
     .btn-group-vertical > .btn:hover, .comment-form
     .btn-group-vertical > #submit:hover,
-    .btn-group-vertical > #cancel-comment-reply-link:hover {
+    .btn-group-vertical > #cancel-comment-reply-link:hover, .nav-links
+    .btn-group-vertical > a:hover {
       z-index: 1; }
-    .btn-group > .btn:focus, .comment-form .btn-group > #submit:focus, .btn-group > #cancel-comment-reply-link:focus, .btn-group > .btn:active, .comment-form .btn-group > #submit:active, .btn-group > #cancel-comment-reply-link:active, .btn-group > .btn.active, .btn-group > .btn.current_page_item, .comment-form .btn-group > .current_page_item#submit, .btn-group > .current_page_item#cancel-comment-reply-link, .comment-form .btn-group > .active#submit, .btn-group > .active#cancel-comment-reply-link,
+    .btn-group > .btn:focus, .comment-form .btn-group > #submit:focus, .btn-group > #cancel-comment-reply-link:focus, .nav-links .btn-group > a:focus, .btn-group > .btn:active, .comment-form .btn-group > #submit:active, .btn-group > #cancel-comment-reply-link:active, .nav-links .btn-group > a:active, .btn-group > .btn.active, .btn-group > .btn.current_page_item, .comment-form .btn-group > .current_page_item#submit, .btn-group > .current_page_item#cancel-comment-reply-link, .nav-links .btn-group > a.current_page_item, .comment-form .btn-group > .active#submit, .btn-group > .active#cancel-comment-reply-link, .nav-links .btn-group > a.active,
     .btn-group-vertical > .btn:focus, .comment-form
     .btn-group-vertical > #submit:focus,
-    .btn-group-vertical > #cancel-comment-reply-link:focus,
+    .btn-group-vertical > #cancel-comment-reply-link:focus, .nav-links
+    .btn-group-vertical > a:focus,
     .btn-group-vertical > .btn:active, .comment-form
     .btn-group-vertical > #submit:active,
-    .btn-group-vertical > #cancel-comment-reply-link:active,
+    .btn-group-vertical > #cancel-comment-reply-link:active, .nav-links
+    .btn-group-vertical > a:active,
     .btn-group-vertical > .btn.active,
     .btn-group-vertical > .btn.current_page_item, .comment-form
     .btn-group-vertical > .current_page_item#submit,
-    .btn-group-vertical > .current_page_item#cancel-comment-reply-link, .comment-form
+    .btn-group-vertical > .current_page_item#cancel-comment-reply-link, .nav-links
+    .btn-group-vertical > a.current_page_item, .comment-form
     .btn-group-vertical > .active#submit,
-    .btn-group-vertical > .active#cancel-comment-reply-link {
+    .btn-group-vertical > .active#cancel-comment-reply-link, .nav-links
+    .btn-group-vertical > a.active {
       z-index: 1; }
-  .btn-group .btn + .btn, .btn-group .comment-form #submit + .btn, .comment-form .btn-group #submit + .btn, .btn-group #cancel-comment-reply-link + .btn, .btn-group .comment-form .btn + #submit, .comment-form .btn-group .btn + #submit, .btn-group .comment-form #submit + #submit, .comment-form .btn-group #submit + #submit, .btn-group .comment-form #cancel-comment-reply-link + #submit, .comment-form .btn-group #cancel-comment-reply-link + #submit, .btn-group .btn + #cancel-comment-reply-link, .btn-group .comment-form #submit + #cancel-comment-reply-link, .comment-form .btn-group #submit + #cancel-comment-reply-link, .btn-group #cancel-comment-reply-link + #cancel-comment-reply-link,
+  .btn-group .btn + .btn, .btn-group .comment-form #submit + .btn, .comment-form .btn-group #submit + .btn, .btn-group #cancel-comment-reply-link + .btn, .btn-group .nav-links a + .btn, .nav-links .btn-group a + .btn, .btn-group .comment-form .btn + #submit, .comment-form .btn-group .btn + #submit, .btn-group .comment-form #submit + #submit, .comment-form .btn-group #submit + #submit, .btn-group .comment-form #cancel-comment-reply-link + #submit, .comment-form .btn-group #cancel-comment-reply-link + #submit, .btn-group .nav-links .comment-form a + #submit, .comment-form .btn-group .nav-links a + #submit, .nav-links .btn-group .comment-form a + #submit, .comment-form .nav-links .btn-group a + #submit, .btn-group .btn + #cancel-comment-reply-link, .btn-group .comment-form #submit + #cancel-comment-reply-link, .comment-form .btn-group #submit + #cancel-comment-reply-link, .btn-group #cancel-comment-reply-link + #cancel-comment-reply-link, .btn-group .nav-links a + #cancel-comment-reply-link, .nav-links .btn-group a + #cancel-comment-reply-link, .btn-group .nav-links .btn + a, .nav-links .btn-group .btn + a, .btn-group .comment-form .nav-links #submit + a, .nav-links .btn-group .comment-form #submit + a, .comment-form .btn-group .nav-links #submit + a, .nav-links .comment-form .btn-group #submit + a, .btn-group .nav-links #cancel-comment-reply-link + a, .nav-links .btn-group #cancel-comment-reply-link + a, .btn-group .nav-links a + a, .nav-links .btn-group a + a,
   .btn-group .btn + .btn-group,
   .btn-group .comment-form #submit + .btn-group, .comment-form
   .btn-group #submit + .btn-group,
   .btn-group #cancel-comment-reply-link + .btn-group,
+  .btn-group .nav-links a + .btn-group, .nav-links
+  .btn-group a + .btn-group,
   .btn-group .btn-group + .btn,
   .btn-group .comment-form .btn-group + #submit, .comment-form
   .btn-group .btn-group + #submit,
   .btn-group .btn-group + #cancel-comment-reply-link,
+  .btn-group .nav-links .btn-group + a, .nav-links
+  .btn-group .btn-group + a,
   .btn-group .btn-group + .btn-group,
   .btn-group-vertical .btn + .btn,
   .btn-group-vertical .comment-form #submit + .btn, .comment-form
   .btn-group-vertical #submit + .btn,
   .btn-group-vertical #cancel-comment-reply-link + .btn,
+  .btn-group-vertical .nav-links a + .btn, .nav-links
+  .btn-group-vertical a + .btn,
   .btn-group-vertical .comment-form .btn + #submit, .comment-form
   .btn-group-vertical .btn + #submit,
   .btn-group-vertical .comment-form #submit + #submit, .comment-form
   .btn-group-vertical #submit + #submit,
   .btn-group-vertical .comment-form #cancel-comment-reply-link + #submit, .comment-form
   .btn-group-vertical #cancel-comment-reply-link + #submit,
+  .btn-group-vertical .nav-links .comment-form a + #submit, .comment-form
+  .btn-group-vertical .nav-links a + #submit, .nav-links
+  .btn-group-vertical .comment-form a + #submit, .comment-form .nav-links
+  .btn-group-vertical a + #submit,
   .btn-group-vertical .btn + #cancel-comment-reply-link,
   .btn-group-vertical .comment-form #submit + #cancel-comment-reply-link, .comment-form
   .btn-group-vertical #submit + #cancel-comment-reply-link,
   .btn-group-vertical #cancel-comment-reply-link + #cancel-comment-reply-link,
+  .btn-group-vertical .nav-links a + #cancel-comment-reply-link, .nav-links
+  .btn-group-vertical a + #cancel-comment-reply-link,
+  .btn-group-vertical .nav-links .btn + a, .nav-links
+  .btn-group-vertical .btn + a,
+  .btn-group-vertical .comment-form .nav-links #submit + a, .nav-links
+  .btn-group-vertical .comment-form #submit + a, .comment-form
+  .btn-group-vertical .nav-links #submit + a, .nav-links .comment-form
+  .btn-group-vertical #submit + a,
+  .btn-group-vertical .nav-links #cancel-comment-reply-link + a, .nav-links
+  .btn-group-vertical #cancel-comment-reply-link + a,
+  .btn-group-vertical .nav-links a + a, .nav-links
+  .btn-group-vertical a + a,
   .btn-group-vertical .btn + .btn-group,
   .btn-group-vertical .comment-form #submit + .btn-group, .comment-form
   .btn-group-vertical #submit + .btn-group,
   .btn-group-vertical #cancel-comment-reply-link + .btn-group,
+  .btn-group-vertical .nav-links a + .btn-group, .nav-links
+  .btn-group-vertical a + .btn-group,
   .btn-group-vertical .btn-group + .btn,
   .btn-group-vertical .comment-form .btn-group + #submit, .comment-form
   .btn-group-vertical .btn-group + #submit,
   .btn-group-vertical .btn-group + #cancel-comment-reply-link,
+  .btn-group-vertical .nav-links .btn-group + a, .nav-links
+  .btn-group-vertical .btn-group + a,
   .btn-group-vertical .btn-group + .btn-group {
     margin-left: -1px; }
 
@@ -2322,20 +2366,22 @@ tbody.collapse.show {
   .btn-toolbar .input-group {
     width: auto; }
 
-.btn-group > .btn:first-child, .comment-form .btn-group > #submit:first-child, .btn-group > #cancel-comment-reply-link:first-child {
+.btn-group > .btn:first-child, .comment-form .btn-group > #submit:first-child, .btn-group > #cancel-comment-reply-link:first-child, .nav-links .btn-group > a:first-child {
   margin-left: 0; }
 
-.btn-group > .btn:not(:last-child):not(.dropdown-toggle), .comment-form .btn-group > #submit:not(:last-child):not(.dropdown-toggle), .btn-group > #cancel-comment-reply-link:not(:last-child):not(.dropdown-toggle),
+.btn-group > .btn:not(:last-child):not(.dropdown-toggle), .comment-form .btn-group > #submit:not(:last-child):not(.dropdown-toggle), .btn-group > #cancel-comment-reply-link:not(:last-child):not(.dropdown-toggle), .nav-links .btn-group > a:not(:last-child):not(.dropdown-toggle),
 .btn-group > .btn-group:not(:last-child) > .btn, .comment-form
 .btn-group > .btn-group:not(:last-child) > #submit,
-.btn-group > .btn-group:not(:last-child) > #cancel-comment-reply-link {
+.btn-group > .btn-group:not(:last-child) > #cancel-comment-reply-link, .nav-links
+.btn-group > .btn-group:not(:last-child) > a {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0; }
 
-.btn-group > .btn:not(:first-child), .comment-form .btn-group > #submit:not(:first-child), .btn-group > #cancel-comment-reply-link:not(:first-child),
+.btn-group > .btn:not(:first-child), .comment-form .btn-group > #submit:not(:first-child), .btn-group > #cancel-comment-reply-link:not(:first-child), .nav-links .btn-group > a:not(:first-child),
 .btn-group > .btn-group:not(:first-child) > .btn, .comment-form
 .btn-group > .btn-group:not(:first-child) > #submit,
-.btn-group > .btn-group:not(:first-child) > #cancel-comment-reply-link {
+.btn-group > .btn-group:not(:first-child) > #cancel-comment-reply-link, .nav-links
+.btn-group > .btn-group:not(:first-child) > a {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0; }
 
@@ -2345,11 +2391,11 @@ tbody.collapse.show {
   .dropdown-toggle-split::after {
     margin-left: 0; }
 
-.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .comment-form .btn-group-sm > #submit + .dropdown-toggle-split, .btn-group-sm > #cancel-comment-reply-link + .dropdown-toggle-split {
+.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .comment-form .btn-group-sm > #submit + .dropdown-toggle-split, .btn-group-sm > #cancel-comment-reply-link + .dropdown-toggle-split, .nav-links .btn-group-sm > a + .dropdown-toggle-split {
   padding-right: 0.375rem;
   padding-left: 0.375rem; }
 
-.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .comment-form .btn-group-lg > #submit + .dropdown-toggle-split, .btn-group-lg > #cancel-comment-reply-link + .dropdown-toggle-split {
+.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .comment-form .btn-group-lg > #submit + .dropdown-toggle-split, .btn-group-lg > #cancel-comment-reply-link + .dropdown-toggle-split, .nav-links .btn-group-lg > a + .dropdown-toggle-split {
   padding-right: 0.75rem;
   padding-left: 0.75rem; }
 
@@ -2357,47 +2403,55 @@ tbody.collapse.show {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center; }
-  .btn-group-vertical .btn, .btn-group-vertical .comment-form #submit, .comment-form .btn-group-vertical #submit, .btn-group-vertical #cancel-comment-reply-link,
+  .btn-group-vertical .btn, .btn-group-vertical .comment-form #submit, .comment-form .btn-group-vertical #submit, .btn-group-vertical #cancel-comment-reply-link, .btn-group-vertical .nav-links a, .nav-links .btn-group-vertical a,
   .btn-group-vertical .btn-group {
     width: 100%; }
-  .btn-group-vertical > .btn + .btn, .comment-form .btn-group-vertical > #submit + .btn, .btn-group-vertical > #cancel-comment-reply-link + .btn, .comment-form .btn-group-vertical > .btn + #submit, .comment-form .btn-group-vertical > #submit + #submit, .comment-form .btn-group-vertical > #cancel-comment-reply-link + #submit, .btn-group-vertical > .btn + #cancel-comment-reply-link, .comment-form .btn-group-vertical > #submit + #cancel-comment-reply-link, .btn-group-vertical > #cancel-comment-reply-link + #cancel-comment-reply-link,
+  .btn-group-vertical > .btn + .btn, .comment-form .btn-group-vertical > #submit + .btn, .btn-group-vertical > #cancel-comment-reply-link + .btn, .nav-links .btn-group-vertical > a + .btn, .comment-form .btn-group-vertical > .btn + #submit, .comment-form .btn-group-vertical > #submit + #submit, .comment-form .btn-group-vertical > #cancel-comment-reply-link + #submit, .nav-links .comment-form .btn-group-vertical > a + #submit, .comment-form .nav-links .btn-group-vertical > a + #submit, .btn-group-vertical > .btn + #cancel-comment-reply-link, .comment-form .btn-group-vertical > #submit + #cancel-comment-reply-link, .btn-group-vertical > #cancel-comment-reply-link + #cancel-comment-reply-link, .nav-links .btn-group-vertical > a + #cancel-comment-reply-link, .nav-links .btn-group-vertical > .btn + a, .comment-form .nav-links .btn-group-vertical > #submit + a, .nav-links .comment-form .btn-group-vertical > #submit + a, .nav-links .btn-group-vertical > #cancel-comment-reply-link + a, .nav-links .btn-group-vertical > a + a,
   .btn-group-vertical > .btn + .btn-group, .comment-form
   .btn-group-vertical > #submit + .btn-group,
-  .btn-group-vertical > #cancel-comment-reply-link + .btn-group,
+  .btn-group-vertical > #cancel-comment-reply-link + .btn-group, .nav-links
+  .btn-group-vertical > a + .btn-group,
   .btn-group-vertical > .btn-group + .btn, .comment-form
   .btn-group-vertical > .btn-group + #submit,
-  .btn-group-vertical > .btn-group + #cancel-comment-reply-link,
+  .btn-group-vertical > .btn-group + #cancel-comment-reply-link, .nav-links
+  .btn-group-vertical > .btn-group + a,
   .btn-group-vertical > .btn-group + .btn-group {
     margin-top: -1px;
     margin-left: 0; }
-  .btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), .comment-form .btn-group-vertical > #submit:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > #cancel-comment-reply-link:not(:last-child):not(.dropdown-toggle),
+  .btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), .comment-form .btn-group-vertical > #submit:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > #cancel-comment-reply-link:not(:last-child):not(.dropdown-toggle), .nav-links .btn-group-vertical > a:not(:last-child):not(.dropdown-toggle),
   .btn-group-vertical > .btn-group:not(:last-child) > .btn, .comment-form
   .btn-group-vertical > .btn-group:not(:last-child) > #submit,
-  .btn-group-vertical > .btn-group:not(:last-child) > #cancel-comment-reply-link {
+  .btn-group-vertical > .btn-group:not(:last-child) > #cancel-comment-reply-link, .nav-links
+  .btn-group-vertical > .btn-group:not(:last-child) > a {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0; }
-  .btn-group-vertical > .btn:not(:first-child), .comment-form .btn-group-vertical > #submit:not(:first-child), .btn-group-vertical > #cancel-comment-reply-link:not(:first-child),
+  .btn-group-vertical > .btn:not(:first-child), .comment-form .btn-group-vertical > #submit:not(:first-child), .btn-group-vertical > #cancel-comment-reply-link:not(:first-child), .nav-links .btn-group-vertical > a:not(:first-child),
   .btn-group-vertical > .btn-group:not(:first-child) > .btn, .comment-form
   .btn-group-vertical > .btn-group:not(:first-child) > #submit,
-  .btn-group-vertical > .btn-group:not(:first-child) > #cancel-comment-reply-link {
+  .btn-group-vertical > .btn-group:not(:first-child) > #cancel-comment-reply-link, .nav-links
+  .btn-group-vertical > .btn-group:not(:first-child) > a {
     border-top-left-radius: 0;
     border-top-right-radius: 0; }
 
-.btn-group-toggle > .btn, .comment-form .btn-group-toggle > #submit, .btn-group-toggle > #cancel-comment-reply-link,
+.btn-group-toggle > .btn, .comment-form .btn-group-toggle > #submit, .btn-group-toggle > #cancel-comment-reply-link, .nav-links .btn-group-toggle > a,
 .btn-group-toggle > .btn-group > .btn, .comment-form
 .btn-group-toggle > .btn-group > #submit,
-.btn-group-toggle > .btn-group > #cancel-comment-reply-link {
+.btn-group-toggle > .btn-group > #cancel-comment-reply-link, .nav-links
+.btn-group-toggle > .btn-group > a {
   margin-bottom: 0; }
-  .btn-group-toggle > .btn input[type="radio"], .comment-form .btn-group-toggle > #submit input[type="radio"], .btn-group-toggle > #cancel-comment-reply-link input[type="radio"],
+  .btn-group-toggle > .btn input[type="radio"], .comment-form .btn-group-toggle > #submit input[type="radio"], .btn-group-toggle > #cancel-comment-reply-link input[type="radio"], .nav-links .btn-group-toggle > a input[type="radio"],
   .btn-group-toggle > .btn input[type="checkbox"], .comment-form
   .btn-group-toggle > #submit input[type="checkbox"],
-  .btn-group-toggle > #cancel-comment-reply-link input[type="checkbox"],
+  .btn-group-toggle > #cancel-comment-reply-link input[type="checkbox"], .nav-links
+  .btn-group-toggle > a input[type="checkbox"],
   .btn-group-toggle > .btn-group > .btn input[type="radio"], .comment-form
   .btn-group-toggle > .btn-group > #submit input[type="radio"],
-  .btn-group-toggle > .btn-group > #cancel-comment-reply-link input[type="radio"],
+  .btn-group-toggle > .btn-group > #cancel-comment-reply-link input[type="radio"], .nav-links
+  .btn-group-toggle > .btn-group > a input[type="radio"],
   .btn-group-toggle > .btn-group > .btn input[type="checkbox"], .comment-form
   .btn-group-toggle > .btn-group > #submit input[type="checkbox"],
-  .btn-group-toggle > .btn-group > #cancel-comment-reply-link input[type="checkbox"] {
+  .btn-group-toggle > .btn-group > #cancel-comment-reply-link input[type="checkbox"], .nav-links
+  .btn-group-toggle > .btn-group > a input[type="checkbox"] {
     position: absolute;
     clip: rect(0, 0, 0, 0);
     pointer-events: none; }
@@ -2460,46 +2514,74 @@ tbody.collapse.show {
 .input-group-prepend,
 .input-group-append {
   display: flex; }
-  .input-group-prepend .btn, .input-group-prepend .comment-form #submit, .comment-form .input-group-prepend #submit, .input-group-prepend #cancel-comment-reply-link,
+  .input-group-prepend .btn, .input-group-prepend .comment-form #submit, .comment-form .input-group-prepend #submit, .input-group-prepend #cancel-comment-reply-link, .input-group-prepend .nav-links a, .nav-links .input-group-prepend a,
   .input-group-append .btn,
   .input-group-append .comment-form #submit, .comment-form
   .input-group-append #submit,
-  .input-group-append #cancel-comment-reply-link {
+  .input-group-append #cancel-comment-reply-link,
+  .input-group-append .nav-links a, .nav-links
+  .input-group-append a {
     position: relative;
     z-index: 2; }
-  .input-group-prepend .btn + .btn, .input-group-prepend .comment-form #submit + .btn, .comment-form .input-group-prepend #submit + .btn, .input-group-prepend #cancel-comment-reply-link + .btn, .input-group-prepend .comment-form .btn + #submit, .comment-form .input-group-prepend .btn + #submit, .input-group-prepend .comment-form #submit + #submit, .comment-form .input-group-prepend #submit + #submit, .input-group-prepend .comment-form #cancel-comment-reply-link + #submit, .comment-form .input-group-prepend #cancel-comment-reply-link + #submit, .input-group-prepend .btn + #cancel-comment-reply-link, .input-group-prepend .comment-form #submit + #cancel-comment-reply-link, .comment-form .input-group-prepend #submit + #cancel-comment-reply-link, .input-group-prepend #cancel-comment-reply-link + #cancel-comment-reply-link,
+  .input-group-prepend .btn + .btn, .input-group-prepend .comment-form #submit + .btn, .comment-form .input-group-prepend #submit + .btn, .input-group-prepend #cancel-comment-reply-link + .btn, .input-group-prepend .nav-links a + .btn, .nav-links .input-group-prepend a + .btn, .input-group-prepend .comment-form .btn + #submit, .comment-form .input-group-prepend .btn + #submit, .input-group-prepend .comment-form #submit + #submit, .comment-form .input-group-prepend #submit + #submit, .input-group-prepend .comment-form #cancel-comment-reply-link + #submit, .comment-form .input-group-prepend #cancel-comment-reply-link + #submit, .input-group-prepend .nav-links .comment-form a + #submit, .comment-form .input-group-prepend .nav-links a + #submit, .nav-links .input-group-prepend .comment-form a + #submit, .comment-form .nav-links .input-group-prepend a + #submit, .input-group-prepend .btn + #cancel-comment-reply-link, .input-group-prepend .comment-form #submit + #cancel-comment-reply-link, .comment-form .input-group-prepend #submit + #cancel-comment-reply-link, .input-group-prepend #cancel-comment-reply-link + #cancel-comment-reply-link, .input-group-prepend .nav-links a + #cancel-comment-reply-link, .nav-links .input-group-prepend a + #cancel-comment-reply-link, .input-group-prepend .nav-links .btn + a, .nav-links .input-group-prepend .btn + a, .input-group-prepend .comment-form .nav-links #submit + a, .nav-links .input-group-prepend .comment-form #submit + a, .comment-form .input-group-prepend .nav-links #submit + a, .nav-links .comment-form .input-group-prepend #submit + a, .input-group-prepend .nav-links #cancel-comment-reply-link + a, .nav-links .input-group-prepend #cancel-comment-reply-link + a, .input-group-prepend .nav-links a + a, .nav-links .input-group-prepend a + a,
   .input-group-prepend .btn + .input-group-text,
   .input-group-prepend .comment-form #submit + .input-group-text, .comment-form
   .input-group-prepend #submit + .input-group-text,
   .input-group-prepend #cancel-comment-reply-link + .input-group-text,
+  .input-group-prepend .nav-links a + .input-group-text, .nav-links
+  .input-group-prepend a + .input-group-text,
   .input-group-prepend .input-group-text + .input-group-text,
   .input-group-prepend .input-group-text + .btn,
   .input-group-prepend .comment-form .input-group-text + #submit, .comment-form
   .input-group-prepend .input-group-text + #submit,
   .input-group-prepend .input-group-text + #cancel-comment-reply-link,
+  .input-group-prepend .nav-links .input-group-text + a, .nav-links
+  .input-group-prepend .input-group-text + a,
   .input-group-append .btn + .btn,
   .input-group-append .comment-form #submit + .btn, .comment-form
   .input-group-append #submit + .btn,
   .input-group-append #cancel-comment-reply-link + .btn,
+  .input-group-append .nav-links a + .btn, .nav-links
+  .input-group-append a + .btn,
   .input-group-append .comment-form .btn + #submit, .comment-form
   .input-group-append .btn + #submit,
   .input-group-append .comment-form #submit + #submit, .comment-form
   .input-group-append #submit + #submit,
   .input-group-append .comment-form #cancel-comment-reply-link + #submit, .comment-form
   .input-group-append #cancel-comment-reply-link + #submit,
+  .input-group-append .nav-links .comment-form a + #submit, .comment-form
+  .input-group-append .nav-links a + #submit, .nav-links
+  .input-group-append .comment-form a + #submit, .comment-form .nav-links
+  .input-group-append a + #submit,
   .input-group-append .btn + #cancel-comment-reply-link,
   .input-group-append .comment-form #submit + #cancel-comment-reply-link, .comment-form
   .input-group-append #submit + #cancel-comment-reply-link,
   .input-group-append #cancel-comment-reply-link + #cancel-comment-reply-link,
+  .input-group-append .nav-links a + #cancel-comment-reply-link, .nav-links
+  .input-group-append a + #cancel-comment-reply-link,
+  .input-group-append .nav-links .btn + a, .nav-links
+  .input-group-append .btn + a,
+  .input-group-append .comment-form .nav-links #submit + a, .nav-links
+  .input-group-append .comment-form #submit + a, .comment-form
+  .input-group-append .nav-links #submit + a, .nav-links .comment-form
+  .input-group-append #submit + a,
+  .input-group-append .nav-links #cancel-comment-reply-link + a, .nav-links
+  .input-group-append #cancel-comment-reply-link + a,
+  .input-group-append .nav-links a + a, .nav-links
+  .input-group-append a + a,
   .input-group-append .btn + .input-group-text,
   .input-group-append .comment-form #submit + .input-group-text, .comment-form
   .input-group-append #submit + .input-group-text,
   .input-group-append #cancel-comment-reply-link + .input-group-text,
+  .input-group-append .nav-links a + .input-group-text, .nav-links
+  .input-group-append a + .input-group-text,
   .input-group-append .input-group-text + .input-group-text,
   .input-group-append .input-group-text + .btn,
   .input-group-append .comment-form .input-group-text + #submit, .comment-form
   .input-group-append .input-group-text + #submit,
-  .input-group-append .input-group-text + #cancel-comment-reply-link {
+  .input-group-append .input-group-text + #cancel-comment-reply-link,
+  .input-group-append .nav-links .input-group-text + a, .nav-links
+  .input-group-append .input-group-text + a {
     margin-left: -1px; }
 
 .input-group-prepend {
@@ -2526,28 +2608,32 @@ tbody.collapse.show {
   .input-group-text input[type="checkbox"] {
     margin-top: 0; }
 
-.input-group > .input-group-prepend > .btn, .comment-form .input-group > .input-group-prepend > #submit, .input-group > .input-group-prepend > #cancel-comment-reply-link,
+.input-group > .input-group-prepend > .btn, .comment-form .input-group > .input-group-prepend > #submit, .input-group > .input-group-prepend > #cancel-comment-reply-link, .nav-links .input-group > .input-group-prepend > a,
 .input-group > .input-group-prepend > .input-group-text,
 .input-group > .input-group-append:not(:last-child) > .btn, .comment-form
 .input-group > .input-group-append:not(:last-child) > #submit,
-.input-group > .input-group-append:not(:last-child) > #cancel-comment-reply-link,
+.input-group > .input-group-append:not(:last-child) > #cancel-comment-reply-link, .nav-links
+.input-group > .input-group-append:not(:last-child) > a,
 .input-group > .input-group-append:not(:last-child) > .input-group-text,
 .input-group > .input-group-append:last-child > .btn:not(:last-child):not(.dropdown-toggle), .comment-form
 .input-group > .input-group-append:last-child > #submit:not(:last-child):not(.dropdown-toggle),
-.input-group > .input-group-append:last-child > #cancel-comment-reply-link:not(:last-child):not(.dropdown-toggle),
+.input-group > .input-group-append:last-child > #cancel-comment-reply-link:not(:last-child):not(.dropdown-toggle), .nav-links
+.input-group > .input-group-append:last-child > a:not(:last-child):not(.dropdown-toggle),
 .input-group > .input-group-append:last-child > .input-group-text:not(:last-child) {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0; }
 
-.input-group > .input-group-append > .btn, .comment-form .input-group > .input-group-append > #submit, .input-group > .input-group-append > #cancel-comment-reply-link,
+.input-group > .input-group-append > .btn, .comment-form .input-group > .input-group-append > #submit, .input-group > .input-group-append > #cancel-comment-reply-link, .nav-links .input-group > .input-group-append > a,
 .input-group > .input-group-append > .input-group-text,
 .input-group > .input-group-prepend:not(:first-child) > .btn, .comment-form
 .input-group > .input-group-prepend:not(:first-child) > #submit,
-.input-group > .input-group-prepend:not(:first-child) > #cancel-comment-reply-link,
+.input-group > .input-group-prepend:not(:first-child) > #cancel-comment-reply-link, .nav-links
+.input-group > .input-group-prepend:not(:first-child) > a,
 .input-group > .input-group-prepend:not(:first-child) > .input-group-text,
 .input-group > .input-group-prepend:first-child > .btn:not(:first-child), .comment-form
 .input-group > .input-group-prepend:first-child > #submit:not(:first-child),
-.input-group > .input-group-prepend:first-child > #cancel-comment-reply-link:not(:first-child),
+.input-group > .input-group-prepend:first-child > #cancel-comment-reply-link:not(:first-child), .nav-links
+.input-group > .input-group-prepend:first-child > a:not(:first-child),
 .input-group > .input-group-prepend:first-child > .input-group-text:not(:first-child) {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0; }
@@ -2730,37 +2816,47 @@ tbody.collapse.show {
     border-left: 1px solid #ced4da;
     border-radius: 0 0.25rem 0.25rem 0; }
 
-.nav {
+.nav, .nav-links {
   display: flex;
   flex-wrap: wrap;
   padding-left: 0;
   margin-bottom: 0;
   list-style: none; }
 
-.nav-link {
+.nav-link, .nav-links a {
   display: block;
   padding: 0.5rem 1rem; }
-  .nav-link:hover, .nav-link:focus {
+  .nav-link:hover, .nav-links a:hover, .nav-link:focus, .nav-links a:focus {
     text-decoration: none; }
-  .nav-link.disabled {
+  .nav-link.disabled, .nav-links a.disabled {
     color: #6c757d; }
 
 .nav-tabs {
   border-bottom: 1px solid #dee2e6; }
-  .nav-tabs .nav-item {
+  .nav-tabs .nav-item, .nav-tabs .nav-links .nav-previous, .nav-links .nav-tabs .nav-previous, .nav-tabs .nav-links .nav-next, .nav-links .nav-tabs .nav-next {
     margin-bottom: -1px; }
-  .nav-tabs .nav-link {
+  .nav-tabs .nav-link, .nav-tabs .nav-links a, .nav-links .nav-tabs a {
     border: 1px solid transparent;
     border-top-left-radius: 0.25rem;
     border-top-right-radius: 0.25rem; }
-    .nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus {
+    .nav-tabs .nav-link:hover, .nav-tabs .nav-links a:hover, .nav-links .nav-tabs a:hover, .nav-tabs .nav-link:focus, .nav-tabs .nav-links a:focus, .nav-links .nav-tabs a:focus {
       border-color: #e9ecef #e9ecef #dee2e6; }
-    .nav-tabs .nav-link.disabled {
+    .nav-tabs .nav-link.disabled, .nav-tabs .nav-links a.disabled, .nav-links .nav-tabs a.disabled {
       color: #6c757d;
       background-color: transparent;
       border-color: transparent; }
-  .nav-tabs .nav-link.active, .nav-tabs .nav-link.current_page_item,
-  .nav-tabs .nav-item.show .nav-link {
+  .nav-tabs .nav-link.active, .nav-tabs .nav-link.current_page_item, .nav-tabs .nav-links a.current_page_item, .nav-links .nav-tabs a.current_page_item, .nav-tabs .nav-links a.active, .nav-links .nav-tabs a.active,
+  .nav-tabs .nav-item.show .nav-link,
+  .nav-tabs .nav-links .show.nav-previous .nav-link, .nav-links
+  .nav-tabs .show.nav-previous .nav-link,
+  .nav-tabs .nav-links .show.nav-next .nav-link, .nav-links
+  .nav-tabs .show.nav-next .nav-link,
+  .nav-tabs .nav-item.show .nav-links a, .nav-links
+  .nav-tabs .nav-item.show a,
+  .nav-tabs .nav-links .show.nav-previous a, .nav-links
+  .nav-tabs .show.nav-previous a,
+  .nav-tabs .nav-links .show.nav-next a, .nav-links
+  .nav-tabs .show.nav-next a {
     color: #495057;
     background-color: #fff;
     border-color: #dee2e6 #dee2e6 #fff; }
@@ -2769,19 +2865,21 @@ tbody.collapse.show {
     border-top-left-radius: 0;
     border-top-right-radius: 0; }
 
-.nav-pills .nav-link {
+.nav-pills .nav-link, .nav-pills .nav-links a, .nav-links .nav-pills a {
   border-radius: 0.25rem; }
 
-.nav-pills .nav-link.active, .nav-pills .nav-link.current_page_item,
-.nav-pills .show > .nav-link {
+.nav-pills .nav-link.active, .nav-pills .nav-link.current_page_item, .nav-pills .nav-links a.current_page_item, .nav-links .nav-pills a.current_page_item, .nav-pills .nav-links a.active, .nav-links .nav-pills a.active,
+.nav-pills .show > .nav-link,
+.nav-pills .nav-links .show > a, .nav-links
+.nav-pills .show > a {
   color: #fff;
   background-color: #2196F3; }
 
-.nav-fill .nav-item {
+.nav-fill .nav-item, .nav-fill .nav-links .nav-previous, .nav-links .nav-fill .nav-previous, .nav-fill .nav-links .nav-next, .nav-links .nav-fill .nav-next {
   flex: 1 1 auto;
   text-align: center; }
 
-.nav-justified .nav-item {
+.nav-justified .nav-item, .nav-justified .nav-links .nav-previous, .nav-links .nav-justified .nav-previous, .nav-justified .nav-links .nav-next, .nav-links .nav-justified .nav-next {
   flex-basis: 0;
   flex-grow: 1;
   text-align: center; }
@@ -2823,7 +2921,7 @@ tbody.collapse.show {
   padding-left: 0;
   margin-bottom: 0;
   list-style: none; }
-  .navbar-nav .nav-link {
+  .navbar-nav .nav-link, .navbar-nav .nav-links a, .nav-links .navbar-nav a {
     padding-right: 0;
     padding-left: 0; }
   .navbar-nav .dropdown-menu {
@@ -2878,7 +2976,7 @@ tbody.collapse.show {
       .navbar-expand-sm .navbar-nav .dropdown-menu-right {
         right: 0;
         left: auto; }
-      .navbar-expand-sm .navbar-nav .nav-link {
+      .navbar-expand-sm .navbar-nav .nav-link, .navbar-expand-sm .navbar-nav .nav-links a, .nav-links .navbar-expand-sm .navbar-nav a {
         padding-right: 0.5rem;
         padding-left: 0.5rem; }
     .navbar-expand-sm > .container,
@@ -2910,7 +3008,7 @@ tbody.collapse.show {
       .navbar-expand-md .navbar-nav .dropdown-menu-right {
         right: 0;
         left: auto; }
-      .navbar-expand-md .navbar-nav .nav-link {
+      .navbar-expand-md .navbar-nav .nav-link, .navbar-expand-md .navbar-nav .nav-links a, .nav-links .navbar-expand-md .navbar-nav a {
         padding-right: 0.5rem;
         padding-left: 0.5rem; }
     .navbar-expand-md > .container,
@@ -2942,7 +3040,7 @@ tbody.collapse.show {
       .navbar-expand-lg .navbar-nav .dropdown-menu-right {
         right: 0;
         left: auto; }
-      .navbar-expand-lg .navbar-nav .nav-link {
+      .navbar-expand-lg .navbar-nav .nav-link, .navbar-expand-lg .navbar-nav .nav-links a, .nav-links .navbar-expand-lg .navbar-nav a {
         padding-right: 0.5rem;
         padding-left: 0.5rem; }
     .navbar-expand-lg > .container,
@@ -2974,7 +3072,7 @@ tbody.collapse.show {
       .navbar-expand-xl .navbar-nav .dropdown-menu-right {
         right: 0;
         left: auto; }
-      .navbar-expand-xl .navbar-nav .nav-link {
+      .navbar-expand-xl .navbar-nav .nav-link, .navbar-expand-xl .navbar-nav .nav-links a, .nav-links .navbar-expand-xl .navbar-nav a {
         padding-right: 0.5rem;
         padding-left: 0.5rem; }
     .navbar-expand-xl > .container,
@@ -3003,7 +3101,7 @@ tbody.collapse.show {
     .navbar-expand .navbar-nav .dropdown-menu-right {
       right: 0;
       left: auto; }
-    .navbar-expand .navbar-nav .nav-link {
+    .navbar-expand .navbar-nav .nav-link, .navbar-expand .navbar-nav .nav-links a, .nav-links .navbar-expand .navbar-nav a {
       padding-right: 0.5rem;
       padding-left: 0.5rem; }
   .navbar-expand > .container,
@@ -3023,19 +3121,29 @@ tbody.collapse.show {
   .navbar-light .navbar-brand:hover, .navbar-light .navbar-brand:focus {
     color: rgba(0, 0, 0, 0.9); }
 
-.navbar-light .navbar-nav .nav-link {
+.navbar-light .navbar-nav .nav-link, .navbar-light .navbar-nav .nav-links a, .nav-links .navbar-light .navbar-nav a {
   color: rgba(0, 0, 0, 0.5); }
-  .navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus {
+  .navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-links a:hover, .nav-links .navbar-light .navbar-nav a:hover, .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-links a:focus, .nav-links .navbar-light .navbar-nav a:focus {
     color: rgba(0, 0, 0, 0.7); }
-  .navbar-light .navbar-nav .nav-link.disabled {
+  .navbar-light .navbar-nav .nav-link.disabled, .navbar-light .navbar-nav .nav-links a.disabled, .nav-links .navbar-light .navbar-nav a.disabled {
     color: rgba(0, 0, 0, 0.3); }
 
-.navbar-light .navbar-nav .show > .nav-link,
+.navbar-light .navbar-nav .show > .nav-link, .navbar-light .navbar-nav .nav-links .show > a, .nav-links .navbar-light .navbar-nav .show > a,
 .navbar-light .navbar-nav .active > .nav-link,
 .navbar-light .navbar-nav .current_page_item > .nav-link,
+.navbar-light .navbar-nav .nav-links .active > a, .nav-links
+.navbar-light .navbar-nav .active > a,
+.navbar-light .navbar-nav .nav-links .current_page_item > a, .nav-links
+.navbar-light .navbar-nav .current_page_item > a,
 .navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .nav-links a.show, .nav-links
+.navbar-light .navbar-nav a.show,
 .navbar-light .navbar-nav .nav-link.active,
-.navbar-light .navbar-nav .nav-link.current_page_item {
+.navbar-light .navbar-nav .nav-link.current_page_item,
+.navbar-light .navbar-nav .nav-links a.current_page_item, .nav-links
+.navbar-light .navbar-nav a.current_page_item,
+.navbar-light .navbar-nav .nav-links a.active, .nav-links
+.navbar-light .navbar-nav a.active {
   color: rgba(0, 0, 0, 0.9); }
 
 .navbar-light .navbar-toggler {
@@ -3057,19 +3165,29 @@ tbody.collapse.show {
   .navbar-dark .navbar-brand:hover, .navbar-dark .navbar-brand:focus {
     color: #fff; }
 
-.navbar-dark .navbar-nav .nav-link {
+.navbar-dark .navbar-nav .nav-link, .navbar-dark .navbar-nav .nav-links a, .nav-links .navbar-dark .navbar-nav a {
   color: rgba(255, 255, 255, 0.5); }
-  .navbar-dark .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav .nav-link:focus {
+  .navbar-dark .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav .nav-links a:hover, .nav-links .navbar-dark .navbar-nav a:hover, .navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-links a:focus, .nav-links .navbar-dark .navbar-nav a:focus {
     color: rgba(255, 255, 255, 0.75); }
-  .navbar-dark .navbar-nav .nav-link.disabled {
+  .navbar-dark .navbar-nav .nav-link.disabled, .navbar-dark .navbar-nav .nav-links a.disabled, .nav-links .navbar-dark .navbar-nav a.disabled {
     color: rgba(255, 255, 255, 0.25); }
 
-.navbar-dark .navbar-nav .show > .nav-link,
+.navbar-dark .navbar-nav .show > .nav-link, .navbar-dark .navbar-nav .nav-links .show > a, .nav-links .navbar-dark .navbar-nav .show > a,
 .navbar-dark .navbar-nav .active > .nav-link,
 .navbar-dark .navbar-nav .current_page_item > .nav-link,
+.navbar-dark .navbar-nav .nav-links .active > a, .nav-links
+.navbar-dark .navbar-nav .active > a,
+.navbar-dark .navbar-nav .nav-links .current_page_item > a, .nav-links
+.navbar-dark .navbar-nav .current_page_item > a,
 .navbar-dark .navbar-nav .nav-link.show,
+.navbar-dark .navbar-nav .nav-links a.show, .nav-links
+.navbar-dark .navbar-nav a.show,
 .navbar-dark .navbar-nav .nav-link.active,
-.navbar-dark .navbar-nav .nav-link.current_page_item {
+.navbar-dark .navbar-nav .nav-link.current_page_item,
+.navbar-dark .navbar-nav .nav-links a.current_page_item, .nav-links
+.navbar-dark .navbar-nav a.current_page_item,
+.navbar-dark .navbar-nav .nav-links a.active, .nav-links
+.navbar-dark .navbar-nav a.active {
   color: #fff; }
 
 .navbar-dark .navbar-toggler {
@@ -3367,7 +3485,7 @@ tbody.collapse.show {
   .badge:empty {
     display: none; }
 
-.btn .badge, .comment-form #submit .badge, #cancel-comment-reply-link .badge {
+.btn .badge, .comment-form #submit .badge, #cancel-comment-reply-link .badge, .nav-links a .badge {
   position: relative;
   top: -1px; }
 
@@ -4578,7 +4696,7 @@ button.bg-dark:focus {
 .justify-content-end {
   justify-content: flex-end !important; }
 
-.justify-content-center {
+.justify-content-center, .nav-links {
   justify-content: center !important; }
 
 .justify-content-between {
@@ -4954,7 +5072,7 @@ button.bg-dark:focus {
     top: 0;
     z-index: 1020; } }
 
-.sr-only {
+.sr-only, .screen-reader-text {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -6133,7 +6251,7 @@ a.text-dark:hover, a.text-dark:focus {
   *::after {
     text-shadow: none !important;
     box-shadow: none !important; }
-  a:not(.btn):not(.comment-form #submit):not(#cancel-comment-reply-link) {
+  a:not(.btn):not(.comment-form #submit):not(#cancel-comment-reply-link):not(.nav-links a) {
     text-decoration: underline; }
   abbr[title]::after {
     content: " (" attr(title) ")"; }
@@ -6294,3 +6412,9 @@ body {
 #cancel-comment-reply-link {
   font-size: 0.6em;
   margin-right: 1em; }
+
+.nav-links {
+  margin-top: 2em; }
+  .nav-links a {
+    margin-left: 0.5em;
+    margin-right: 0.5em; }

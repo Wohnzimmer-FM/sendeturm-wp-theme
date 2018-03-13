@@ -14,44 +14,39 @@
 
 get_header(); ?>
 
-
-
 		<?php
-		if (have_posts()) :
-			
-			while (have_posts())
-			{
-				the_post();
+			#TODO: Load the last episode and display here
+			get_template_part('template-parts/content', 'featured');
+		?>
 
-				if($wp_query->current_post == 0)
-				{
-					get_template_part('template-parts/content', 'featured');
+	<div id="main-content" class="container">
+		<main id="main">
+			<div class="row">
+				<div class="col-12">
+					<h2><?php echo __('All episodes', 'sendeturm'); ?></h2>
+					<div id="all-episodes" class="list-group">
 
-					echo '<div id="main-content" class="container">';
-					echo '<main id="main">';
-					echo '<div class="row">';
-					echo '<div class="col-12">';
-					echo '<h2>' . __('All episodes', 'sendeturm') . '</h2>';
-					echo '<div id="all-episodes" class="list-group">';
-				}
-				else
-				{
-					get_template_part('template-parts/content', 'home');
-
-					if(($wp_query->current_post + 1) === ($wp_query->post_count))
-					{
-						?>
-								</div><!-- end of list-group -->
-							</div><!-- end of col-8 -->
-
-								</div>
-							</div>
 						<?php
-					}
-				}
-			}
+						if (have_posts()) :
+							
+							while (have_posts())
+							{
+								the_post();
+								get_template_part('template-parts/content', 'home');
+							}
+						?>
+						</div><!-- end of list-group -->
+						<?php the_posts_navigation(array(
+							'mid_size' => 2
+						));
+						?>
+					</div><!-- end of col-X -->
 
-			//the_posts_navigation();
+				</div>
+			</div>
+		<?php
+
+			
 		else :
 			get_template_part('template-parts/content', 'none');
 		endif;

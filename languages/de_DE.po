@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2018-03-12 22:46+0100\n"
-"PO-Revision-Date: 2018-03-12 22:46+0100\n"
+"POT-Creation-Date: 2018-03-13 21:38+0100\n"
+"PO-Revision-Date: 2018-03-13 21:39+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de\n"
@@ -13,7 +13,7 @@ msgstr ""
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: __;_e;_n\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: node_modules\n"
 "X-Poedit-SearchPathExcluded-1: vendor\n"
@@ -47,8 +47,11 @@ msgid "Published today"
 msgstr "Heute veröffentlicht"
 
 #: functions.php:99
+#, php-format
 msgid "Published yesterday"
-msgstr "Gestern veröffentlicht"
+msgid_plural "Published %d days ago"
+msgstr[0] "Gestern veröffentlicht"
+msgstr[1] "Veröffentlicht vor %d Tagen"
 
 #: functions.php:101
 msgid "Published on"
@@ -56,7 +59,9 @@ msgstr "Veröffentlicht am"
 
 #: functions.php:120
 msgid "Guest"
-msgstr "Gast"
+msgid_plural "Guests"
+msgstr[0] "Gast"
+msgstr[1] "Gäste"
 
 #: header.php:32 search.php:21 search.php:24
 msgid "Search"
@@ -65,10 +70,6 @@ msgstr "Suche"
 #: index.php:34
 msgid "All episodes"
 msgstr "Alle Episoden"
-
-#: index.php:48
-msgid "Last comments"
-msgstr "Neuste Kommentare"
 
 #: search.php:26
 msgid "Start search"
@@ -97,7 +98,7 @@ msgstr ""
 msgid "Sorry, the page you are looking was not found"
 msgstr "Sorry, die Seite wurde nicht gefunden"
 
-#: template-parts/content-episode.php:15 template-parts/content-home.php:23
+#: template-parts/content-episode.php:15 template-parts/content-home.php:24
 msgid "Duration"
 msgstr "Dauer"
 
@@ -133,6 +134,13 @@ msgstr "In iTunes abonnieren"
 msgid "Subscribe with RSS"
 msgstr "Feed abonnieren"
 
+#: template-parts/content-home.php:16
+msgid "Episode cover"
+msgstr "Episodenbild"
+
 #: template-parts/content-none.php:2
 msgid "Sorry, nothing found"
 msgstr "Sorry, es wurde nichts gefunden"
+
+#~ msgid "Last comments"
+#~ msgstr "Neuste Kommentare"

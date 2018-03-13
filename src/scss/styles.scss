@@ -232,3 +232,29 @@ body {
   @extend .btn-danger;
   margin-right: 1em;
 }
+
+.screen-reader-text {
+  @extend .sr-only
+}
+
+.nav-links {
+  margin-top: 2em;
+  @extend .nav;
+  @extend .justify-content-center;
+
+  a {
+    @extend .nav-link;
+    @extend .btn;
+    @extend .btn-primary;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+  }
+
+  .nav-previous {
+    @extend .nav-item;
+  }
+  
+  .nav-next {
+    @extend .nav-item;
+  }  
+}
