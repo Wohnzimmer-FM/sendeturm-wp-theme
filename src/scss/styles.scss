@@ -94,14 +94,16 @@ body {
     margin-bottom: 0;
   }
 
-  .subscribe .inner {
+  .subscribe .inner, .about-info {
     background: #444;
   }
 }
 
 @media(min-width:992px) {
-  #featured .subscribe .inner {
-    background: none;
+  #featured {
+    .subscribe .inner, .about-info {
+      background: none;
+    }
   }
 }
 
