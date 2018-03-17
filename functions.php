@@ -46,8 +46,17 @@ function bootstrap_navigation($menu_location, $menu_class)
 function sendeturm_theme_setup()
 {
     load_theme_textdomain('sendeturm', get_template_directory() . '/languages');
+    
     register_nav_menu('header-menu', __('Header Menu', 'sendeturm'));
     register_nav_menu('footer-menu', __('Footer Menu', 'sendeturm'));
+
+    add_theme_support( 'title-tag' );
+
+    add_theme_support('html5', array(
+		'search-form', 'comment-form', 'comment-list', 'gallery', 'caption'
+    ));
+    
+    add_theme_support( 'automatic-feed-links' );
 }
 add_action('after_setup_theme', 'sendeturm_theme_setup');
 
@@ -126,12 +135,6 @@ function get_guests($episode, $filter = array())
     return $list;
 }
 
-function custom_theme_setup() {
-    add_theme_support('html5', array(
-		'search-form', 'comment-form', 'comment-list', 'gallery', 'caption'
-	));
-}
-add_action( 'after_setup_theme', 'custom_theme_setup' );
 
 
 function toolbar_add_links( $wp_admin_bar ) {
