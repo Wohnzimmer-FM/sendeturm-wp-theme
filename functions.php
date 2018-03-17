@@ -114,18 +114,22 @@ function get_guests($episode, $filter = array())
             continue;
         }
 
-        $names []= '<span>' . $contributor->name(). '</span><img src="' . $contributor->image()->url(array('width' => 15, 'height' => 15)). '" />';
+        $names []= '<span>' . $contributor->name(). '</span><img src="' . $contributor->image()->url(array('width' => 25, 'height' => 25)). '" />';
     }
 
-    $list = _n('Guest', 'Guests', count($names), 'sendeturm') .': '. implode(', ', $names);
+    if(count($names) < 1) {
+        return '';
+    }
+
+    $list = _n('Guest', 'Guests', count($names), 'sendeturm') .': '. implode(' ', $names);
 
     return $list;
 }
 
 function custom_theme_setup() {
-    add_theme_support( 'html5', array(
+    add_theme_support('html5', array(
 		'search-form', 'comment-form', 'comment-list', 'gallery', 'caption'
-	) );
+	));
 }
 add_action( 'after_setup_theme', 'custom_theme_setup' );
 

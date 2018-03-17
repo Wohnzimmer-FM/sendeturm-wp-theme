@@ -12,21 +12,24 @@ $theme-colors: (
   "success": #8BC34A
 );
 
-@mixin light-box-shadow {
-  box-shadow: 0 1px 1px 0 rgba(10, 16, 34, .2);
-}
+$headings-font-weight: 600;
 
 // Bootstrap
 @import "node_modules/bootstrap/scss/bootstrap";
 
+@mixin light-box-shadow {
+  box-shadow: 0 1px 1px 0 rgba(10, 16, 34, .2);
+}
+
 //#main-content {
   div, article, header, ul, ol {
-    //outline: 1px dashed #999;
+    outline: 1px dashed #999;
   }
 //}
 
 body {
   background: #F8F8F8;
+  font-family: 'Open Sans', sans-serif;
 }
 
 #page-header {
@@ -124,10 +127,18 @@ body {
 }
 
 .guest-list {
+  display: flex;
+  align-items: center;
+
   img {
     display: inline;
     margin-left: 0.5em;
+    margin-right: 0.5em;
     border-radius: 50%;
+  }
+
+  span {
+    margin-left: 0.3em;
   }
 }
 
