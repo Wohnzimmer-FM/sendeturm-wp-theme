@@ -1,7 +1,8 @@
 <?php
 $args = array(
     'post_type' =>'podcast',
-    'posts_per_page' => 1
+    'posts_per_page' => 1,
+    'post_status' => 'publish'
 );
 
 $recent_post = wp_get_recent_posts($args, OBJECT);
