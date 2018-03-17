@@ -6293,9 +6293,6 @@ a.text-dark:hover, a.text-dark:focus {
   .table-bordered td {
     border: 1px solid #ddd !important; } }
 
-div, article, header, ul, ol {
-  outline: 1px dashed #999; }
-
 body {
   background: #F8F8F8;
   font-family: 'Open Sans', sans-serif; }
