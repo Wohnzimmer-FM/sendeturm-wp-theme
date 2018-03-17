@@ -17,7 +17,7 @@ $episode = \Podlove\get_episode();
         </div>
         <div class="col">
             <h3 class="h5"><i class="fa fa-volume-down mr-2"></i><?php the_title(); ?></h3>
-            <small class="text-info"><?php echo get_guests($episode, array('Guests', 'Gäste')); ?></small>
+            <small class="text-info guest-list"><?php echo get_guests($episode, array('Guests', 'Gäste')); ?></small>
             <p class="mt-2"><?php echo $episode->summary(); ?></p>
             <div class="row">
                 <small class="text-info col"><?php echo get_published(); ?></small>

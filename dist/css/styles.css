@@ -6345,6 +6345,14 @@ body {
 #contributors li.contributor .name {
   font-size: 1rem; }
 
+#contributors li.contributor .contributor-pic img {
+  border-radius: 50%; }
+
+.guest-list img {
+  display: inline;
+  margin-left: 0.5em;
+  border-radius: 50%; }
+
 #header-search input {
   background: rgba(255, 255, 255, 0.7);
   border: 0; }

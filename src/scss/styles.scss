@@ -111,13 +111,23 @@ body {
   }
 }
 
-
-
 #contributors {
   li.contributor {
     .name {
       font-size: 1rem;
     }
+
+    .contributor-pic img {
+      border-radius: 50%;
+    }
+  }
+}
+
+.guest-list {
+  img {
+    display: inline;
+    margin-left: 0.5em;
+    border-radius: 50%;
   }
 }
 

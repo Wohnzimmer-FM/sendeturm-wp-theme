@@ -114,7 +114,7 @@ function get_guests($episode, $filter = array())
             continue;
         }
 
-        $names []= $contributor->name();
+        $names []= '<span>' . $contributor->name(). '</span><img src="' . $contributor->image()->url(array('width' => 15, 'height' => 15)). '" />';
     }
 
     $list = _n('Guest', 'Guests', count($names), 'sendeturm') .': '. implode(', ', $names);

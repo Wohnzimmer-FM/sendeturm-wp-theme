@@ -69,7 +69,7 @@ $episode = \Podlove\get_episode();
                 <li class="list-group-item contributor">
                     <div class="row no-gutters">
                         <div class="contributor-pic col mb-2 mb-sm-0">
-                            <img src="<?php echo $contributor->image()->url(array('width' => 50, 'height' => 50)); ?>" />
+                            <img src="<?php echo $contributor->image()->url(array('width' => 55, 'height' => 55)); ?>" />
                         </div>
                         <div class="contributor-name col-12 col-sm-8 col-md-9 col-lg-5 col-xl-6">
                             <h4 class="name"><?php echo $contributor->name(); ?></h4>
@@ -78,7 +78,7 @@ $episode = \Podlove\get_episode();
                         <div class="contributor-links col">
                             <ul class="nav justify-content-lg-end">
                                 <?php foreach($contributor->services() as $service): ?>
-                                <li class="nav-item mb-1 mr-1">
+                                <li class="nav-item mr-1">
                                     <a href="<?php echo $service->profileUrl(); ?>">
                                         <img src="<?php echo $service->image()->url(array('width' => 20, 'height' => 20)); ?>" alt="<?php echo $service->title(); ?>" />
                                     </a>
