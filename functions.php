@@ -128,3 +128,15 @@ function custom_theme_setup() {
 	) );
 }
 add_action( 'after_setup_theme', 'custom_theme_setup' );
+
+
+function toolbar_add_links( $wp_admin_bar ) {
+	$args = array(
+		'id'    => 'podlove_analytics',
+		'title' => 'Podlove Analytics',
+		'href'  => admin_url() . 'admin.php?page=podlove_analytics',
+		'meta'  => array( 'class' => 'my-toolbar-page' )
+	);
+	$wp_admin_bar->add_node( $args );
+}
+add_action( 'admin_bar_menu', 'toolbar_add_links', 999 );
