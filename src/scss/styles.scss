@@ -12,6 +12,10 @@ $theme-colors: (
   "success": #8BC34A
 );
 
+@mixin light-box-shadow {
+  box-shadow: 0 1px 1px 0 rgba(10, 16, 34, .2);
+}
+
 // Bootstrap
 @import "node_modules/bootstrap/scss/bootstrap";
 
@@ -27,7 +31,7 @@ body {
 
 #page-header {
   padding-bottom: $header-border;
-  box-shadow: 0 1px 1px 0 rgba(10, 16, 34, .2);
+  @include light-box-shadow;
 }
 
 #page-header, #featured {
@@ -107,8 +111,14 @@ body {
   }
 }
 
-.contributor .name {
-  font-size: 1rem;
+
+
+#contributors {
+  li.contributor {
+    .name {
+      font-size: 1rem;
+    }
+  }
 }
 
 .current_page_item {
@@ -147,7 +157,7 @@ body {
     margin-top: 4rem;
     margin-bottom: 3rem;
     border-radius: $main-border-radius;
-    box-shadow: 0 1px 1px 0 rgba(10, 16, 34, .2);        
+    @include light-box-shadow;
   }
 
   #header-search {
@@ -195,7 +205,7 @@ body {
       margin-bottom: 1em;
       background: #f8f9fa;
       border-radius: $main-border-radius;
-      box-shadow: 0 1px 1px 0 rgba(10, 16, 34, .2);
+      @include light-box-shadow;
     }
   }
 
@@ -224,7 +234,7 @@ body {
   padding: 1em 1em 0.5em 1em;
   background: #f8f9fa;
   border-radius: $main-border-radius;
-  box-shadow: 0 1px 1px 0 rgba(10, 16, 34, .2);
+  @include light-box-shadow;
   margin-bottom: 1em;
 }
 

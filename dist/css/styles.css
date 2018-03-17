@@ -6342,7 +6342,7 @@ body {
   #featured .subscribe .inner, #featured .about-info {
     background: none; } }
 
-.contributor .name {
+#contributors li.contributor .name {
   font-size: 1rem; }
 
 #header-search input {
