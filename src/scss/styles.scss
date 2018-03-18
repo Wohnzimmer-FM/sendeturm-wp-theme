@@ -134,7 +134,7 @@ body {
   }
 
   li {
-    background: #f8f9fa;
+    background: #ececec;
     border-radius: 12px;
   }
 
@@ -149,7 +149,7 @@ body {
     line-height: 24px;
     display: inline-block;
     color: #666;
-    font-weight: bold;
+    //font-weight: bold;
   }
 }
 
@@ -305,8 +305,9 @@ body {
 
 .tag-list-inline {
   li {
-    background: $accent-color;
+    background: #ececec;
     padding: 1px 10px;
     border-radius: 1em;
+    color: #666;
   }
 }

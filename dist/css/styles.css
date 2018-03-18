@@ -6350,7 +6350,7 @@ body {
   border-radius: 50%; }
 
 .guest-list li {
-  background: #f8f9fa;
+  background: #ececec;
   border-radius: 12px; }
 
 .guest-list img {
@@ -6362,8 +6362,7 @@ body {
   padding-right: 12px;
   line-height: 24px;
   display: inline-block;
-  color: #666;
-  font-weight: bold; }
+  color: #666; }
 
 #header-search input {
   background: rgba(255, 255, 255, 0.7);
@@ -6440,6 +6439,7 @@ body {
     margin-right: 0.5em; }
 
 .tag-list-inline li {
-  background: #FFEB3B;
+  background: #ececec;
   padding: 1px 10px;
-  border-radius: 1em; }
+  border-radius: 1em;
+  color: #666; }
