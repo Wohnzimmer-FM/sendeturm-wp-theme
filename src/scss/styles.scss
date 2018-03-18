@@ -37,7 +37,7 @@ body {
   @include light-box-shadow;
 }
 
-#page-header, #featured {
+#page-header, #featured, #page-footer {
   background-image: repeating-linear-gradient(90deg, 
         #F44336 0.00%, #F44336 6.66%,
         #E91E63 6.66%, #E91E63 13.32%,
@@ -64,11 +64,13 @@ body {
   position: relative;
 }
 
+
 #page-footer {
-  margin-bottom: 3rem;
+  padding-top: $header-border;
+  .overlay {
+    background: rgba(0, 0, 0, 0.8);
+  }
 }
-
-
 
 .home #main-content {
   margin-top: 0;
