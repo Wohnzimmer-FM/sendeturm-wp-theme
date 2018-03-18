@@ -68,6 +68,8 @@ body {
   margin-bottom: 3rem;
 }
 
+
+
 .home #main-content {
   margin-top: 0;
   border-top: none;
@@ -127,18 +129,27 @@ body {
 }
 
 .guest-list {
-  display: flex;
-  align-items: center;
+  * {
+    //border: 1px solid red;
+  }
+
+  li {
+    background: #f8f9fa;
+    border-radius: 12px;
+  }
 
   img {
-    display: inline;
-    margin-left: 0.5em;
+    float: left;
     margin-right: 0.5em;
     border-radius: 50%;
   }
 
   span {
-    margin-left: 0.3em;
+    padding-right: 12px;
+    line-height: 24px;
+    display: inline-block;
+    color: #666;
+    font-weight: bold;
   }
 }
 
@@ -290,4 +301,12 @@ body {
   .nav-next {
     @extend .nav-item;
   }  
+}
+
+.tag-list-inline {
+  li {
+    background: $accent-color;
+    padding: 1px 10px;
+    border-radius: 1em;
+  }
 }

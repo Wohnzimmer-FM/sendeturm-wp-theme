@@ -19,10 +19,16 @@ $episode = \Podlove\get_episode();
             <h3 class="h5"><i class="fa fa-volume-down mr-2"></i><?php the_title(); ?></h3>
             <small class="text-info guest-list"><?php echo get_guests($episode, array('Guests', 'Gäste')); ?></small>
             <p class="mt-2"><?php echo $episode->summary(); ?></p>
+            
+            <div class="topics">
+                <?php tag_list(); ?>
+            </div>
+
             <div class="row">
                 <small class="text-info col"><?php echo get_published(); ?></small>
                 <small class="text-info col-lg-6 col-md col-12"><?php echo _e('Duration', 'sendeturm') . ': ' . $episode->duration(); ?></small>
             </div>
+
         </div>
     </div>
 </a>

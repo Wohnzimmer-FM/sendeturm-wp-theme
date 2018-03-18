@@ -6349,16 +6349,21 @@ body {
 #contributors li.contributor .contributor-pic img {
   border-radius: 50%; }
 
-.guest-list {
-  display: flex;
-  align-items: center; }
-  .guest-list img {
-    display: inline;
-    margin-left: 0.5em;
-    margin-right: 0.5em;
-    border-radius: 50%; }
-  .guest-list span {
-    margin-left: 0.3em; }
+.guest-list li {
+  background: #f8f9fa;
+  border-radius: 12px; }
+
+.guest-list img {
+  float: left;
+  margin-right: 0.5em;
+  border-radius: 50%; }
+
+.guest-list span {
+  padding-right: 12px;
+  line-height: 24px;
+  display: inline-block;
+  color: #666;
+  font-weight: bold; }
 
 #header-search input {
   background: rgba(255, 255, 255, 0.7);
@@ -6433,3 +6438,8 @@ body {
   .nav-links a {
     margin-left: 0.5em;
     margin-right: 0.5em; }
+
+.tag-list-inline li {
+  background: #FFEB3B;
+  padding: 1px 10px;
+  border-radius: 1em; }

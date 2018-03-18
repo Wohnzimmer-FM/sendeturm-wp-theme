@@ -120,17 +120,20 @@ function get_guests($episode, $filter = array())
     {
         if($filter_len > 0 && !in_array($contributor->group(), $filter))
         {
-            continue;
+            #continue;
         }
 
-        $names []= '<span>' . $contributor->name(). '</span><img src="' . $contributor->image()->url(array('width' => 25, 'height' => 25)). '" />';
+        $names []= '<li class="list-inline-item mb-1">'.
+                    '<img src="' . $contributor->image()->url(array('width' => 24, 'height' => 24)). '" />' . 
+                    '<span>' . $contributor->name(). '</span>' .
+                    '</li>';
     }
 
     if(count($names) < 1) {
         return '';
     }
 
-    $list = _n('Guest', 'Guests', count($names), 'sendeturm') .': '. implode(' ', $names);
+    $list = '<ul class="list-inline">'.implode(' ', $names).'</ul>';
 
     return $list;
 }
@@ -147,3 +150,17 @@ function toolbar_add_links( $wp_admin_bar ) {
 	$wp_admin_bar->add_node( $args );
 }
 add_action( 'admin_bar_menu', 'toolbar_add_links', 999 );
+
+function tag_list() {
+    $posttags = get_the_tags();
+
+    if ($posttags) {
+        echo '<ul class="list-inline tag-list-inline">';
+        
+        foreach($posttags as $tag) {
+            echo '<li class="list-inline-item small">' . $tag->name . '</li>'; 
+        }
+
+        echo '</ul>';
+    }
+}
