@@ -28,7 +28,6 @@ $episode = \Podlove\get_episode();
                 <small class="text-info col"><?php echo get_published(); ?></small>
                 <small class="text-info col-lg-6 col-md col-12"><?php echo _e('Duration', 'sendeturm') . ': ' . $episode->duration(); ?></small>
             </div>
-
         </div>
     </div>
 </a>
