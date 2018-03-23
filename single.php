@@ -16,6 +16,7 @@ get_header(); ?>
 
 	<div id="main-content" class="container">
 		<main id="main">
+			<?php get_template_part('template-parts/partial', 'socialbar'); ?>
 
 		<?php
 		if (have_posts()) :

@@ -35,7 +35,7 @@ $feed = \Podlove\Model\Feed::find_one_by_slug('mp3');
                 </div>
 
                 <div class="col-lg-4 align-self-end text-center text-lg-right subscribe">                				
-                    <div class="about-info mb-0 mb-lg-2 text-secondary h4">
+                    <div class="about-info mb-0 mb-lg-2 text-secondary h4 d-none d-lg-block">
                         <?php bloginfo('description'); ?>
                     </div>
                     
