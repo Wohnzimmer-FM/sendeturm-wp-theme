@@ -6447,3 +6447,6 @@ body {
   padding: 1px 10px;
   border-radius: 1em;
   color: #666; }
+
+#featured iframe {
+  display: block; }

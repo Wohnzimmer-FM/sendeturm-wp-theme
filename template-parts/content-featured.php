@@ -27,7 +27,7 @@ $feed = \Podlove\Model\Feed::find_one_by_slug('mp3');
 
             <div class="row">
                 <div class="col-12 col-lg-8 align-self-end">
-                    <h1 class="entry-title mb-4 text-center text-sm-left">
+                    <h1 class="entry-title mb-4 text-center text-lg-left">
                         <a href="<?php echo esc_url(get_permalink($recent_post[0])); ?>" rel="bookmark"><?php echo $episode->title(); ?></a>
                         <span class="badge badge-pill badge-success"><?php echo __('New', 'sendeturm'); ?></span>
                     </h1>

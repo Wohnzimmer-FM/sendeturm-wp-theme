@@ -14,13 +14,12 @@
 
 get_header(); ?>
 
-		<?php
-			#TODO: Load the last episode and display here
-			get_template_part('template-parts/content', 'featured');
-		?>
+	<?php get_template_part('template-parts/content', 'featured'); ?>
 
 	<div id="main-content" class="container">
 		<main id="main">
+			<?php get_template_part('template-parts/partial', 'socialbar'); ?>
+
 			<div class="row">
 				<div class="col-12">
 					<h2><?php echo __('All episodes', 'sendeturm'); ?></h2>

@@ -18,7 +18,7 @@ $episode = \Podlove\get_episode();
             </div>
 
             <!-- Buttons -->
-            <div class="mb-4">
+            <div class="mb-4 text-center">
                 <a class="btn btn-secondary" href="<?php comments_link(); ?>" role="button">
                     <i class="fa fa-comment mr-1"></i>
                 <?php
