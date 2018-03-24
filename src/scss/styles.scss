@@ -1,8 +1,7 @@
 // Overrides
 
-$header-border: 10px;
-$accent-color: #FFEB3B;
-$primary-color: #2196F3;
+$accent-color: #FFEB3B !default;
+$primary-color: #2196F3 !default;
 $main-border-radius: 7px;
 
 $theme-colors: (
@@ -14,28 +13,13 @@ $theme-colors: (
 
 $headings-font-weight: 600;
 
-// Bootstrap
-@import "node_modules/bootstrap/scss/bootstrap";
-
-@mixin light-box-shadow {
-  box-shadow: 0 1px 1px 0 rgba(10, 16, 34, .2);
-}
+@import "_layout.scss";
 
 //#main-content {
   div, article, header, ul, ol {
     //outline: 1px dashed #999;
   }
 //}
-
-body {
-  background: #F8F8F8;
-  font-family: 'Open Sans', sans-serif;
-}
-
-#page-header {
-  padding-bottom: $header-border;
-  @include light-box-shadow;
-}
 
 #page-header, #featured, #page-footer {
   background-image: repeating-linear-gradient(90deg, 
@@ -61,26 +45,13 @@ body {
   background: #fff;
   border-top: $header-border solid $accent-color;
   border-bottom: $header-border solid $accent-color;
-  position: relative;
 }
 
 
 #page-footer {
-  padding-top: $header-border;
   .overlay {
     background: rgba(0, 0, 0, 0.8);
   }
-}
-
-.home #main-content {
-  margin-top: 0;
-  border-top: none;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-}
-
-#main {
-  padding: 1em;
 }
 
 #main-nav {
@@ -88,6 +59,8 @@ body {
 }
 
 #featured {
+  border-bottom: $header-border solid $accent-color;
+  
   .overlay {
     background: rgba(0, 0, 0, 0.7);
   }
@@ -221,10 +194,6 @@ body {
   }
 }
 
-#current-episode {
-  //border-bottom: 5px solid $accent-color;
-}
-
 .entry-title a {
   color: #000;
   text-decoration: none;
@@ -250,21 +219,6 @@ body {
   }
 }
 
-.comment-form {
-  .comment-form-comment {
-    @extend .form-group;
-  }
-
-  textarea, input {
-    @extend .form-control;
-  }
-
-  #submit {
-    @extend .btn;
-    @extend .btn-primary;
-  }
-}
-
 #respond {
   border-top: 5px solid $primary-color;
   padding: 1em 1em 0.5em 1em;
@@ -279,10 +233,6 @@ body {
   @extend .btn;
   @extend .btn-danger;
   margin-right: 1em;
-}
-
-.screen-reader-text {
-  @extend .sr-only
 }
 
 .nav-links {

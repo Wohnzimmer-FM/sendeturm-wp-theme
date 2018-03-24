@@ -4,8 +4,10 @@ include 'vendor/wp-bootstrap4-navwalker/wp-bootstrap-navwalker.php';
 
 function sendeturm_scripts()
 {
-    $css_file = '/dist/css/styles.css';
+    $css_file = '/dist/css/' . get_theme_mod("sendeturm_active_theme", "styles.css");
+
     $version = filemtime(get_template_directory() . $css_file);
+
     wp_enqueue_style('sendeturm-styles', get_template_directory_uri() . $css_file, array(), $version);
 
     wp_enqueue_script('script-popper', get_template_directory_uri() . '/dist/js/popper.min.js');
@@ -164,3 +166,40 @@ function tag_list() {
         echo '</ul>';
     }
 }
+
+function sendeturm_sanitize_select( $input, $setting ) {
+    // Get list of choices from the control associated with the setting.
+    $choices = $setting->manager->get_control( $setting->id )->choices;
+    // If the input is a valid key, return it; otherwise, return the default.
+    return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
+  }
+
+function sendeturm_customize_register( $wp_customize ) {
+    $path = get_template_directory() . '/dist/css';
+    $files = array_diff(scandir($path), array('.', '..'));
+    $list = array();
+
+    foreach($files as $file) {
+        $list[$file] = $file;
+    }
+
+    $wp_customize->add_section( 'sendeturm_theme' , array(
+        'title'      => __( 'Theme', 'sendeturm' ),
+        'priority'   => 30,
+    ));
+
+    $wp_customize->add_setting( 'sendeturm_active_theme', array(
+        'capability' => 'edit_theme_options',
+        'sanitize_callback' => 'sendeturm_sanitize_select',
+        'default' => $list[0],
+    ));
+
+    $wp_customize->add_control( 'sendeturm_active_theme', array(
+        'type' => 'select',
+        'section' => 'sendeturm_theme', // Add a default or your own section
+        'label' => __( 'Active Theme' ),
+        'description' => __( 'Which Theme Stylesheet should be used?' ),
+        'choices' => $list,
+    ));
+ }
+ add_action('customize_register', 'sendeturm_customize_register');

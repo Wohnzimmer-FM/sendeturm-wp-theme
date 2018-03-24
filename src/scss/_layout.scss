@@ -1,0 +1,59 @@
+
+// Bootstrap
+@import "node_modules/bootstrap/scss/bootstrap";
+
+$header-border: 10px !default;
+
+@mixin light-box-shadow {
+    box-shadow: 0 1px 1px 0 rgba(10, 16, 34, .2);
+}
+
+body {
+    background: #F8F8F8;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#page-header {
+    padding-bottom: $header-border;
+    @include light-box-shadow;
+}
+
+#page-footer {
+    padding-top: $header-border;
+}
+
+#main-content {
+    position: relative;
+}
+
+.home #main-content {
+    margin-top: 0;
+    border-top: none;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+  
+#main {
+    padding: 1em;
+}
+
+
+.comment-form {
+    .comment-form-comment {
+      @extend .form-group;
+    }
+  
+    textarea, input {
+      @extend .form-control;
+    }
+  
+    #submit {
+      @extend .btn;
+      @extend .btn-primary;
+    }
+}
+
+.screen-reader-text {
+    @extend .sr-only
+}
+  
