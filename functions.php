@@ -4,7 +4,7 @@ include 'vendor/wp-bootstrap4-navwalker/wp-bootstrap-navwalker.php';
 
 function sendeturm_scripts()
 {
-    $css_file = '/dist/css/' . get_theme_mod("sendeturm_active_theme", "styles.css");
+    $css_file = '/dist/css/' . get_theme_mod("sendeturm_active_theme", "styles") . '.css';
 
     $version = filemtime(get_template_directory() . $css_file);
 
@@ -180,7 +180,8 @@ function sendeturm_customize_register( $wp_customize ) {
     $list = array();
 
     foreach($files as $file) {
-        $list[$file] = $file;
+        $path_parts = pathinfo($file);
+        $list[$path_parts['filename']] = $file;
     }
 
     $wp_customize->add_section( 'sendeturm_theme' , array(
