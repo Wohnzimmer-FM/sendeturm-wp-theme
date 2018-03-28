@@ -2,7 +2,7 @@
 
 $accent-color: #FFEB3B !default;
 $primary-color: #2196F3 !default;
-$main-border-radius: 7px;
+$main-border-radius: 0;
 
 $theme-colors: (
   "primary": $primary-color,
@@ -10,6 +10,8 @@ $theme-colors: (
   "info": #3F51B5,
   "success": #8BC34A
 );
+
+$enable-rounded:   false;
 
 $headings-font-weight: 600;
 
