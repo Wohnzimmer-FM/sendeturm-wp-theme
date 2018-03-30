@@ -1,5 +1,9 @@
 <?php
 
+if(in_array($_SERVER["REMOTE_ADDR"], array('127.0.0.1'))) {
+    define('ISLOCAL', true);
+}
+
 include 'vendor/wp-bootstrap4-navwalker/wp-bootstrap-navwalker.php';
 
 function sendeturm_scripts()
@@ -20,7 +24,9 @@ function sendeturm_scripts()
 }
 add_action('wp_enqueue_scripts', 'sendeturm_scripts');
 
-#add_filter('show_admin_bar', '__return_false');
+if(defined('ISLOCAL')) {
+    add_filter('show_admin_bar', '__return_false');
+}
 
 function get_assets_url()
 {
@@ -140,16 +146,24 @@ function get_guests($episode, $filter = array())
     return $list;
 }
 
-
-
 function toolbar_add_links( $wp_admin_bar ) {
 	$args = array(
 		'id'    => 'podlove_analytics',
 		'title' => 'Podlove Analytics',
 		'href'  => admin_url() . 'admin.php?page=podlove_analytics',
 		'meta'  => array( 'class' => 'my-toolbar-page' )
-	);
-	$wp_admin_bar->add_node( $args );
+    );
+    
+    $wp_admin_bar->add_node($args);
+    
+	$args = array(
+		'id'    => 'podcast',
+		'title' => 'Podcast',
+		'href'  => admin_url() . 'edit.php?post_type=podcast',
+		'meta'  => array( 'class' => 'my-toolbar-page' )
+    );
+    
+	$wp_admin_bar->add_node($args);
 }
 add_action( 'admin_bar_menu', 'toolbar_add_links', 999 );
 

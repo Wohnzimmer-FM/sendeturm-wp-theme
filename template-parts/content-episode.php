@@ -11,7 +11,7 @@ $episode = \Podlove\get_episode();
             <div class="mb-4">
                 <?php echo $episode->player(); ?>
 
-                <div class="row">
+                <div class="row mt-2">
                     <div class="col"><?php echo _e('Duration', 'sendeturm') . ': ' . $episode->duration(); ?></div>
                     <div class="col text-right"><?php echo get_published(); ?></div>
                 </div>

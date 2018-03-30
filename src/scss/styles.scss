@@ -2,7 +2,7 @@
 
 $accent-color: #FFEB3B !default;
 $primary-color: #2196F3 !default;
-$main-border-radius: 0;
+$main-border-radius: 0px;
 
 $theme-colors: (
   "primary": $primary-color,
@@ -11,8 +11,10 @@ $theme-colors: (
   "success": #8BC34A
 );
 
-$enable-rounded:   false;
-
+// Overrides
+$enable-rounded: false;
+$navbar-dark-color: rgba(#fff, .9) !default;
+$navbar-dark-hover-color: rgba($accent-color, .75) !default;
 $headings-font-weight: 600;
 
 @import "_layout.scss";
@@ -47,17 +49,31 @@ $headings-font-weight: 600;
   background: #fff;
   border-top: $header-border solid $accent-color;
   border-bottom: $header-border solid $accent-color;
+  box-shadow: 0px 0px 7px #efefef;
 }
 
+#page-footer .overlay, #main-nav {
+  background: rgba(0, 0, 0, 0.8);
+}
 
 #page-footer {
-  .overlay {
-    background: rgba(0, 0, 0, 0.8);
+  h2 {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1em;
+    padding-bottom: 0.2em;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   }
-}
 
-#main-nav {
-  background: rgba(0, 0, 0, 0.8);
+  color: white;
+
+  #menu-footer-menu a, .social-icons a {
+    padding: 0;
+    color: #fff;
+
+    &:hover {
+      color: $accent-color;
+    }
+  }
 }
 
 #featured {
@@ -69,7 +85,8 @@ $headings-font-weight: 600;
 
   .container {
     padding: 0;
-    padding-top: 3rem;
+    padding-top: 2em;
+    padding-bottom: 2em;
   }
 
   h1 {
@@ -83,7 +100,7 @@ $headings-font-weight: 600;
   }
 
   .subscribe .inner, .about-info {
-    background: rgb(189, 189, 189);
+    //background: rgb(189, 189, 189);
   }
 }
 
@@ -108,10 +125,6 @@ $headings-font-weight: 600;
 }
 
 .guest-list {
-  * {
-    //border: 1px solid red;
-  }
-
   li {
     background: #ececec;
     border-radius: 12px;
@@ -128,7 +141,6 @@ $headings-font-weight: 600;
     line-height: 24px;
     display: inline-block;
     color: #666;
-    //font-weight: bold;
   }
 }
 
@@ -216,13 +228,17 @@ $headings-font-weight: 600;
     }
   }
 
+  .media-content {
+    border: 1px solid #e7e7e7;
+  }
+
   .bypostauthor .media-content {
     border: 5px solid $accent-color;
   }
 }
 
 #respond {
-  border-top: 5px solid $primary-color;
+  border: 1px solid #e7e7e7;
   padding: 1em 1em 0.5em 1em;
   background: #f8f9fa;
   border-radius: $main-border-radius;
@@ -265,11 +281,5 @@ $headings-font-weight: 600;
     padding: 1px 10px;
     border-radius: 1em;
     color: #666;
-  }
-}
-
-#featured {
-  iframe {
-    display: block;
   }
 }

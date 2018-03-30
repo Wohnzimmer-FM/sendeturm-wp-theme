@@ -13,6 +13,16 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+.simple-list {
+    list-style: none;
+    padding: 0;
+
+    li {
+        padding-left: 0;
+        list-style: none;
+    }
+}
+
 #page-header {
     padding-bottom: $header-border;
     @include light-box-shadow;
@@ -56,4 +66,10 @@ body {
 .screen-reader-text {
     @extend .sr-only
 }
-  
+
+
+#featured {
+    iframe {
+      display: block;
+    }
+}
