@@ -56,6 +56,20 @@ $headings-font-weight: 600;
   background: rgba(0, 0, 0, 0.8);
 }
 
+.navbar-brand {
+  font-weight: bold;
+}
+
+#menu-header-menu {
+  a {
+    font-weight: bold;
+  }
+}
+
+#menu-header-menu .current_page_item a {
+  color: $accent-color;
+}
+
 #page-footer {
   h2 {
     color: rgba(255, 255, 255, 0.5);

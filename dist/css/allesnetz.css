@@ -6113,6 +6113,7 @@ body {
   padding: 0; }
   .simple-list li {
     padding-left: 0;
+    margin-bottom: 0.3em;
     list-style: none; }
 
 #page-header {
@@ -6120,6 +6121,9 @@ body {
 
 #page-footer {
   padding-top: 10px; }
+  #page-footer .overlay {
+    padding-top: 2rem;
+    padding-bottom: 3rem; }
 
 #main-content {
   position: relative; }
@@ -6147,6 +6151,15 @@ body {
 
 #page-footer .overlay, #main-nav {
   background: rgba(0, 0, 0, 0.8); }
+
+.navbar-brand {
+  font-weight: bold; }
+
+#menu-header-menu a {
+  font-weight: bold; }
+
+#menu-header-menu .current_page_item a {
+  color: #8BC34A; }
 
 #page-footer {
   color: white; }

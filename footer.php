@@ -2,11 +2,8 @@
 
     <footer id="page-footer">
         <div class="overlay">
-
-
-
             <div class="container">
-                <div class="row pt-4 pb-4">
+                <div class="row">
                     <div class="col-6">
                         <h2><i class="fa fa-microphone mr-1"></i><?php echo __('About', 'sendeturm'); ?></h2>
                         <p><?php bloginfo('description'); ?></p>
@@ -16,6 +13,7 @@
                         <h2><i class="fa fa-link mr-1"></i><?php echo __('Quick links', 'sendeturm'); ?></h2>
                         <?php bootstrap_navigation('footer-menu', 'simple-list simple-menu'); ?>
                     </div>
+                    
                     <div class="col social-icons">
                         <h2><i class="fa fa-comment mr-1"></i> <?php echo __('Contact', 'sendeturm'); ?></h2>
                         <div class="d-flex flex-row h1">
@@ -30,9 +28,6 @@
                     </div>
                 </div>
             </div>
-
-            
-
         </div>
     </footer>
 

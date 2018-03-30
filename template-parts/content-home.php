@@ -20,9 +20,11 @@ $episode = \Podlove\get_episode();
             <small class="text-info guest-list"><?php echo get_guests($episode, array('Guests', 'Gäste')); ?></small>
             <p class="mt-2"><?php echo $episode->summary(); ?></p>
             
+            <?php /*
             <div class="topics">
                 <?php tag_list(); ?>
             </div>
+            */ ?>
 
             <div class="row">
                 <small class="text-info col"><?php echo get_published(); ?></small>

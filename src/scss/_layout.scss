@@ -19,6 +19,7 @@ body {
 
     li {
         padding-left: 0;
+        margin-bottom: 0.3em;
         list-style: none;
     }
 }
@@ -30,6 +31,11 @@ body {
 
 #page-footer {
     padding-top: $header-border;
+
+    .overlay {
+        padding-top: 2rem;
+        padding-bottom: 3rem;
+    }
 }
 
 #main-content {
