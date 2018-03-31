@@ -43,7 +43,6 @@ $the_query = new WP_Query( $args );
                 </div>
             </div>
         <?php
-
             
         else :
             get_template_part('template-parts/content', 'none');
@@ -59,7 +58,7 @@ $the_query = new WP_Query( $args );
 
 </div>
 
-<p class="text-center"><?php echo sprintf('Time to load: %s', microtime(1) - $starting_time); ?></p>
+<p class="text-center"><?php echo sprintf('<ttl>%s</ttl>', microtime(1) - $starting_time); ?></p>
 
 </body>
 </html>

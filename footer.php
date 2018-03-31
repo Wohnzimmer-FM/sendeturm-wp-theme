@@ -5,7 +5,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-6">
-                        <h2><i class="fa fa-microphone mr-1"></i><?php echo __('About', 'sendeturm'); ?></h2>
+                        <h2><i class="fa fa-microphone mr-1"></i><?php echo __('About', 'sendeturm'); ?> <?php bloginfo('name'); ?></h2>
                         <p><?php bloginfo('description'); ?></p>
                     </div>
                     

@@ -40,13 +40,19 @@ $feed = \Podlove\Model\Feed::find_one_by_slug('mp3');
                 </div>
 
                 <div class="col-lg-4 align-self-end text-center text-lg-right subscribe">                				
-                    <div class="about-info mb-0 mb-lg-2 text-secondary h3 d-none d-lg-block">
+                    <div class="about-info mb-0 mb-lg-2 text-secondary h4 d-none d-lg-block">
                         <?php bloginfo('description'); ?>
                     </div>
                     
-                    <div class="inner pt-2 pt-lg-0">
-                        <a class="btn btn-secondary" role="button" href="https://itunes.apple.com/de/podcast/id<?php echo $feed->itunes_feed_id; ?>"><?php echo _e('Subscribe with iTunes', 'sendeturm'); ?></a>
-                        <a class="btn btn-secondary" role="button" href="<?php echo $feed->get_subscribe_url(); ?>"><?php echo _e('Subscribe with RSS', 'sendeturm'); ?></a>
+                    <div class="inner">
+                        <a class="btn btn-secondary mt-1 icon-button" role="button" href="https://itunes.apple.com/de/podcast/id<?php echo $feed->itunes_feed_id; ?>">
+                            <i class="fa fa-podcast"></i>
+                            <?php echo _e('Subscribe with iTunes', 'sendeturm'); ?>
+                        </a>
+                        <a class="btn btn-secondary mt-1 icon-button" role="button" href="<?php echo $feed->get_subscribe_url(); ?>">
+                            <i class="fa fa-rss"></i>
+                            <?php echo _e('Subscribe with RSS', 'sendeturm'); ?>
+                        </a>
                     </div>
                 </div>
             </div>
