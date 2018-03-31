@@ -208,12 +208,7 @@ $headings-font-weight: 600;
       border-top-left-radius: $main-border-radius;
       border-bottom-left-radius: $main-border-radius;
       width: 10em;
-      transition: all .2s ease;
-
-      &:focus {
-        width: 20em;
-        transition: all .2s ease;
-      }
+      
     }
   
     button {

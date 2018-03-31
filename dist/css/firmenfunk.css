@@ -6242,11 +6242,7 @@ body {
     border-radius: 0;
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
-    width: 10em;
-    transition: all .2s ease; }
-    #header-search input:focus {
-      width: 20em;
-      transition: all .2s ease; }
+    width: 10em; }
   #header-search button {
     border-radius: 0;
     border-top-right-radius: 0px;
