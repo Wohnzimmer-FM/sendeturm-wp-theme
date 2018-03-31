@@ -6135,7 +6135,8 @@ body {
   border-top-right-radius: 0; }
 
 #main {
-  padding: 1em; }
+  padding: 1em;
+  min-height: 30em; }
 
 #featured iframe {
   display: block; }
@@ -6155,8 +6156,11 @@ body {
 .navbar-brand {
   font-weight: bold; }
 
-#menu-header-menu a {
+#menu-header-menu li a {
   font-weight: bold; }
+
+#menu-header-menu li .dropdown-menu a {
+  font-weight: normal; }
 
 #menu-header-menu .current_page_item a {
   color: #8BC34A; }
