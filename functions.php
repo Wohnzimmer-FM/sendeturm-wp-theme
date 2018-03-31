@@ -4,6 +4,36 @@ if(in_array($_SERVER["REMOTE_ADDR"], array('127.0.0.1'))) {
     define('ISLOCAL', true);
 }
 
+function load_global_settings() {
+    $page = get_page_by_path('global-settings');
+
+    if(!$page) {
+        return array();
+    }
+
+    $data = get_post_meta($page->ID);
+    
+    return $data;
+}
+
+$global_settings = load_global_settings();
+
+function get_global_setting($key) {
+    global $global_settings;
+    
+    if(array_key_exists($key, $global_settings)) {
+        $value = $global_settings[$key];
+
+        if(is_array($value)) {
+            return $value[0];
+        } else {
+            return $value;
+        }
+    } else {
+        return '';
+    }
+}
+
 include 'vendor/wp-bootstrap4-navwalker/wp-bootstrap-navwalker.php';
 
 function sendeturm_scripts()
@@ -186,7 +216,7 @@ function sendeturm_sanitize_select( $input, $setting ) {
     $choices = $setting->manager->get_control( $setting->id )->choices;
     // If the input is a valid key, return it; otherwise, return the default.
     return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
-  }
+}
 
 function sendeturm_customize_register( $wp_customize ) {
     $path = get_template_directory() . '/dist/css';
@@ -216,5 +246,6 @@ function sendeturm_customize_register( $wp_customize ) {
         'description' => __( 'Which Theme Stylesheet should be used?' ),
         'choices' => $list,
     ));
- }
- add_action('customize_register', 'sendeturm_customize_register');
+}
+add_action('customize_register', 'sendeturm_customize_register');
+

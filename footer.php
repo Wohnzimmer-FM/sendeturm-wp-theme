@@ -32,5 +32,8 @@
     </footer>
 
 <?php wp_footer(); ?>
+
+<?php echo get_global_setting('analytics'); ?>
+
 </body>
 </html>
