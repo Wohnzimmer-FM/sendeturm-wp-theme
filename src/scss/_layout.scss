@@ -8,14 +8,12 @@ $header-border: 10px !default;
     //box-shadow: 0 1px 1px 0 rgba(10, 16, 34, .2);
 }
 
-html {
+html, body {
     height: 100%;
 }
 
-body {
-    height: 100%;
-    background: #F8F8F8;
-    font-family: 'Open Sans', sans-serif;
+#page-inner {
+    min-height: 100%;
 }
 
 .simple-list {
@@ -44,12 +42,12 @@ body {
 }
 
 #content {
-    min-height: 100%;
+    padding-top: 4rem;
+    padding-bottom: 3rem;
 }
 
 #main-content {
     position: relative;
-    min-height: 100%;
 }
 
 .home #main-content {
@@ -61,8 +59,7 @@ body {
   
 #main {
     padding: 1em;
-    min-height: 100%;
-    height: auto !important;
+    min-height: 30em;
 }
 
 
