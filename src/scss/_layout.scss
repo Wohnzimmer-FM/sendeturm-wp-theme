@@ -8,7 +8,12 @@ $header-border: 10px !default;
     //box-shadow: 0 1px 1px 0 rgba(10, 16, 34, .2);
 }
 
+html {
+    height: 100%;
+}
+
 body {
+    height: 100%;
     background: #F8F8F8;
     font-family: 'Open Sans', sans-serif;
 }
@@ -38,8 +43,13 @@ body {
     }
 }
 
+#content {
+    min-height: 100%;
+}
+
 #main-content {
     position: relative;
+    min-height: 100%;
 }
 
 .home #main-content {
@@ -51,7 +61,8 @@ body {
   
 #main {
     padding: 1em;
-    min-height: 30em;
+    min-height: 100%;
+    height: auto !important;
 }
 
 
