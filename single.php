@@ -14,6 +14,8 @@
 
 get_header(); ?>
 
+	<?php get_template_part('template-parts/partial', 'subscribebar'); ?>
+	
 	<div id="main-content" class="container">
 		<main id="main">
 			<?php get_template_part('template-parts/partial', 'socialbar'); ?>
