@@ -6267,20 +6267,19 @@ body, #page-footer, #page-header, #featured {
   color: #000;
   text-decoration: none; }
 
-#comments .comments-title {
-  margin-bottom: 0.5em; }
-
-#comments .media .media-content {
-  padding: 1em;
-  margin-bottom: 1em;
-  background: #f8f9fa;
-  border-radius: 0px; }
-
-#comments .media-content {
-  border: 1px solid #e7e7e7; }
-
-#comments .bypostauthor .media-content {
-  border: 5px solid #FFEB3B; }
+#comments {
+  border-top: 5px solid #2196F3; }
+  #comments .comments-title {
+    margin-bottom: 0.5em; }
+  #comments .media .media-content {
+    padding: 1em;
+    margin-bottom: 1em;
+    background: #f8f9fa;
+    border-radius: 0px; }
+  #comments .media-content {
+    border: 1px solid #e7e7e7; }
+  #comments .bypostauthor .media-content {
+    border: 5px solid #FFEB3B; }
 
 #respond {
   border: 1px solid #e7e7e7;

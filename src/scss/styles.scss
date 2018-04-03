@@ -233,6 +233,8 @@ body, #page-footer, #page-header, #featured {
 }
 
 #comments {
+  border-top: 5px solid $primary-color;
+
   .comments-title {
     margin-bottom: 0.5em;
   }
