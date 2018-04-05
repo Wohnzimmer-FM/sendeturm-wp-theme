@@ -10,21 +10,17 @@
 $episode = \Podlove\get_episode();
 ?>
 
-<a href="<?php echo esc_url(get_permalink()); ?>" class="list-group-item list-group-item-action">
+<a href="<?php echo esc_url(get_permalink()); ?>" class="episode-list-item list-group-item list-group-item-action d-block">
    <div class="row">
         <div class="col-2 d-none d-md-block">
             <img src="<?php echo $episode->image(array('fallback' => true))->url(array('width' => 250)); ?>" alt="<?php echo _e('Episode cover'); ?>" class="img-fluid" />
         </div>
-        <div class="col">
+        <div class="col-10">
             <h3 class="h5 text-primary"><?php the_title(); ?></h3>
-            <small class="text-info guest-list"><?php echo get_guests($episode, array('Guests', 'Gäste')); ?></small>
-            <p class="mt-2"><?php echo $episode->summary(); ?></p>
             
-            <?php /*
-            <div class="topics">
-                <?php tag_list(); ?>
-            </div>
-            */ ?>
+            <small class="text-info guest-list"><?php echo get_guests($episode, array('Guests', 'Gäste')); ?></small>
+            
+            <p class="mt-2"><?php echo $episode->summary(); ?></p>
 
             <div class="row">
                 <small class="text-primary col"><?php echo get_published(); ?></small>

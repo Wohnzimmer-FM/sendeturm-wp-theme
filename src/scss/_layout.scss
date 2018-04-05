@@ -88,3 +88,8 @@ html, body {
       display: block;
     }
 }
+
+/* Fix for IE11 */
+.episode-list-item {
+    height: 100%;
+}

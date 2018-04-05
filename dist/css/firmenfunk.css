@@ -6147,6 +6147,10 @@ html, body {
 #featured iframe {
   display: block; }
 
+/* Fix for IE11 */
+.episode-list-item {
+  height: 100%; }
+
 body {
   font-family: 'Open Sans', sans-serif; }
 
