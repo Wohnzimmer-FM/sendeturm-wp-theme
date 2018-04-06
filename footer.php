@@ -6,7 +6,7 @@
                     <div class="row">
                         <div class="col-6">
                             <h2><i class="fa fa-microphone mr-1"></i><?php echo __('About', 'sendeturm'); ?> <?php bloginfo('name'); ?></h2>
-                            <p><?php bloginfo('description'); ?></p>
+                            <p><?php echo get_global_setting('about', bloginfo('description')); ?></p>
                         </div>
                         
                         <div class="col">
@@ -27,6 +27,9 @@
                             </div>
                         </div>
                     </div>
+
+                    <?php echo get_global_setting('footer'); ?>                
+
                 </div>
             </div>
         </footer>

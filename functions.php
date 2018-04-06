@@ -18,17 +18,24 @@ function load_global_settings() {
 
 $global_settings = load_global_settings();
 
-function get_global_setting($key) {
+function get_global_setting($key, $default="") {
     global $global_settings;
     
     if(array_key_exists($key, $global_settings)) {
         $value = $global_settings[$key];
+        $ret = "";
 
         if(is_array($value)) {
-            return $value[0];
+            $ret = $value[0];
         } else {
-            return $value;
+            $ret = $value;
         }
+
+        if(!$ret) {
+            $ret = $default;
+        }
+
+        return $ret;
     } else {
         return '';
     }
