@@ -188,3 +188,7 @@ function sendeturm_sanitize_select( $input, $setting ) {
     // If the input is a valid key, return it; otherwise, return the default.
     return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
 }
+
+function episode_title($episode, $podcast) {
+    return sprintf('%s <span class="badge badge-secondary">%s%03d</span>', $episode->title(), $podcast->mnemonic(), $episode->number());
+}

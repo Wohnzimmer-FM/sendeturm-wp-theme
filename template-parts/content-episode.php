@@ -1,8 +1,9 @@
 <?php
 $episode = \Podlove\get_episode();
+$podcast = \Podlove\get_podcast();
 ?>
 
-<?php the_title('<h1 class="entry-title mb-4">', '</h1>'); ?>
+<h1 class="entry-title mb-4"><?php echo episode_title($episode, $podcast); ?></h1>
 
 <div id="current-episode" class="row pb-4">
     <div class="col-lg-8">

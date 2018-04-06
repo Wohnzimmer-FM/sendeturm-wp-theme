@@ -6316,8 +6316,3 @@ body, #page-footer, #page-header, #featured {
     margin-top: 0.1em;
     display: block;
     font-size: 2em; } }
-
-.list-group-item:hover .guest-list .list-inline-item {
-  background: #03A9F4; }
-  .list-group-item:hover .guest-list .list-inline-item span {
-    color: #fff; }
