@@ -1,47 +1,11 @@
 <?php
 
 if(in_array($_SERVER["REMOTE_ADDR"], array('127.0.0.1'))) {
-    define('ISLOCAL', true);
-}
-
-function load_global_settings() {
-    $page = get_page_by_path('global-settings');
-
-    if(!$page) {
-        return array();
-    }
-
-    $data = get_post_meta($page->ID);
-    
-    return $data;
-}
-
-$global_settings = load_global_settings();
-
-function get_global_setting($key, $default="") {
-    global $global_settings;
-    
-    if(array_key_exists($key, $global_settings)) {
-        $value = $global_settings[$key];
-        $ret = "";
-
-        if(is_array($value)) {
-            $ret = $value[0];
-        } else {
-            $ret = $value;
-        }
-
-        if(!$ret) {
-            $ret = $default;
-        }
-
-        return $ret;
-    } else {
-        return '';
-    }
+    #define('ISLOCAL', true);
 }
 
 include 'vendor/wp-bootstrap4-navwalker/wp-bootstrap-navwalker.php';
+include 'inc/theme-options.php';
 
 function sendeturm_scripts()
 {
@@ -224,35 +188,3 @@ function sendeturm_sanitize_select( $input, $setting ) {
     // If the input is a valid key, return it; otherwise, return the default.
     return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
 }
-
-function sendeturm_customize_register( $wp_customize ) {
-    $path = get_template_directory() . '/dist/css';
-    $files = array_diff(scandir($path), array('.', '..'));
-    $list = array();
-
-    foreach($files as $file) {
-        $path_parts = pathinfo($file);
-        $list[$path_parts['filename']] = $file;
-    }
-
-    $wp_customize->add_section( 'sendeturm_theme' , array(
-        'title'      => __( 'Theme', 'sendeturm' ),
-        'priority'   => 30,
-    ));
-
-    $wp_customize->add_setting( 'sendeturm_active_theme', array(
-        'capability' => 'edit_theme_options',
-        'sanitize_callback' => 'sendeturm_sanitize_select',
-        'default' => $list[0],
-    ));
-
-    $wp_customize->add_control( 'sendeturm_active_theme', array(
-        'type' => 'select',
-        'section' => 'sendeturm_theme', // Add a default or your own section
-        'label' => __( 'Active Theme' ),
-        'description' => __( 'Which Theme Stylesheet should be used?' ),
-        'choices' => $list,
-    ));
-}
-add_action('customize_register', 'sendeturm_customize_register');
-
