@@ -2,7 +2,7 @@
 
 $accent-color: #FFEB3B !default;
 $primary-color: #2196F3 !default;
-$main-border-radius: 0px;
+$main-border-radius: 0.25rem;
 
 $theme-colors: (
   "primary": $primary-color,
@@ -12,7 +12,7 @@ $theme-colors: (
 );
 
 // Overrides
-$enable-rounded: false;
+//$enable-rounded: false;
 $navbar-dark-color: rgba(#fff, .9) !default;
 $navbar-dark-hover-color: rgba($accent-color, .75) !default;
 $headings-font-weight: 600;
@@ -104,6 +104,14 @@ body, #page-footer, #page-header, #featured {
 
 .home #content {
   padding-top: 0;
+}
+
+#content {
+  .social-icons {
+    font-size: 2em;
+    color: #fff;
+    padding: 0;
+  }
 }
 
 #featured {
@@ -317,8 +325,4 @@ body, #page-footer, #page-header, #featured {
       font-size: 2em;
     }
   }
-}
-
-.episode-list-item .title span {
-  
 }

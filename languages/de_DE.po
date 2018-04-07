@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2018-03-31 13:25+0200\n"
-"PO-Revision-Date: 2018-03-31 13:26+0200\n"
+"POT-Creation-Date: 2018-04-07 16:12+0200\n"
+"PO-Revision-Date: 2018-04-07 16:13+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de\n"
@@ -26,7 +26,7 @@ msgstr "Ihr Kommentar wartet auf Freigabe."
 msgid "Edit"
 msgstr "Bearbeiten"
 
-#: comments.php:16 template-parts/content-episode.php:30
+#: comments.php:16 template-parts/content-episode.php:31
 msgid "Comments"
 msgstr "Kommentare"
 
@@ -46,54 +46,87 @@ msgstr "Links"
 msgid "Contact"
 msgstr "Kontakt"
 
-#: functions.php:58
+#: functions.php:59
 msgid "Header Menu"
 msgstr "Hauptmenü"
 
-#: functions.php:59
+#: functions.php:60
 msgid "Footer Menu"
 msgstr "Footer Menü"
 
-#: functions.php:114
+#: functions.php:115
 msgid "Published today"
 msgstr "Heute veröffentlicht"
 
-#: functions.php:116
+#: functions.php:117
 #, php-format
 msgid "Published yesterday"
 msgid_plural "Published %d days ago"
 msgstr[0] "Gestern veröffentlicht"
 msgstr[1] "Veröffentlicht vor %d Tagen"
 
-#: functions.php:118
+#: functions.php:119
 msgid "Published on"
 msgstr "Veröffentlicht am"
 
-#: functions.php:202
-msgid "Theme"
-msgstr "Theme"
-
-#: functions.php:215
-msgid "Active Theme"
-msgstr "Aktives Theme"
-
-#: functions.php:216
-msgid "Which Theme Stylesheet should be used?"
-msgstr "Welches Stylesheet soll benutzt werden?"
-
-#: header.php:33 search.php:21 search.php:24
+#: header.php:35 search.php:23 search.php:26
 msgid "Search"
 msgstr "Suche"
 
-#: index.php:25 performance-check.php:23
+#: inc/theme-options.php:17
+msgid "Theme CSS"
+msgstr "Theme CSS"
+
+#: inc/theme-options.php:30
+msgid "Active Theme"
+msgstr "Aktives Theme"
+
+#: inc/theme-options.php:31
+msgid "Which Theme Stylesheet should be used?"
+msgstr "Welches Stylesheet soll benutzt werden?"
+
+#: inc/theme-options.php:40 inc/theme-options.php:61 inc/theme-options.php:81
+msgid "Footer"
+msgstr "Footer"
+
+#: inc/theme-options.php:51
+msgid "Custom Content"
+msgstr "Zus. Inhalt"
+
+#: inc/theme-options.php:52
+msgid "Custom additional footer content."
+msgstr "Zus. Inhalt für den Footer"
+
+#: inc/theme-options.php:72
+msgid "Analytics code"
+msgstr "Analytics Code"
+
+#: inc/theme-options.php:73
+msgid "Code for analytics."
+msgstr "Code für Analytics."
+
+#: inc/theme-options.php:92
+msgid "About the podcast"
+msgstr "Über den Podcast"
+
+#: inc/theme-options.php:93
+msgid "Short description or mission statement."
+msgstr "Kurze Beschreibung oder Mission"
+
+#: index.php:25
+#, php-format
+msgid "All episodes of %s"
+msgstr "Alle Episoden vom %s"
+
+#: performance-check.php:23
 msgid "All episodes"
 msgstr "Alle Episoden"
 
-#: search.php:26
+#: search.php:28
 msgid "Start search"
 msgstr "Suche starten"
 
-#: search.php:33
+#: search.php:35
 msgid "Search results"
 msgstr "Suchergebnisse"
 
@@ -116,39 +149,41 @@ msgstr ""
 msgid "Sorry, the page you are looking was not found"
 msgstr "Sorry, die Seite wurde nicht gefunden"
 
-#: template-parts/content-episode.php:15 template-parts/content-home.php:31
+#: template-parts/content-episode.php:16 template-parts/content-home.php:29
 msgid "Duration"
 msgstr "Dauer"
 
-#: template-parts/content-episode.php:28
+#: template-parts/content-episode.php:29
 msgid "Write the first comment!"
 msgstr "Kommentar schreiben!"
 
-#: template-parts/content-episode.php:44
+#: template-parts/content-episode.php:45
 msgid "Share"
 msgstr "Teilen"
 
-#: template-parts/content-episode.php:64
+#: template-parts/content-episode.php:65
 msgid "Contributors"
 msgstr "Mitwirkende"
 
-#: template-parts/content-episode.php:76
+#: template-parts/content-episode.php:77
 msgid "Author's page"
 msgstr "Autorenseite"
 
-#: template-parts/content-episode.php:99
+#: template-parts/content-episode.php:100
 msgid "Related episodes"
 msgstr "Verwandte Episoden"
 
-#: template-parts/content-featured.php:48
+#: template-parts/content-featured.php:50
+#: template-parts/partial-subscribebar.php:15
 msgid "Subscribe with iTunes"
 msgstr "In iTunes abonnieren"
 
-#: template-parts/content-featured.php:49
+#: template-parts/content-featured.php:54
+#: template-parts/partial-subscribebar.php:19
 msgid "Subscribe with RSS"
 msgstr "Feed abonnieren"
 
-#: template-parts/content-home.php:16
+#: template-parts/content-home.php:18
 msgid "Episode cover"
 msgstr "Episodenbild"
 
