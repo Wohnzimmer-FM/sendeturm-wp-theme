@@ -14,7 +14,7 @@ function sendeturm_customize_register( $wp_customize ) {
     // Control for Theme CSS selection
 
     $wp_customize->add_section( 'sendeturm_theme' , array(
-        'title'      => __( 'Theme CSS', 'sendeturm' ),
+        'title'      => __( 'Theme', 'sendeturm' ),
         'priority'   => 30,
     ));
 
@@ -92,6 +92,27 @@ function sendeturm_customize_register( $wp_customize ) {
         'label' => __('About the podcast'),
         'description' => __('Short description or mission statement.'),
     ));
+
+
+    ////////////////////////////////////////////////
+    // Control for the footer's "about" section
+
+    $wp_customize->add_setting( 'sendeturm_home_as_blog', array(
+        'capability' => 'edit_theme_options',
+        'sanitize_callback' => 'sendeturm_sanitize_checkbox',
+    ));
+      
+    $wp_customize->add_control( 'sendeturm_home_as_blog', array(
+        'type' => 'checkbox',
+        'section' => 'sendeturm_theme', // Add a default or your own section
+        'label' => __( 'Home as Blog' ),
+        'description' => __( 'The homepage is used as blog if checked. Otherwise as podcast.' ),
+    ));
+}
+
+function sendeturm_sanitize_checkbox( $checked ) {
+    // Boolean check.
+    return ( ( isset( $checked ) && true == $checked ) ? true : false );
 }
 
 add_action('customize_register', 'sendeturm_customize_register');

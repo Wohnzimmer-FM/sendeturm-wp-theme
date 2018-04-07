@@ -69,7 +69,8 @@ function sendeturm_theme_setup()
 }
 add_action('after_setup_theme', 'sendeturm_theme_setup');
 
-
+/*
+DEPRECATED
 function auto_template_part()
 {
     if (get_post_type() == 'podcast') {
@@ -77,13 +78,26 @@ function auto_template_part()
     } else {
         get_template_part('template-parts/content', get_post_format());
     }
+}*/
+
+
+function custom_class($classes) {
+    if (is_home()) {
+        if(get_theme_mod("sendeturm_home_as_blog", true)) {
+            $classes[] = 'home-blog';
+        } else {
+            $classes[] = 'home-podcast';
+        }
+    }
+    
+    return $classes;
 }
+add_filter('body_class', 'custom_class');
 
 
 function separate_podcasts_from_blogs($query)
 {
-    # Erst mal bleibt das auf false, also nur Podcasts auflisten
-    $is_blog = false;
+    $is_blog = get_theme_mod("sendeturm_home_as_blog", true);
 
     if ($query->is_main_query() && is_home()) {
         if ($is_blog) {
@@ -182,9 +196,10 @@ function tag_list() {
     }
 }
 
-function sendeturm_sanitize_select( $input, $setting ) {
+function sendeturm_sanitize_select($input, $setting) {
     // Get list of choices from the control associated with the setting.
     $choices = $setting->manager->get_control( $setting->id )->choices;
+
     // If the input is a valid key, return it; otherwise, return the default.
     return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
 }

@@ -4,7 +4,7 @@ $podcast = \Podlove\get_podcast();
 $services = $podcast->services(array('category' => 'social'));
 ?>
 
-<div id="subscribe-bar" class="container text-center mb-4">
+<div id="subscribe-bar" class="container text-center">
     <div class="row align-items-center">
         <div class="col-12 col-lg-6 h6 p-2 m-0">
             <?php bloginfo('description'); ?>
@@ -18,7 +18,7 @@ $services = $podcast->services(array('category' => 'social'));
                 <i class="fa fa-rss"></i>
                 <?php echo _e('Subscribe with RSS', 'sendeturm'); ?>
             </a>
-            
+
         </div>
     </div>
 </div>

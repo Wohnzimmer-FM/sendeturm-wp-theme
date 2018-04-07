@@ -5,7 +5,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12 col-lg-6">
-                            <h2><i class="fa fa-microphone mr-1"></i><?php echo __('About', 'sendeturm'); ?> <?php bloginfo('name'); ?></h2>
+                            <h2><i class="fa fa-info-circle mr-1"></i><?php echo __('About', 'sendeturm'); ?> <?php bloginfo('name'); ?></h2>
                             <p><?php echo get_theme_mod('sendeturm_footer_about', get_bloginfo('description')); ?></p>
                         </div>
                         

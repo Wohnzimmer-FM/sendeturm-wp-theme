@@ -6296,9 +6296,6 @@ a.text-dark:hover, a.text-dark:focus {
 html, body {
   height: 100%; }
 
-#page-inner {
-  min-height: 100%; }
-
 .simple-list {
   list-style: none;
   padding: 0; }
@@ -6318,12 +6315,12 @@ html, body {
 
 #content {
   padding-top: 2rem;
-  padding-bottom: 3rem; }
+  padding-bottom: 2rem; }
 
 #main-content {
   position: relative; }
 
-.home #main-content {
+.home-podcast #main-content {
   margin-top: 0;
   border-top: none;
   border-top-left-radius: 0;
@@ -6339,6 +6336,9 @@ html, body {
 /* Fix for IE11 */
 .episode-list-item {
   height: 100%; }
+
+#subscribe-bar {
+  margin-bottom: 2em; }
 
 body {
   font-family: 'Open Sans', sans-serif; }
@@ -6383,7 +6383,7 @@ body, #page-footer, #page-header, #featured {
     #page-footer #menu-footer-menu a:hover, #page-footer .social-icons a:hover {
       color: #FFEB3B; }
 
-.home #content {
+.home-podcast #content {
   padding-top: 0; }
 
 #content .social-icons {
