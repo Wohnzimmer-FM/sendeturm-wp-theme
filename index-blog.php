@@ -14,8 +14,6 @@
 
 get_header(); ?>
 
-	<?php #get_template_part('template-parts/partial', 'subscribebar'); ?>
-
 	<div id="main-content" class="container">
 		<main id="main">
 
@@ -25,15 +23,18 @@ get_header(); ?>
 					<div class="">
 						<?php
 						if (have_posts()) :
+							echo '<div id="all-posts" class="card-columns">';
 							
 							while (have_posts())
 							{
 								the_post();
 
-								if (get_post_type() == 'blog') {
-									#get_template_part('template-parts/content', 'blog');
+								if (get_post_type() == 'post') {
+									get_template_part('template-parts/content', 'post-small');
 								}
 							}
+
+							echo '</div><!-- end of list-group -->';
 						?>
 						</div><!-- end of list-group -->
 						<?php the_posts_navigation(array(

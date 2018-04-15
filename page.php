@@ -14,7 +14,11 @@
 
 get_header(); ?>
 
-	<?php get_template_part('template-parts/partial', 'subscribebar'); ?>
+	<?php 
+		if(get_theme_mod("sendeturm_home_as_blog", true) == false) {
+			get_template_part('template-parts/partial', 'subscribebar');
+		}
+	?>
 
 	<div id="main-content" class="container">
 		<main id="main">

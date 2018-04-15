@@ -6320,7 +6320,7 @@ html, body {
 #main-content {
   position: relative; }
 
-.home-podcast #main-content {
+.home-podcast #main-content, .post-type-archive-podcast #main-content {
   margin-top: 0;
   border-top: none;
   border-top-left-radius: 0;
@@ -6339,6 +6339,14 @@ html, body {
 
 #subscribe-bar {
   margin-bottom: 2em; }
+
+@media (max-width: 1199.98px) {
+  .card-columns {
+    column-count: 1; } }
+
+@media (min-width: 1200px) {
+  .card-columns {
+    column-count: 2; } }
 
 body {
   font-family: 'Open Sans', sans-serif; }
@@ -6383,7 +6391,7 @@ body, #page-footer, #page-header, #featured {
     #page-footer #menu-footer-menu a:hover, #page-footer .social-icons a:hover {
       color: #8BC34A; }
 
-.home-podcast #content {
+.home-podcast #content, .post-type-archive-podcast #content {
   padding-top: 0; }
 
 #content .social-icons {

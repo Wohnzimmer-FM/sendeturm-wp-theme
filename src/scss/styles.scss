@@ -102,8 +102,10 @@ body, #page-footer, #page-header, #featured {
   }
 }
 
-.home-podcast #content {
-  padding-top: 0;
+.home-podcast, .post-type-archive-podcast {
+  #content {
+    padding-top: 0;
+  }
 }
 
 #content {
@@ -324,5 +326,11 @@ body, #page-footer, #page-header, #featured {
       display: block;
       font-size: 2em;
     }
+  }
+}
+
+.card-columns {
+  .card {
+    
   }
 }

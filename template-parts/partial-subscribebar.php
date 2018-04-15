@@ -18,7 +18,6 @@ $services = $podcast->services(array('category' => 'social'));
                 <i class="fa fa-rss"></i>
                 <?php echo _e('Subscribe with RSS', 'sendeturm'); ?>
             </a>
-
         </div>
     </div>
 </div>

@@ -12,7 +12,7 @@
  * @package sendeturm
  */
 
-if(get_theme_mod("sendeturm_home_as_blog", true)) {
+if(get_theme_mod("sendeturm_home_as_blog", true) && (!is_post_type_archive('podcast'))) {
 	include('index-blog.php');
 } else {
 	include('index-podcast.php');

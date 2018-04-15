@@ -105,8 +105,8 @@ function sendeturm_customize_register( $wp_customize ) {
     $wp_customize->add_control( 'sendeturm_home_as_blog', array(
         'type' => 'checkbox',
         'section' => 'sendeturm_theme', // Add a default or your own section
-        'label' => __( 'Home as Blog' ),
-        'description' => __( 'The homepage is used as blog if checked. Otherwise as podcast.' ),
+        'label' => __( 'Used mainly as blog' ),
+        'description' => __( 'This Wordpress instance is used as blog if checked. Otherwise as podcast.' ),
     ));
 }
 

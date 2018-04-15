@@ -14,11 +14,14 @@
 
 get_header(); ?>
 
-	<?php get_template_part('template-parts/partial', 'subscribebar'); ?>
+	<?php 
+		if(get_post_type() == 'podcast') {
+			get_template_part('template-parts/partial', 'subscribebar');
+		}
+	?>
 	
 	<div id="main-content" class="container">
 		<main id="main">
-			<?php #get_template_part('template-parts/partial', 'socialbar'); ?>
 
 		<?php
 		if (have_posts()) :

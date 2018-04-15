@@ -14,12 +14,12 @@
 
 get_header(); ?>
 
-	<?php get_template_part('template-parts/content', 'featured'); ?>
+	<?php 
+		get_template_part('template-parts/content', 'featured');
+	?>
 
 	<div id="main-content" class="container">
 		<main id="main">
-			<?php #get_template_part('template-parts/partial', 'socialbar'); ?>
-
 			<div class="row">
 				<div class="col-12">
 					<h2 class="mb-3"><?php echo sprintf(__('All episodes of %s', 'sendeturm'), get_bloginfo('name')); ?></h2>
@@ -34,7 +34,7 @@ get_header(); ?>
 								the_post();
 
 								if (get_post_type() == 'podcast') {
-									get_template_part('template-parts/content', 'home');
+									get_template_part('template-parts/content', 'episode-small');
 								}
 							}
 						?>

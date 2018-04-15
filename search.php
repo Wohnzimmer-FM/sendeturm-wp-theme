@@ -14,7 +14,11 @@
 
 get_header(); ?>
 
-<?php get_template_part('template-parts/partial', 'subscribebar'); ?>
+<?php 
+	if(get_theme_mod("sendeturm_home_as_blog", true) == false) {
+		get_template_part('template-parts/partial', 'subscribebar');
+	}
+?>
 
 <div id="main-content" class="container">
 	<main id="main">
@@ -30,23 +34,49 @@ get_header(); ?>
 
 
 		<?php
-		if (have_posts()) :
+		if (have_posts()) {
 			
-			echo '<h3>' . __('Search results', 'sendeturm') . '</h3>';
-			echo '<div id="all-episodes" class="list-group">';
+			echo '<h3 class="mb-4">' . __('Search results', 'sendeturm') . '</h3>';
+			
+			$results_episodes = array();
+			$results_posts = array();
 
 			while (have_posts())
 			{
 				the_post();
-				get_template_part('template-parts/content', 'home');
+				
+				if (get_post_type() == 'podcast') {
+					ob_start();
+					get_template_part('template-parts/content', 'episode-small');
+					$results_episodes[] = ob_get_clean();
+				}
+
+				if (get_post_type() == 'post') {
+					ob_start();
+					get_template_part('template-parts/content', 'post-small');
+					$results_posts[] = ob_get_clean();
+				}
 			}
 
-			echo '</div><!-- end of list-group -->';
+			if(count($results_episodes)) {
+				echo '<h4>' . __('Podcast episodes', 'sendeturm') . '</h4>';
+				echo '<div id="all-episodes" class="list-group mb-4">';
+				echo implode($results_episodes);
+				echo '</div><!-- end of list-group -->';
+			}
+
+			if(count($results_posts)) {
+				echo '<h4>' . __('Blog posts', 'sendeturm') . '</h4>';
+				echo '<div id="all-posts" class="card-columns mb-4">';
+				echo implode($results_posts);
+				echo '</div><!-- end of list-group -->';
+			}
 
 			//the_posts_navigation();
-		else :
+		} else {
 			get_template_part('template-parts/content', 'none');
-		endif;
+		}
+
 		?>
 				</div>
 			</div>
