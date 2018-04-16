@@ -11,11 +11,6 @@ $podcast = \Podlove\get_podcast();
             <!-- Player -->
             <div class="mb-4">
                 <?php echo $episode->player(); ?>
-
-                <div class="row mt-2">
-                    <div class="col"><?php echo _e('Duration', 'sendeturm') . ': ' . $episode->duration(); ?></div>
-                    <div class="col text-right"><?php echo get_published(); ?></div>
-                </div>
             </div>
 
             <!-- Buttons -->
@@ -55,12 +50,16 @@ $podcast = \Podlove\get_podcast();
             
             <?php the_content(); ?>
 
+            <div class="row mt-4">
+                <div class="col"><?php echo _e('Duration', 'sendeturm') . ': ' . $episode->duration(); ?></div>
+                <div class="col text-right"><?php echo get_published(); ?></div>
+            </div>
         </article>
     </div>
 
     <div class="col-lg-4">
         <!-- Contributors list -->
-        <div class="card mb-4 bg-secondary">
+        <div class="card mb-4">
             <div class="card-header">
                 <i class="fa fa-microphone mr-2"></i><?php echo _e('Contributors', 'sendeturm'); ?>
             </div>

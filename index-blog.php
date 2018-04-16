@@ -17,34 +17,31 @@ get_header(); ?>
 	<div id="main-content" class="container">
 		<main id="main">
 
-			<div class="row">
-				<div class="col-12">
+			<?php echo '<h1 class="mb-4">' . __('Blog posts', 'sendeturm') . '</h1>'; ?>
 
-					<div class="">
-						<?php
-						if (have_posts()) :
-							echo '<div id="all-posts" class="card-columns">';
-							
-							while (have_posts())
-							{
-								the_post();
 
-								if (get_post_type() == 'post') {
-									get_template_part('template-parts/content', 'post-small');
-								}
-							}
+			<?php
+			if (have_posts()) :
+				echo '<div id="all-posts" class="card-columns">';
+				
+				while (have_posts())
+				{
+					the_post();
 
-							echo '</div><!-- end of list-group -->';
-						?>
-						</div><!-- end of list-group -->
-						<?php the_posts_navigation(array(
-							'mid_size' => 2
-						));
-						?>
-					</div><!-- end of col-X -->
+					if (get_post_type() == 'post') {
+						get_template_part('template-parts/content', 'post-small');
+					}
+				}
 
-				</div>
-			</div>
+				echo '</div><!-- end of list-group -->';
+			?>
+			</div><!-- end of list-group -->
+			<?php the_posts_navigation(array(
+				'mid_size' => 2
+			));
+			?>
+
+
 		<?php
 
 			
