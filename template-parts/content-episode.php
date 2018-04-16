@@ -69,7 +69,7 @@ $podcast = \Podlove\get_podcast();
                 <li class="list-group-item contributor">
                     <div class="row no-gutters">
                         <div class="contributor-pic col mb-2 mb-sm-0">
-                            <img src="<?php echo $contributor->image()->url(array('width' => 55, 'height' => 55)); ?>" />
+                            <img width="55" height="55" src="<?php echo $contributor->image()->url(array('width' => 55, 'height' => 55)); ?>" srcset="<?php echo $contributor->image()->url(array('width' => 110, 'height' => 110)); ?> 2x" />
                         </div>
                         <div class="contributor-name col-12 col-sm-8 col-md-9 col-lg-5 col-xl-6">
                             <h4 class="name"><?php echo $contributor->name(); ?></h4>
@@ -80,7 +80,7 @@ $podcast = \Podlove\get_podcast();
                                 <?php foreach($contributor->services() as $service): ?>
                                 <li class="nav-item mr-1">
                                     <a href="<?php echo $service->profileUrl(); ?>">
-                                        <img src="<?php echo $service->image()->url(array('width' => 20, 'height' => 20)); ?>" alt="<?php echo $service->title(); ?>" />
+                                        <img width="20" height="20" src="<?php echo $service->image()->url(array('width' => 20, 'height' => 20)); ?>" srcset="<?php echo $service->image()->url(array('width' => 40, 'height' => 40)); ?> 2x" alt="<?php echo $service->title(); ?>" />
                                     </a>
                                 </li>
                                 <?php endforeach; ?>

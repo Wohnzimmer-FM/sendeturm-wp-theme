@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2018-04-07 16:12+0200\n"
-"PO-Revision-Date: 2018-04-07 16:13+0200\n"
+"POT-Creation-Date: 2018-04-17 01:01+0200\n"
+"PO-Revision-Date: 2018-04-17 01:04+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de\n"
@@ -26,7 +26,7 @@ msgstr "Ihr Kommentar wartet auf Freigabe."
 msgid "Edit"
 msgstr "Bearbeiten"
 
-#: comments.php:16 template-parts/content-episode.php:31
+#: comments.php:16 template-parts/content-episode.php:26
 msgid "Comments"
 msgstr "Kommentare"
 
@@ -54,28 +54,28 @@ msgstr "Hauptmenü"
 msgid "Footer Menu"
 msgstr "Footer Menü"
 
-#: functions.php:115
+#: functions.php:129
 msgid "Published today"
 msgstr "Heute veröffentlicht"
 
-#: functions.php:117
+#: functions.php:131
 #, php-format
 msgid "Published yesterday"
 msgid_plural "Published %d days ago"
 msgstr[0] "Gestern veröffentlicht"
 msgstr[1] "Veröffentlicht vor %d Tagen"
 
-#: functions.php:119
+#: functions.php:133
 msgid "Published on"
 msgstr "Veröffentlicht am"
 
-#: header.php:35 search.php:23 search.php:26
+#: header.php:35 search.php:27 search.php:30
 msgid "Search"
 msgstr "Suche"
 
 #: inc/theme-options.php:17
-msgid "Theme CSS"
-msgstr "Theme CSS"
+msgid "Theme"
+msgstr "Theme"
 
 #: inc/theme-options.php:30
 msgid "Active Theme"
@@ -113,22 +113,38 @@ msgstr "Über den Podcast"
 msgid "Short description or mission statement."
 msgstr "Kurze Beschreibung oder Mission"
 
-#: index.php:25
+#: inc/theme-options.php:108
+msgid "Used mainly as blog"
+msgstr "Hauptsächlich als Blog benutzt"
+
+#: inc/theme-options.php:109
+msgid "This Wordpress instance is used as blog if checked. Otherwise as podcast."
+msgstr ""
+
+#: index-blog.php:20 search.php:69
+msgid "Blog posts"
+msgstr "Blogbeiträge"
+
+#: index-podcast.php:25
 #, php-format
 msgid "All episodes of %s"
 msgstr "Alle Episoden vom %s"
 
-#: performance-check.php:23
+#: performance-check.php:22
 msgid "All episodes"
 msgstr "Alle Episoden"
 
-#: search.php:28
+#: search.php:32
 msgid "Start search"
 msgstr "Suche starten"
 
-#: search.php:35
+#: search.php:39
 msgid "Search results"
 msgstr "Suchergebnisse"
+
+#: search.php:62
+msgid "Podcast episodes"
+msgstr "Podcast-Episoden"
 
 #: template-parts/_bak/content-none.php:25
 #, php-format
@@ -149,27 +165,32 @@ msgstr ""
 msgid "Sorry, the page you are looking was not found"
 msgstr "Sorry, die Seite wurde nicht gefunden"
 
-#: template-parts/content-episode.php:16 template-parts/content-home.php:29
+#: template-parts/content-episode-small.php:18
+msgid "Episode cover"
+msgstr "Episodenbild"
+
+#: template-parts/content-episode-small.php:29
+#: template-parts/content-episode.php:54
 msgid "Duration"
 msgstr "Dauer"
 
-#: template-parts/content-episode.php:29
+#: template-parts/content-episode.php:24
 msgid "Write the first comment!"
 msgstr "Kommentar schreiben!"
 
-#: template-parts/content-episode.php:45
+#: template-parts/content-episode.php:40
 msgid "Share"
 msgstr "Teilen"
 
-#: template-parts/content-episode.php:65
+#: template-parts/content-episode.php:64
 msgid "Contributors"
 msgstr "Mitwirkende"
 
-#: template-parts/content-episode.php:77
+#: template-parts/content-episode.php:76
 msgid "Author's page"
 msgstr "Autorenseite"
 
-#: template-parts/content-episode.php:100
+#: template-parts/content-episode.php:99
 msgid "Related episodes"
 msgstr "Verwandte Episoden"
 
@@ -183,13 +204,13 @@ msgstr "In iTunes abonnieren"
 msgid "Subscribe with RSS"
 msgstr "Feed abonnieren"
 
-#: template-parts/content-home.php:18
-msgid "Episode cover"
-msgstr "Episodenbild"
-
 #: template-parts/content-none.php:2
 msgid "Sorry, nothing found"
 msgstr "Sorry, es wurde nichts gefunden"
+
+#: template-parts/content-post-small.php:10
+msgid "Read More"
+msgstr "Weiterlesen"
 
 #~ msgid "Guest"
 #~ msgid_plural "Guests"

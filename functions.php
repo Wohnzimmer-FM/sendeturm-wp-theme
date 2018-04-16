@@ -147,7 +147,7 @@ function get_guests($episode, $filter = array())
         }
 
         $names []= '<li class="list-inline-item mb-1">'.
-                    '<img src="' . $contributor->image()->url(array('width' => 24, 'height' => 24)). '" />' . 
+                    sprintf('<img width="24" height="24" src="%s" srcset="%s 2x" />', $contributor->image()->url(array('width' => 24, 'height' => 24)), $contributor->image()->url(array('width' => 48, 'height' => 48))) . 
                     '<span>' . $contributor->name(). '</span>' .
                     '</li>';
     }
