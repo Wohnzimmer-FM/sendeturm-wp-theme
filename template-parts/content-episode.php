@@ -102,9 +102,7 @@ $podcast = \Podlove\get_podcast();
             <div class="list-group list-group-flush">
             <?php foreach($episode->relatedEpisodes() as $related): ?>
                 <a href="<?php echo $related->url(); ?>" class="list-group-item list-group-item-action flex-column align-items-start">
-                    <div class="d-flex w-100 justify-content-between">
-                        <?php echo $related->title(); ?>
-                    </div>
+                    <?php echo episode_title($related, $podcast); ?> 
                 </a>
             <?php endforeach; ?>
             </div>

@@ -6305,10 +6305,10 @@ html, body {
     list-style: none; }
 
 #page-header {
-  padding-bottom: 10px; }
+  padding-bottom: 5px; }
 
 #page-footer {
-  padding-top: 10px; }
+  padding-top: 5px; }
   #page-footer .overlay {
     padding-top: 2rem;
     padding-bottom: 3rem; }
@@ -6359,8 +6359,8 @@ body, #page-footer, #page-header, #featured {
 
 #main-content {
   background: #fff;
-  border-top: 10px solid #03A9F4;
-  border-bottom: 10px solid #03A9F4; }
+  border-top: 5px solid #03A9F4;
+  border-bottom: 5px solid #03A9F4; }
 
 #page-inner, #page-footer .overlay, #main-nav {
   background: rgba(0, 0, 0, 0.8); }
