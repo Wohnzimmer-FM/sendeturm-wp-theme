@@ -80,6 +80,19 @@ function auto_template_part()
     }
 }*/
 
+function is_featured() {
+    if(get_theme_mod("sendeturm_home_as_blog", true)) {
+        if(is_post_type_archive('podcast')) {
+            return true;
+        }
+    } else {
+        if (is_home()) {
+            return true;
+        }
+    }
+
+    return false;
+}
 
 function custom_class($classes) {
     if (is_home()) {
@@ -201,9 +214,23 @@ function sendeturm_sanitize_select($input, $setting) {
     $choices = $setting->manager->get_control( $setting->id )->choices;
 
     // If the input is a valid key, return it; otherwise, return the default.
-    return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
+    return (array_key_exists( $input, $choices ) ? $input : $setting->default);
 }
 
 function episode_title($episode, $podcast) {
     return sprintf('%s <span class="badge badge-secondary">%s%03d</span>', $episode->title(), $podcast->mnemonic(), $episode->number());
 }
+
+function sendeturm_podlove_player4_config($config) {
+    if(is_featured()) {
+        $config['theme']['main'] = get_theme_mod('sendeturm_main_player_color_featured', '#FFF');
+        $config['theme']['highlight'] = get_theme_mod('sendeturm_highlight_player_color_featured', '#F00');
+    } else {
+        $config['theme']['main'] = get_theme_mod('sendeturm_main_player_color', '#FFF');
+        $config['theme']['highlight'] = get_theme_mod('sendeturm_highlight_player_color', '#F00');
+    }
+    
+	return $config;
+}
+
+add_filter('podlove_player4_config', 'sendeturm_podlove_player4_config');

@@ -108,6 +108,55 @@ function sendeturm_customize_register( $wp_customize ) {
         'label' => __( 'Used mainly as blog' ),
         'description' => __( 'This Wordpress instance is used as blog if checked. Otherwise as podcast.' ),
     ));
+
+    // Based on article: https://code.tutsplus.com/tutorials/settings-and-controls-for-a-color-scheme-in-the-theme-customizer--cms-21350
+    $colors = array();
+
+    $colors[] = array(
+        'slug'=>'sendeturm_main_player_color', 
+        'default' => '#fff',
+        'label' => __( 'Main Player Color', 'sendeturm' )
+    );
+    
+    $colors[] = array(
+        'slug'=>'sendeturm_highlight_player_color', 
+        'default' => '#000',
+        'label' => __( 'Highlight Player Color', 'sendeturm' )
+    );
+
+    $colors[] = array(
+        'slug'=>'sendeturm_main_player_color_featured', 
+        'default' => '#fff',
+        'label' => __( 'Main Player Color for featured episode', 'sendeturm' )
+    );
+    
+    $colors[] = array(
+        'slug'=>'sendeturm_highlight_player_color_featured', 
+        'default' => '#000',
+        'label' => __( 'Highlight Player Color for featured episode', 'sendeturm' )
+    );
+
+    // add the settings and controls for each color
+    foreach( $colors as $color ) {
+        $wp_customize->add_setting(
+            $color['slug'], array(
+                'default' => $color['default'],
+                'sanitize_callback' => 'sanitize_hex_color',
+                'capability' => 'edit_theme_options'
+            )
+        );
+
+        $wp_customize->add_control(
+            new WP_Customize_Color_Control(
+                $wp_customize, $color['slug'], 
+                array(
+                    'label' => $color['label'], 
+                    'section' => 'sendeturm_theme',
+                    'settings' => $color['slug']
+                )
+            )
+        );
+    }
 }
 
 function sendeturm_sanitize_checkbox( $checked ) {
