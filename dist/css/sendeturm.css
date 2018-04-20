@@ -6307,6 +6307,9 @@ html, body {
 #page-header {
   padding-bottom: 5px; }
 
+#main-nav {
+  padding: 0.3rem 0.7rem; }
+
 #page-footer {
   padding-top: 5px; }
   #page-footer .overlay {
@@ -6362,11 +6365,16 @@ body, #page-footer, #page-header, #featured {
   border-top: 5px solid #03A9F4;
   border-bottom: 5px solid #03A9F4; }
 
-#page-inner, #page-footer .overlay, #main-nav {
-  background: rgba(0, 0, 0, 0.8); }
+#page-inner, #page-footer .overlay {
+  background: rgba(0, 0, 0, 0.9); }
+
+#main-nav {
+  background: rgba(0, 0, 0, 0.9); }
 
 .navbar-brand {
   font-weight: bold; }
+  .navbar-brand .name {
+    line-height: 40px; }
 
 #menu-header-menu li a {
   font-weight: bold; }

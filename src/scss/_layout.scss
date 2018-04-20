@@ -28,6 +28,10 @@ html, body {
     @include light-box-shadow;
 }
 
+#main-nav {
+    padding: 0.3rem 0.7rem;
+}
+
 #page-footer {
     padding-top: $header-border;
 
