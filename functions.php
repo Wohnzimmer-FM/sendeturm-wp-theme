@@ -218,7 +218,7 @@ function sendeturm_sanitize_select($input, $setting) {
 }
 
 function episode_title($episode, $podcast) {
-    return sprintf('%s <span class="badge badge-secondary">%s%03d</span>', $episode->title(), $podcast->mnemonic(), $episode->number());
+    return sprintf('<span class="badge badge-secondary">%s%03d</span> %s', $podcast->mnemonic(), $episode->number(), $episode->title());
 }
 
 function sendeturm_podlove_player4_config($config) {
