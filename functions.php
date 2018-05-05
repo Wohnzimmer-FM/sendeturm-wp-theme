@@ -7,13 +7,20 @@ if(in_array($_SERVER["REMOTE_ADDR"], array('127.0.0.1'))) {
 include 'vendor/wp-bootstrap4-navwalker/wp-bootstrap-navwalker.php';
 include 'inc/theme-options.php';
 
+function enqueue_style($css_file, $name) {
+    $version = filemtime(get_template_directory() . $css_file);
+    wp_enqueue_style($name, get_template_directory_uri() . $css_file, array(), $version);
+}
+
 function sendeturm_scripts()
 {
     $css_file = '/dist/css/' . get_theme_mod("sendeturm_active_theme", "styles") . '.css';
-
     $version = filemtime(get_template_directory() . $css_file);
-
     wp_enqueue_style('sendeturm-styles', get_template_directory_uri() . $css_file, array(), $version);
+
+    enqueue_style('/dist/assets/fontawesome/web-fonts-with-css/css/fontawesome-all.css', 'sendeturm-font-awesome');
+
+    enqueue_style('/dist/css/open-sans.css', 'sendeturm-font-open-sans');
 
     wp_enqueue_script('script-popper', get_template_directory_uri() . '/dist/js/popper.min.js');
     wp_enqueue_script('script-bootstrap', get_template_directory_uri() . '/dist/js/bootstrap.min.js');
@@ -234,3 +241,8 @@ function sendeturm_podlove_player4_config($config) {
 }
 
 add_filter('podlove_player4_config', 'sendeturm_podlove_player4_config');
+
+function wpb_remove_commentsip($comment_author_ip) {
+    return '';
+}
+add_filter( 'pre_comment_user_ip', 'wpb_remove_commentsip' );

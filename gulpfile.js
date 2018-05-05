@@ -21,8 +21,12 @@ gulp.task('assets', function() {
     return gulp.src(['src/assets/**/*']).pipe(gulp.dest("dist/assets"))
 });
 
+gulp.task('css', function() {
+    return gulp.src(['src/css/**/*']).pipe(gulp.dest("dist/css"))
+});
+
 // Static Server + watching scss/html files
-gulp.task('serve', ['sass', 'assets'], function() {
+gulp.task('serve', ['sass', 'assets', 'css'], function() {
     /*
     browserSync.init({
         //server: "./src" 

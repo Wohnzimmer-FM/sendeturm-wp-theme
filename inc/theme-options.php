@@ -4,9 +4,15 @@ function sendeturm_customize_register( $wp_customize ) {
     $path = get_template_directory() . '/dist/css';
     $files = array_diff(scandir($path), array('.', '..'));
     $list = array();
+    $prefix = 'theme_';
 
     foreach($files as $file) {
         $path_parts = pathinfo($file);
+
+        if(substr($path_parts['filename'], 0, strlen($prefix)) != $prefix) {
+            continue;
+        }
+
         $list[$path_parts['filename']] = $file;
     }
 
