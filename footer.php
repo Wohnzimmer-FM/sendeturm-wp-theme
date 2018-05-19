@@ -22,7 +22,7 @@
                             $services = $podcast->services(array('category' => 'social'));
 
                             foreach($services as $service): ?>                     
-                                <a href="<?php echo $service->profileUrl(); ?>"><i class="fa fa-<?php echo strtolower($service->title()); ?>-square mr-1"></i></a>
+                                <a href="<?php echo $service->profileUrl(); ?>"><i class="fab fa-<?php echo strtolower($service->title()); ?>-square mr-1"></i></a>
                             <?php endforeach; ?>
                             </div>
                         </div>
