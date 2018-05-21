@@ -249,6 +249,21 @@ function sendeturm_podlove_player4_config($config) {
         $config['theme']['main'] = get_theme_mod('sendeturm_main_player_color', '#FFF');
         $config['theme']['highlight'] = get_theme_mod('sendeturm_highlight_player_color', '#F00');
         $config['tabs']['chapters'] = true;
+
+        $config['visibleComponents'] = array(
+            "tabInfo",
+            "tabChapters",
+            "tabDownload",
+            #"tabAudio",
+            "tabShare",
+            "poster",
+            #"showTitle",
+            #"episodeTitle",
+            "subtitle",
+            "progressbar",
+            "controlSteppers",
+            "controlChapters"
+        );
     }
 
 	return $config;
