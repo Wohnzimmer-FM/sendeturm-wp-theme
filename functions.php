@@ -232,11 +232,25 @@ function sendeturm_podlove_player4_config($config) {
     if(is_featured()) {
         $config['theme']['main'] = get_theme_mod('sendeturm_main_player_color_featured', '#FFF');
         $config['theme']['highlight'] = get_theme_mod('sendeturm_highlight_player_color_featured', '#F00');
+            
+        $config['visibleComponents'] = array(
+            #"tabChapters",
+            "tabDownload",
+            "tabShare",
+            "poster",
+            #"showTitle",
+            "episodeTitle",
+            "subtitle",
+            #"progressbar",
+            "controlSteppers",
+            "controlChapters"
+        );
     } else {
         $config['theme']['main'] = get_theme_mod('sendeturm_main_player_color', '#FFF');
         $config['theme']['highlight'] = get_theme_mod('sendeturm_highlight_player_color', '#F00');
+        $config['tabs']['chapters'] = true;
     }
-    
+
 	return $config;
 }
 
@@ -246,3 +260,10 @@ function wpb_remove_commentsip($comment_author_ip) {
     return '';
 }
 add_filter( 'pre_comment_user_ip', 'wpb_remove_commentsip' );
+
+
+function replace_avatar($args) {
+    $args['url'] = get_template_directory_uri() . '/dist/assets/brand/avatar.png';
+    return $args;
+}
+add_filter( 'pre_get_avatar_data', 'replace_avatar' );
