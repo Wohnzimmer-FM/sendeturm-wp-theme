@@ -61,7 +61,7 @@ h1, h2 {
   background: #fff;
   //border-top: $header-border solid $accent-color;
   //border-bottom: $header-border solid $accent-color;
-  //box-shadow: 0px 0px 7px #e9e9e9;
+  box-shadow: 0px 0px 7px #e9e9e9;
 }
 
 #page-inner, #page-footer .overlay {
@@ -69,7 +69,13 @@ h1, h2 {
 }
 
 #main-nav {
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.8);
+}
+
+#page-header {
+  box-shadow: 0 2px 4px -1px rgba(0,0,0,0.25);
+  position: relative;
+  z-index: 100;
 }
 
 .navbar-brand {
@@ -118,9 +124,15 @@ h1, h2 {
   #content {
     padding-top: 0;
   }
+  #main-content {
+    box-shadow: none;
+  }
 }
 
 #content {
+  position: relative;
+  z-index: 99;
+
   .social-icons {
     font-size: 2em;
     color: #fff;
@@ -215,6 +227,7 @@ h1, h2 {
     border: 0;
     background: $search-bck;
     margin-top: 5px;
+    height: calc(2.25rem + 2px);
   }
 }
 

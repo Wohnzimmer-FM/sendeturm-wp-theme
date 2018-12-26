@@ -10,9 +10,12 @@ gulp.task('sass', function() {
         .pipe(browserSync.stream());
 });
 
-// Move the javascript files into our /src/js folder
+// Move the javascript files into our /dist/js folder
 gulp.task('js', function() {
-    return gulp.src(['node_modules/bootstrap/dist/js/bootstrap.min.js', 'node_modules/jquery/dist/jquery.min.js', 'node_modules/popper.js/dist/umd/popper.min.js'])
+    return gulp.src(['node_modules/bootstrap/dist/js/bootstrap.min.js', 
+                     'node_modules/jquery/dist/jquery.min.js', 
+                     'node_modules/popper.js/dist/umd/popper.min.js',
+                     'src/js/sendeturm.js'])
         .pipe(gulp.dest("dist/js"))
         .pipe(browserSync.stream());
 });
@@ -26,17 +29,9 @@ gulp.task('css', function() {
 });
 
 // Static Server + watching scss/html files
-gulp.task('serve', ['sass', 'assets', 'css'], function() {
-    /*
-    browserSync.init({
-        //server: "./src" 
-        proxy: "http://allesnetz.local"
-    });
-    */
-
+gulp.task('serve', ['sass', 'assets', 'css', 'js'], function() {
     gulp.watch(['node_modules/bootstrap/scss/bootstrap.scss', 'src/scss/*.scss'], ['sass']);
-    
-    //gulp.watch("src/*.html").on('change', browserSync.reload);
+    gulp.watch(['src/js/*.js'], ['js']);
 });
 
 gulp.task('default', ['js','serve']);
