@@ -123,9 +123,23 @@ h1, h2 {
 .home-podcast, .post-type-archive-podcast {
   #content {
     padding-top: 0;
+    background: #fff;
   }
+
   #main-content {
     box-shadow: none;
+  }
+
+  @media(min-width:576px) {
+    #main-content {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  #main {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -234,7 +248,7 @@ h1, h2 {
 /* > mobile view */
 @media(min-width:576px) {
   #main {
-    padding: 3em;  
+    padding: 3em;
   }
 
   #main-content {

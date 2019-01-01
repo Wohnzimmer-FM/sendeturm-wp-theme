@@ -7239,10 +7239,20 @@ h1, h2 {
       color: #8BC34A; }
 
 .home-podcast #content, .post-type-archive-podcast #content {
-  padding-top: 0; }
+  padding-top: 0;
+  background: #fff; }
 
 .home-podcast #main-content, .post-type-archive-podcast #main-content {
   box-shadow: none; }
+
+@media (min-width: 576px) {
+  .home-podcast #main-content, .post-type-archive-podcast #main-content {
+    padding-left: 0;
+    padding-right: 0; } }
+
+.home-podcast #main, .post-type-archive-podcast #main {
+  padding-left: 0;
+  padding-right: 0; }
 
 #content {
   position: relative;
