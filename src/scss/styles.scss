@@ -57,6 +57,10 @@ h1, h2 {
   font-weight: 700;
 }
 
+.card, .comment-respond {
+  box-shadow: 2px 2px 13px rgba(126, 126, 126, 0.1);
+}
+
 #main-content {
   background: #fff;
   //border-top: $header-border solid $accent-color;
@@ -307,7 +311,7 @@ h1, h2 {
 
 #respond {
   border: 1px solid #e7e7e7;
-  padding: 1em 1em 0.5em 1em;
+  padding: 1.5em 1.5em 0.5em 1.5em;
   background: #f8f9fa;
   border-radius: $main-border-radius;
   @include light-box-shadow;
@@ -378,5 +382,11 @@ h1, h2 {
     &:hover {
       text-decoration: none;
     }
+  }
+}
+
+.contributors-list {
+  .avatar img {
+    border-radius: 50%;
   }
 }
