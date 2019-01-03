@@ -34,21 +34,21 @@ get_header(); ?>
                 foreach($all_contributors as $contributor) {
                     $contributor_services = \Podlove\Modules\Social\Model\ContributorService::
                                         find_by_contributor_id_and_category($contributor->id, 'social');
+                    
+                    $guest_link = esc_url(add_query_arg('gid', $contributor->id, site_url( '/guest/' )));
 
                     ?>
                     <div class="col-xs-12 col-sm-6 col-md-4">
                         <div class="card mb-4">
                             <div class="card-body text-center">
                                 <div class="avatar mt-2 mb-4">
-                                    <?php echo $contributor->avatar()->setWidth(115)->image(); ?>
+                                    <a href="<?php echo $guest_link; ?>"><?php echo $contributor->avatar()->setWidth(115)->image(); ?></a>
                                 </div>
                                 
-                                <h5><?php echo $contributor->realname; ?></h5>
-
-                                <?php #echo $contributor->contributioncount; ?>
+                                <h5><a href="<?php echo $guest_link; ?>"><?php echo $contributor->realname; ?></a></h5>
 
                                 <div class="contributor-links">
-                                    <ul class="nav justify-content-lg-center">
+                                    <ul class="nav justify-content-center">
                                         <?php foreach($contributor_services as $contributor_service): ?>
                                         <?php $service = $contributor_service->get_service(); ?>
                                         <li class="nav-item mr-1">

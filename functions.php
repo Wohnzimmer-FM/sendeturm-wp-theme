@@ -117,10 +117,12 @@ function inspect_v($var)
     echo '<pre>' . print_r($var, true) . '</pre>';
 }
 
-function get_published($since = 14)
+function get_published($episode, $since = 14)
 {
+    $post = $episode->post();
+
     $post_date = new DateTime();
-    $post_date->setTimestamp(get_the_time('U'));
+    $post_date->setTimestamp(get_the_time('U', $post));
     $today = new DateTime("now");
 
     $interval = $today->diff($post_date);
@@ -132,7 +134,7 @@ function get_published($since = 14)
     } else if ($interval_days <= $since) {
         return sprintf(_n('Published yesterday', 'Published %d days ago', $interval_days, 'sendeturm'), $interval_days);
     } else {
-        return __('Published on', 'sendeturm') . ' ' . get_the_date();
+        return __('Published on', 'sendeturm') . ' ' . get_the_date('', $post);
     }
 }
 
@@ -264,3 +266,10 @@ function replace_avatar($args)
     return $args;
 }
 add_filter('pre_get_avatar_data', 'replace_avatar');
+
+function add_guest_id_query_var($vars)
+{
+    $vars[] = "gid";
+    return $vars;
+}
+add_filter('query_vars', 'add_guest_id_query_var');

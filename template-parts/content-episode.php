@@ -52,7 +52,7 @@ $podcast = \Podlove\get_podcast();
 
             <div class="row mt-4">
                 <div class="col"><?php echo _e('Duration', 'sendeturm') . ': ' . $episode->duration(); ?></div>
-                <div class="col text-right"><?php echo get_published(); ?></div>
+                <div class="col text-right"><?php echo get_published($episode); ?></div>
             </div>
         </article>
     </div>
