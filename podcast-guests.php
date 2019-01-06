@@ -37,6 +37,11 @@ get_header(); ?>
                     
                     $guest_link = esc_url(add_query_arg('gid', $contributor->id, site_url( '/guest/' )));
 
+                    // Hide guests without episodes
+                    if ($contributor->contributioncount < 1) {
+                        continue;
+                    }
+
                     ?>
                     <div class="col-xs-12 col-sm-6 col-md-4">
                         <div class="card mb-4">
