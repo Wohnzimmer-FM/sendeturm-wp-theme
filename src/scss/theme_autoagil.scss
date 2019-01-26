@@ -1,0 +1,17 @@
+$accent-color: #FFEB3B;
+$primary-color: #2196F3;
+
+@import "styles.scss";
+
+.list-group-item:hover {
+    .guest-list {
+      .list-inline-item {
+        //background: $accent-color;
+
+        span { 
+          //color: #000;
+        }
+      }
+    }
+}
+  
