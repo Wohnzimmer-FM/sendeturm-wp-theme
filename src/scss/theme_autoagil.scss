@@ -1,4 +1,4 @@
-$accent-color: #AE3636;
+$accent-color: #efefef;
 $primary-color: #8BC34A;
 
 @import "styles.scss";
@@ -14,4 +14,36 @@ $primary-color: #8BC34A;
       }
     }
 }
-  
+
+#page-header {
+  background-image: repeating-linear-gradient(90deg, 
+    #666 0.00%, #666 6.66%,
+    #aaaaaa 6.66%, #aaaaaa 13.32%,
+    #666 13.32%, #666 19.98%,
+    #aaaaaa 19.98%, #aaaaaa 26.64%,
+    #666 26.64%, #666 33.33%,
+    #aaaaaa 33.33%, #aaaaaa 39.96%,
+    #666 39.96%, #666 46.62%,
+    #aaaaaa 46.62%, #aaaaaa 53.28%,
+    #666 53.28%, #666 59.94%,
+    #aaaaaa 59.94%, #aaaaaa 66.60%,
+    #666 66.60%, #666 73.26%,
+    #aaaaaa 73.26%, #aaaaaa 79.92%,
+    #666 79.92%, #666 86.58%,
+    #aaaaaa 86.65%, #aaaaaa 93.24%,
+    #666 93.24%, #666 100%
+  );
+}
+
+#featured {
+  background: url('../assets/autoagil/featured-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position-y: 25%;
+
+  .overlay {
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+}
+
