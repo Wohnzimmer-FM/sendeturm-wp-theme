@@ -3,6 +3,14 @@
 include 'vendor/wp-bootstrap4-navwalker/wp-bootstrap-navwalker.php';
 include 'inc/theme-options.php';
 
+function get_logo_image_link()
+{
+    $file = 'brand/' . get_theme_mod("sendeturm_active_theme", "styles") . '.svg';
+    $version = filemtime(get_template_directory() . '/dist/assets/' . $file);
+    $url = get_assets_url() . $file . '?v=' . $version;
+    echo $url;    
+}
+
 function enqueue_style($css_file, $name)
 {
     $version = filemtime(get_template_directory() . $css_file);

@@ -16,7 +16,7 @@
 		<header id="page-header">
 			<div id="main-nav" class="navbar navbar-expand-lg navbar-dark">
 				<a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>">
-					<img src="<?php assets_url();?>brand/<?php echo get_theme_mod("sendeturm_active_theme", "styles"); ?>.svg" width="40" height="40" class="d-inline-block align-top mr-1" alt="">
+					<img src="<?php echo get_logo_image_link(); ?>" width="40" height="40" class="d-inline-block align-top mr-1" alt="">
 					<span class="name"><?php bloginfo('name');?></span>
 				</a>
 				
