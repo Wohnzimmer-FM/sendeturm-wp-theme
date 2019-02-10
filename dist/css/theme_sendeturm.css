@@ -7138,13 +7138,13 @@ html, body {
     list-style: none; }
 
 #page-header {
-  padding-bottom: 5px; }
+  padding-bottom: 3px; }
 
 #main-nav {
   padding: 0.3rem 0.7rem; }
 
 #page-footer {
-  padding-top: 5px; }
+  padding-top: 3px; }
   #page-footer .overlay {
     padding-top: 2rem;
     padding-bottom: 3rem; }
