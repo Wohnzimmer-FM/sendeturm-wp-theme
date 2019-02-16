@@ -27,6 +27,8 @@ get_header(); ?>
                     return $item->id;
                 }, $podcast_team);
 
+                print_r($team_ids);
+
                 $sql_query = sprintf('WHERE id NOT IN (%s) ORDER by realname', join(',', $team_ids));
                 
                 $all_contributors = \Podlove\Modules\Contributors\Model\Contributor::all($sql_query);
