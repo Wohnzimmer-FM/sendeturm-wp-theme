@@ -36,7 +36,7 @@ $feed = \Podlove\Model\Feed::find_one_by_slug('mp3');
                         <span class="badge badge-pill badge-success"><?php echo __('New', 'sendeturm'); ?></span>
                     </h1>
                     */ ?>
-                    <?php echo $episode->player(); ?>
+                    <?php echo $episode->player(['context' => 'featured']); ?>
                 </div>
 
                 <div class="col-lg-4 align-self-end text-center text-lg-right subscribe">                				

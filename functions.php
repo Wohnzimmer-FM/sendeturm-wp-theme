@@ -14,7 +14,6 @@ function get_logo_image_link()
 function enqueue_style($css_file, $name)
 {
     $version = filemtime(get_template_directory() . $css_file);
-    
     wp_enqueue_style($name, get_template_directory_uri() . $css_file, array(), $version);
 }
 
@@ -80,6 +79,12 @@ add_action('after_setup_theme', 'sendeturm_theme_setup');
 
 function is_featured()
 {
+    if ($_GET['podlove_context'] == 'featured') {
+        return true;
+    } else {
+        return false;
+    }
+    /*
     if (get_theme_mod("sendeturm_home_as_blog", true)) {
         if (is_post_type_archive('podcast')) {
             return true;
@@ -89,8 +94,8 @@ function is_featured()
             return true;
         }
     }
-
     return false;
+    */
 }
 
 function custom_class($classes)
@@ -261,7 +266,7 @@ function sendeturm_podlove_player4_config($config)
     return $config;
 }
 
-#add_filter('podlove_player4_config', 'sendeturm_podlove_player4_config');
+add_filter('podlove_player4_config', 'sendeturm_podlove_player4_config');
 
 function wpb_remove_commentsip($comment_author_ip)
 {
