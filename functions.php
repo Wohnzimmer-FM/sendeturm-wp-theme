@@ -229,7 +229,7 @@ function sendeturm_podlove_player4_config($config)
     if (is_featured()) {
         $config['theme']['main'] = get_theme_mod('sendeturm_main_player_color_featured', '#FFF');
         $config['theme']['highlight'] = get_theme_mod('sendeturm_highlight_player_color_featured', '#F00');
-
+        /*
         $config['visibleComponents'] = array(
             #"tabChapters",
             "tabDownload",
@@ -241,26 +241,27 @@ function sendeturm_podlove_player4_config($config)
             #"progressbar",
             "controlSteppers",
             "controlChapters",
-        );
+        );*/
     } else {
         $config['theme']['main'] = get_theme_mod('sendeturm_main_player_color', '#FFF');
         $config['theme']['highlight'] = get_theme_mod('sendeturm_highlight_player_color', '#F00');
         $config['tabs']['chapters'] = true;
 
+        /*
         $config['visibleComponents'] = array(
             "tabInfo",
             "tabChapters",
             "tabDownload",
-            #"tabAudio",
+            "tabAudio",
             "tabShare",
             "poster",
-            #"showTitle",
-            #"episodeTitle",
+            "showTitle",
+            "episodeTitle",
             "subtitle",
             "progressbar",
             "controlSteppers",
             "controlChapters",
-        );
+        );*/
     }
 
     return $config;
