@@ -18,8 +18,8 @@ $primary-color: #2196F3;
 #featured {
   background: url('../assets/firmenfunk/featured-bg.jpg');
   background-repeat: no-repeat;
-  background-size: 100%;
-  background-position-y: 25%;
+  background-size: cover;
+  background-position-y: 0%;
 
   .overlay {
     background: rgba(0, 0, 0, 0.5);
