@@ -7396,3 +7396,11 @@ h1, h2 {
 
 .contributors-list .avatar img {
   border-radius: 50%; }
+
+#featured {
+  background: url("../assets/firmenfunk/featured-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position-y: 25%; }
+  #featured .overlay {
+    background: rgba(0, 0, 0, 0.5); }

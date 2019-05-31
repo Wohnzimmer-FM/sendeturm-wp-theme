@@ -5,9 +5,20 @@ include 'inc/theme-options.php';
 
 function get_logo_image_link()
 {
-    $file = 'brand/' . get_theme_mod("sendeturm_active_theme", "styles") . '.svg';
+    $extensions = ['svg', 'png', 'jpeg', 'jpg'];
+
+    foreach ($extensions as $ext) {
+        $file = 'brand/' . get_theme_mod("sendeturm_active_theme", "styles") . '.' . $ext;
+        
+        if (file_exists(get_template_directory() . '/dist/assets/' . $file)) {
+            break;
+        }
+    }
+
     $version = filemtime(get_template_directory() . '/dist/assets/' . $file);
+
     $url = get_assets_url() . $file . '?v=' . $version;
+    
     echo $url;
 }
 
