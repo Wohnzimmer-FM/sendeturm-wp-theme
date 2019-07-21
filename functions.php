@@ -80,6 +80,8 @@ function sendeturm_theme_setup()
 
     add_theme_support('title-tag');
 
+    add_theme_support('post-thumbnails');
+
     add_theme_support('html5', array(
         'search-form', 'comment-form', 'comment-list', 'gallery', 'caption',
     ));
@@ -232,7 +234,10 @@ function sendeturm_sanitize_select($input, $setting)
 
 function episode_title($episode, $podcast)
 {
-    return sprintf('<span class="badge badge-secondary">%s%03d</span> %s', $podcast->mnemonic(), $episode->number(), $episode->title());
+    return sprintf('<span class="badge badge-secondary">%s%03d</span> %s', 
+            podlove_get_mnemonic(),
+            $episode->number(),
+            $episode->title());
 }
 
 function sendeturm_podlove_player4_config($config)
@@ -299,3 +304,4 @@ function add_guest_id_query_var($vars)
     return $vars;
 }
 add_filter('query_vars', 'add_guest_id_query_var');
+

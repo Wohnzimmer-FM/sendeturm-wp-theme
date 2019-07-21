@@ -7,6 +7,7 @@
  * @package sendeturm
  */
 
+
 if (!isset($episode)) {
     $episode = \Podlove\get_episode();
     $url = esc_url(get_permalink());
@@ -17,6 +18,8 @@ if (!isset($episode)) {
 
 $podcast = \Podlove\get_podcast();
 
+$show = \Podlove\Modules\Shows\Model\Show::find_one_by_episode_id($episode->id);
+
 ?>
 
 <a href="<?php echo $url; ?>" class="episode-list-item list-group-item list-group-item-action d-block">
@@ -26,8 +29,12 @@ $podcast = \Podlove\get_podcast();
         </div>
 
         <div class="col-10">
+            <?php if($show) : ?>
+                <span class="badge badge-info mb-3"><?php echo $show->title; ?></span>
+            <?php endif; ?>
+
             <h3 class="title h5 text-primary"><?php echo episode_title($episode, $podcast); ?></h3>
-            
+
             <small class="text-info guest-list"><?php echo get_guests($episode, array('Guests', 'Gäste')); ?></small>
             
             <p class="mt-2"><?php echo $episode->summary(); ?></p>

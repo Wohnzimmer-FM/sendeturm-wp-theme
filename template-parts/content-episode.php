@@ -1,7 +1,12 @@
 <?php
 $episode = \Podlove\get_episode();
 $podcast = \Podlove\get_podcast();
+$show = \Podlove\Modules\Shows\Model\Show::find_one_by_episode_id($episode->id);
 ?>
+
+<?php if($show) : ?>
+    <div><span class="badge badge-info mb-3"><?php echo $show->title; ?></span></div>
+<?php endif; ?>
 
 <h1 class="entry-title mb-4"><?php echo episode_title($episode, $podcast); ?></h1>
 

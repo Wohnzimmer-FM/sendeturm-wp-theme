@@ -2,12 +2,13 @@
 
 $accent-color: #FFEB3B !default;
 $primary-color: #2196F3 !default;
+$info-color: #3F51B5 !default;
 $main-border-radius: 0.25rem;
 
 $theme-colors: (
   "primary": $primary-color,
   "secondary": $accent-color,
-  "info": #3F51B5,
+  "info": $info-color,
   "success": #8BC34A
 );
 

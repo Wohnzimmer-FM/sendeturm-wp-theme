@@ -44,7 +44,20 @@ $feed = \Podlove\Model\Feed::find_one_by_slug('mp3');
                         <?php bloginfo('description'); ?>
                     </div>
                     
-                    <div class="inner">
+                    <div class="inner mt-2">
+                        
+                        <?php
+                            $podcast = \Podlove\get_podcast();
+
+                            echo $podcast->subscribeButton(
+                                [
+                                    'format' => 'rectangle',
+                                    'size' => 'big auto',
+                                    'color' => get_theme_mod('sendeturm_highlight_player_color_featured', '#F00')
+                                ]
+                            );
+                        ?>
+                        <!--
                         <a class="btn btn-secondary mt-1 icon-button" role="button" href="https://itunes.apple.com/de/podcast/id<?php echo $feed->itunes_feed_id; ?>">
                             <i class="fa fa-podcast"></i>
                             <?php echo _e('Subscribe with iTunes', 'sendeturm'); ?>
@@ -53,6 +66,7 @@ $feed = \Podlove\Model\Feed::find_one_by_slug('mp3');
                             <i class="fa fa-rss"></i>
                             <?php echo _e('Subscribe with RSS', 'sendeturm'); ?>
                         </a>
+                        -->
                     </div>
                 </div>
             </div>
