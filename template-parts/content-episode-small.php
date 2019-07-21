@@ -18,7 +18,11 @@ if (!isset($episode)) {
 
 $podcast = \Podlove\get_podcast();
 
-$show = \Podlove\Modules\Shows\Model\Show::find_one_by_episode_id($episode->id);
+if (is_array(\Podlove\Modules\Shows\Model\Show::all())) {
+    $show = \Podlove\Modules\Shows\Model\Show::find_one_by_post_id($episode->post()->id);
+} else {
+    $show = false;
+}
 
 ?>
 

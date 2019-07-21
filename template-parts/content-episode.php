@@ -2,6 +2,7 @@
 $episode = \Podlove\get_episode();
 $podcast = \Podlove\get_podcast();
 $show = \Podlove\Modules\Shows\Model\Show::find_one_by_episode_id($episode->id);
+
 ?>
 
 <?php if($show) : ?>

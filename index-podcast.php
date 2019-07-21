@@ -12,7 +12,22 @@
  * @package sendeturm
  */
 
-get_header(); ?>
+get_header();
+
+$podcast = \Podlove\get_podcast();
+
+$_shows = \Podlove\Modules\Shows\Model\Show::all();
+$shows = array();
+
+foreach ($_shows as $show) {
+	if (!$show) {
+		continue;
+	}
+	
+	$shows []= $show;
+}
+
+?>
 
 	<?php 
 		get_template_part('template-parts/content', 'featured');
@@ -45,14 +60,11 @@ get_header(); ?>
 						));
 						?>
 				</div><!-- end of col-X -->
+				<?php if($shows) : ?>
 				<div class="col-12 col-lg-3 mt-4 mt-lg-0 text-center">
 					<div class="card">
 						<div class="card-body">
 						<?php
-							$podcast = \Podlove\get_podcast();
-
-							$shows = \Podlove\Modules\Shows\Model\Show::all();
-
 							foreach ($shows as $show) {
 								echo '<div class="mb-2">';
 								echo $podcast->subscribeButton([
@@ -65,6 +77,7 @@ get_header(); ?>
 						</div>
 					</div>
 				</div>
+				<?php endif; ?>
 			</div>
 		<?php
 
