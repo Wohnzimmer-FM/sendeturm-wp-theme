@@ -7215,9 +7215,16 @@ h1, h2 {
   z-index: 100; }
 
 .navbar-brand {
-  font-weight: bold; }
+  font-weight: bold;
+  position: relative; }
   .navbar-brand .name {
-    line-height: 40px; }
+    line-height: 28px; }
+  .navbar-brand .network-slogan {
+    position: absolute;
+    left: 49px;
+    bottom: 6px;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.45em; }
 
 #menu-header-menu li a {
   font-weight: bold; }
@@ -7396,16 +7403,6 @@ h1, h2 {
 
 .contributors-list .avatar img {
   border-radius: 50%; }
-
-#main-nav .navbar-brand {
-  position: relative; }
-
-.network-slogan {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 0.45em; }
 
 #featured {
   background: url("../assets/firmenfunk/featured-bg.jpg");
