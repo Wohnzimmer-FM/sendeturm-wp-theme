@@ -7397,6 +7397,16 @@ h1, h2 {
 .contributors-list .avatar img {
   border-radius: 50%; }
 
+#main-nav .navbar-brand {
+  position: relative; }
+
+.network-slogan {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.45em; }
+
 #page-header {
   background-image: repeating-linear-gradient(90deg, #666 0%, #666 6.66%, #aaaaaa 6.66%, #aaaaaa 13.32%, #666 13.32%, #666 19.98%, #aaaaaa 19.98%, #aaaaaa 26.64%, #666 26.64%, #666 33.33%, #aaaaaa 33.33%, #aaaaaa 39.96%, #666 39.96%, #666 46.62%, #aaaaaa 46.62%, #aaaaaa 53.28%, #666 53.28%, #666 59.94%, #aaaaaa 59.94%, #aaaaaa 66.6%, #666 66.6%, #666 73.26%, #aaaaaa 73.26%, #aaaaaa 79.92%, #666 79.92%, #666 86.58%, #aaaaaa 86.65%, #aaaaaa 93.24%, #666 93.24%, #666 100%); }
 

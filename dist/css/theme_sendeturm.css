@@ -7396,3 +7396,13 @@ h1, h2 {
 
 .contributors-list .avatar img {
   border-radius: 50%; }
+
+#main-nav .navbar-brand {
+  position: relative; }
+
+.network-slogan {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.45em; }

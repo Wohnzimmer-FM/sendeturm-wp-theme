@@ -18,6 +18,7 @@
 				<a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>">
 					<img src="<?php echo get_logo_image_link(); ?>" width="40" height="40" class="d-inline-block align-top mr-1" alt="">
 					<span class="name"><?php bloginfo('name');?></span>
+					<span class="network-slogan">Eine Wohnzimmer.FM Produktion</span>
 				</a>
 				
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
