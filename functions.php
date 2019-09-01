@@ -137,6 +137,12 @@ function separate_podcasts_from_blogs($query)
 }
 add_action('pre_get_posts', 'separate_podcasts_from_blogs');
 
+function custom_content($position, $default='', $format='%s')
+{
+    $content = get_theme_mod('sendeturm_custom_content_' . $position, $default);
+    return sprintf($format, $content);
+}
+
 function inspect_v($var)
 {
     echo '<pre>' . print_r($var, true) . '</pre>';

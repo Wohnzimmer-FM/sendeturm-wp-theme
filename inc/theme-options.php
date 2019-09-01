@@ -54,8 +54,8 @@ function sendeturm_customize_register( $wp_customize ) {
     $wp_customize->add_control( 'sendeturm_footer_content', array(
         'type' => 'textarea',
         'section' => 'sendeturm_footer',
-        'label' => __('Custom Content'),
-        'description' => __('Custom additional footer content.'),
+        'label' => __('Custom Content', 'sendeturm'),
+        'description' => __('Custom additional footer content.', 'sendeturm'),
     ));
 
 
@@ -75,8 +75,27 @@ function sendeturm_customize_register( $wp_customize ) {
     $wp_customize->add_control( 'sendeturm_footer_analytics', array(
         'type' => 'textarea',
         'section' => 'sendeturm_footer',
-        'label' => __('Analytics code'),
-        'description' => __('Code for analytics.'),
+        'label' => __('Analytics code', 'sendeturm'),
+        'description' => __('Code for analytics.', 'sendeturm'),
+    ));
+
+    ////////////////////////////////////////////////
+    // Control custom code
+
+    $wp_customize->add_section( 'sendeturm_custom_content' , array(
+        'title'      => __( 'Custom global content', 'sendeturm' ),
+        'priority'   => 30,
+    ));
+
+    $wp_customize->add_setting( 'sendeturm_custom_content_banner', array(
+        'default' => '',
+    ));
+    
+    $wp_customize->add_control( 'sendeturm_custom_content_banner', array(
+        'type' => 'textarea',
+        'section' => 'sendeturm_custom_content',
+        'label' => __('Banner content', 'sendeturm'),
+        'description' => __('Content for the page banner displayed on every page.', 'sendeturm'),
     ));
 
 
@@ -95,8 +114,8 @@ function sendeturm_customize_register( $wp_customize ) {
     $wp_customize->add_control( 'sendeturm_footer_about', array(
         'type' => 'textarea',
         'section' => 'sendeturm_footer',
-        'label' => __('About the podcast'),
-        'description' => __('Short description or mission statement.'),
+        'label' => __('About the podcast', 'sendeturm'),
+        'description' => __('Short description or mission statement.', 'sendeturm'),
     ));
 
 
@@ -111,8 +130,8 @@ function sendeturm_customize_register( $wp_customize ) {
     $wp_customize->add_control( 'sendeturm_home_as_blog', array(
         'type' => 'checkbox',
         'section' => 'sendeturm_theme', // Add a default or your own section
-        'label' => __( 'Used mainly as blog' ),
-        'description' => __( 'This Wordpress instance is used as blog if checked. Otherwise as podcast.' ),
+        'label' => __( 'Used mainly as blog', 'sendeturm' ),
+        'description' => __( 'This Wordpress instance is used as blog if checked. Otherwise as podcast.', 'sendeturm' ),
     ));
 
     // Based on article: https://code.tutsplus.com/tutorials/settings-and-controls-for-a-color-scheme-in-the-theme-customizer--cms-21350

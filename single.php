@@ -23,6 +23,8 @@ get_header(); ?>
 	<div id="main-content" class="container">
 		<main id="main">
 
+		<?php echo custom_content('banner', '', '<div class="mb-3">%s</div>'); ?>
+
 		<?php
 		if (have_posts()) :
 

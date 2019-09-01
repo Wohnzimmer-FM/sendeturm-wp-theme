@@ -18,6 +18,8 @@ get_header(); ?>
 		get_template_part('template-parts/content', 'featured');
 	?>
 
+	<?php echo custom_content('banner'); ?>
+
 	<div id="main-content" class="container">
 		<main id="main">
 			<div class="row">

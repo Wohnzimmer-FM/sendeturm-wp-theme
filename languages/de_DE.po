@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2019-01-03 18:14+0100\n"
-"PO-Revision-Date: 2019-01-03 18:14+0100\n"
+"POT-Creation-Date: 2019-09-01 14:26+0200\n"
+"PO-Revision-Date: 2019-09-01 14:29+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2\n"
+"X-Generator: Poedit 2.2.3\n"
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -46,26 +46,26 @@ msgstr "Links"
 msgid "Contact"
 msgstr "Kontakt"
 
-#: functions.php:59
+#: functions.php:78
 msgid "Header Menu"
 msgstr "Hauptmenü"
 
-#: functions.php:60
+#: functions.php:79
 msgid "Footer Menu"
 msgstr "Footer Menü"
 
-#: functions.php:133
+#: functions.php:158
 msgid "Published today"
 msgstr "Heute veröffentlicht"
 
-#: functions.php:135
+#: functions.php:160
 #, php-format
 msgid "Published yesterday"
 msgid_plural "Published %d days ago"
 msgstr[0] "Gestern veröffentlicht"
 msgstr[1] "Veröffentlicht vor %d Tagen"
 
-#: functions.php:137
+#: functions.php:162
 msgid "Published on"
 msgstr "Veröffentlicht am"
 
@@ -78,7 +78,7 @@ msgstr "Episoden mit %s"
 msgid "Podcast episodes"
 msgstr "Podcast-Episoden"
 
-#: header.php:31 search.php:27 search.php:30
+#: header.php:32 search.php:27 search.php:30
 msgid "Search"
 msgstr "Suche"
 
@@ -94,7 +94,7 @@ msgstr "Aktives Theme"
 msgid "Which Theme Stylesheet should be used?"
 msgstr "Welches Stylesheet soll benutzt werden?"
 
-#: inc/theme-options.php:46 inc/theme-options.php:67 inc/theme-options.php:87
+#: inc/theme-options.php:46 inc/theme-options.php:67 inc/theme-options.php:106
 msgid "Footer"
 msgstr "Footer"
 
@@ -104,7 +104,7 @@ msgstr "Zus. Inhalt"
 
 #: inc/theme-options.php:58
 msgid "Custom additional footer content."
-msgstr "Zus. Inhalt für den Footer"
+msgstr "Zus. Inhalt für den Footer."
 
 #: inc/theme-options.php:78
 msgid "Analytics code"
@@ -114,35 +114,47 @@ msgstr "Analytics Code"
 msgid "Code for analytics."
 msgstr "Code für Analytics."
 
+#: inc/theme-options.php:86
+msgid "Custom global content"
+msgstr "Globaler Inhalt"
+
+#: inc/theme-options.php:97
+msgid "Banner content"
+msgstr "Inhalt des Banners"
+
 #: inc/theme-options.php:98
+msgid "Content for the page banner displayed on every page."
+msgstr "Der Banner wird auf jeder Seite angezeigt."
+
+#: inc/theme-options.php:117
 msgid "About the podcast"
 msgstr "Über den Podcast"
 
-#: inc/theme-options.php:99
+#: inc/theme-options.php:118
 msgid "Short description or mission statement."
-msgstr "Kurze Beschreibung oder Mission"
+msgstr "Kurze Beschreibung oder Mission."
 
-#: inc/theme-options.php:114
+#: inc/theme-options.php:133
 msgid "Used mainly as blog"
 msgstr "Hauptsächlich als Blog benutzt"
 
-#: inc/theme-options.php:115
+#: inc/theme-options.php:134
 msgid "This Wordpress instance is used as blog if checked. Otherwise as podcast."
 msgstr ""
 
-#: inc/theme-options.php:124
+#: inc/theme-options.php:143
 msgid "Main Player Color"
 msgstr ""
 
-#: inc/theme-options.php:130
+#: inc/theme-options.php:149
 msgid "Highlight Player Color"
 msgstr ""
 
-#: inc/theme-options.php:136
+#: inc/theme-options.php:155
 msgid "Main Player Color for featured episode"
 msgstr ""
 
-#: inc/theme-options.php:142
+#: inc/theme-options.php:161
 msgid "Highlight Player Color for featured episode"
 msgstr ""
 
