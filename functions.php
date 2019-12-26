@@ -38,10 +38,7 @@ function sendeturm_scripts()
 
     enqueue_style('/dist/css/open-sans.css', 'sendeturm-font-open-sans');
 
-    wp_enqueue_script('script-popper', get_template_directory_uri() . '/dist/js/popper.min.js');
-    wp_enqueue_script('script-bootstrap', get_template_directory_uri() . '/dist/js/bootstrap.min.js');
-    wp_enqueue_script('script-jquery', get_template_directory_uri() . '/dist/js/jquery.min.js');
-    wp_enqueue_script('script-sendeturm', get_template_directory_uri() . '/dist/js/sendeturm.js');
+    wp_enqueue_script('script-sendeturm', get_template_directory_uri() . '/dist/js/sendeturm.min.js');
 
     if (is_singular() && comments_open() && get_option('thread_comments')) {
         wp_enqueue_script('comment-reply');
