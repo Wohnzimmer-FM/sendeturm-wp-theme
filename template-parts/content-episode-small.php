@@ -28,9 +28,10 @@ $podcast = \Podlove\get_podcast();
         <div class="col-10">
             <h3 class="title h5 text-primary"><?php echo episode_title($episode, $podcast); ?></h3>
             
-            <small class="text-info guest-list"><?php echo get_guests($episode, array('Guests', 'Gäste')); ?></small>
-            
             <p class="mt-2"><?php echo $episode->summary(); ?></p>
+            
+            <small class="text-info guest-list"><?php echo get_guests($episode, array('Guests', 'Gäste'), 36); ?></small>
+            
 
             <div class="row">
                 <small class="text-primary col"><?php echo get_published($episode); ?></small>

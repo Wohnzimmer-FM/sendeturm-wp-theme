@@ -166,14 +166,14 @@ function get_published($episode, $since = 14)
     }
 }
 
-function get_guests($episode, $filter = array())
+function get_guests($episode, $filter = array(), $size = 24)
 {
     $names = array();
     $filter_len = count($filter);
 
     foreach ($episode->contributors() as $contributor) {
         $names[] = '<li class="list-inline-item mb-1">' .
-        sprintf('<img width="24" height="24" src="%s" srcset="%s 2x" />', $contributor->image()->url(array('width' => 24, 'height' => 24)), $contributor->image()->url(array('width' => 48, 'height' => 48))) .
+        sprintf('<img width="%d" height="%d" src="%s" srcset="%s 2x" />', $size, $size, $contributor->image()->url(array('width' => $size, 'height' => $size)), $contributor->image()->url(array('width' => 48, 'height' => 48))) .
         '<span>' . $contributor->name() . '</span>' .
             '</li>';
     }
