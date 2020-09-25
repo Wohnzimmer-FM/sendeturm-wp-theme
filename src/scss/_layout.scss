@@ -24,7 +24,8 @@ html, body {
 }
 
 #page-header {
-    padding-bottom: $header-border;
+    padding-top: 1px;
+    padding-bottom: 1px;
     @include light-box-shadow;
 }
 
